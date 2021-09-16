@@ -1,0 +1,13 @@
+/*!****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/index.scss ***!
+  \****************************************************************************************************************/
+:root {
+  --text: #222;
+}
+
+body {
+  margin: 0;
+  background-color: #fad4b2;
+  color: var(--text);
+  font-size: 36px;
+}
