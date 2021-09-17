@@ -54,6 +54,13 @@ body {
   grid-area: form;
   background: var(--blockbg);
   color: var(--color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form > input {
+  margin: 10px;
 }
 
 .footer {
