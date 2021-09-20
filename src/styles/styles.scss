@@ -74,7 +74,7 @@
 
 	&__card {
 		font-style: 20px;
-		color: var(--color);
+		color: var(--text);
 		border: 2px solid var(--border);
 		font-size: 20px;
 		display: grid;
@@ -86,10 +86,11 @@
 		&:nth-last-child(-n+1) {
 			border: 2px solid var(--yellow);
 		}
-	}
 
-	&__card:hover {
-		box-shadow: 0 14px 28px var(--box_shadow_one), 0 10px 10px var(--box_shadow_two);
+		&:hover {
+			box-shadow: 0 14px 28px var(--box_shadow_one),
+				0 10px 10px var(--box_shadow_two);
+		}
 	}
 }
 
