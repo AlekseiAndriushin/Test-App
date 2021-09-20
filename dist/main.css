@@ -5,6 +5,8 @@
   --text: #222;
   --box_shadow_one: rgba(0,0,0,0.25);
   --box_shadow_two: rgba(0,0,0,0.22);
+  --green: rgb(56, 182, 24);
+  --yellow: rgba(247, 191, 8, 0.986) ;
 }
 
 html.red {
@@ -23,6 +25,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -99,12 +102,14 @@ body {
   align-items: center;
   justify-content: center;
 }
+.components > div:nth-child(2n) {
+  border: 2px solid var(--green);
+}
+.components > div:nth-last-child(-n+1) {
+  border: 2px solid var(--yellow);
+}
 .components > div:hover {
   box-shadow: 0 14px 28px var(--box_shadow_one), 0 10px 10px var(--box_shadow_two);
-}
-
-.wariables {
-  background-color: var(--color);
 }
 
 @media only screen and (max-width: 1024px) {

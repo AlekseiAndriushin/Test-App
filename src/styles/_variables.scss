@@ -1,7 +1,9 @@
 :root {
 	--text: #222;
-	--box_shadow_one: rgba(0,0,0,0.25);
-	--box_shadow_two: rgba(0,0,0,0.22);
+	--box_shadow_one: rgba(0, 0, 0, 0.25);
+	--box_shadow_two: rgba(0, 0, 0, 0.22);
+	--green: rgb(56, 182, 24);
+	--yellow: rgba(247, 191, 8, 0.986)
 }
 
 html.red {
@@ -17,4 +19,3 @@ html.blue {
 }
 
 $bg: rgb(250, 212, 178);
-

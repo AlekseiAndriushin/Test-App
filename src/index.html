@@ -13,29 +13,39 @@
     <div class="container">
       <header class="header">Шапка</header>
       <menu class="menu">Меню</menu>
-      <section class="content">Контент</section>
+      <section class="content">
+        <div class="content__wrapper">
+          <div id="divCompanyName"></div>
+          <div id="divInputAddress"></div>
+          <div id="divEmail"></div>
+          <div id="divPhone"></div>
+        </div>
+      </section>
       <form class="form">
         <input
-          class="form__companyName"
+          class="form__input"
+          id="inputCompanyName"
           type="text"
           name="companyName"
           placeholder="Введите название компании"
         />
         <input
-          class="form__adress"
+          class="form__input"
+          id="inputAddress"
           type="text"
-          name="adress"
+          name="address"
           placeholder="Введите Ваш адрес"
         />
         <input
-          class="form__email"
-          type="text"
-          name="adress"
+          class="form__input"
+          id="inputEmail"
+          type="email"
+          name="email"
           placeholder="Введите Ваш e-mail"
         />
-
         <input
-          class="form__telephone"
+          class="form__input"
+          id="inputPhone"
           type="tel"
           name="telephone"
           placeholder="Введите Ваш телефон"
@@ -44,14 +54,14 @@
       <footer class="footer">Футер</footer>
     </div>
     <div class="components">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
-      <div>5</div>
-      <div>6</div>
-      <div>7</div>
-      <div>8</div>
+      <div class="components__card">1</div>
+      <div class="components__card">2</div>
+      <div class="components__card">3</div>
+      <div class="components__card">4</div>
+      <div class="components__card">5</div>
+      <div class="components__card">6</div>
+      <div class="components__card">7</div>
+      <div class="components__card">8</div>
     </div>
     <div class="wrapper">
       <div class="themes">
@@ -70,6 +80,5 @@
         </label>
       </div>
     </div>
-    <div></div>
   </body>
 </html>
