@@ -24,11 +24,6 @@
 	grid-area: content;
 	background: var(--blockbg);
 	color: var(--color);
-
-	&__wrapper {
-		max-width: 100px;
-		font-size: 24px;
-	}
 }
 
 .menu {
