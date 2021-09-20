@@ -3,8 +3,8 @@
   \****************************************************************************************************************/
 :root {
   --text: #222;
-  --box_shadow_one: rgba(0,0,0,0.25);
-  --box_shadow_two: rgba(0,0,0,0.22);
+  --box_shadow_one: rgba(0, 0, 0, 0.25);
+  --box_shadow_two: rgba(0, 0, 0, 0.22);
   --green: rgb(56, 182, 24);
   --yellow: rgba(247, 191, 8, 0.986) ;
 }
@@ -56,6 +56,10 @@ body {
   background: var(--blockbg);
   color: var(--color);
 }
+.content__wrapper {
+  max-width: 100px;
+  font-size: 24px;
+}
 
 .menu {
   grid-area: menu;
@@ -74,8 +78,10 @@ body {
   justify-content: center;
   align-items: center;
 }
-.form > input {
+.form__input {
   margin: 10px;
+  padding: 5px;
+  border: none;
 }
 
 .footer {
@@ -88,27 +94,26 @@ body {
 }
 
 .components {
-  margin: 100px;
+  margin: 20px;
   display: grid;
   gap: 10px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-rows: 100px;
 }
-.components > div {
+.components__card {
   font-style: 20px;
   color: var(--color);
   border: 2px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 20px;
+  display: grid;
 }
-.components > div:nth-child(2n) {
+.components__card:nth-child(2n) {
   border: 2px solid var(--green);
 }
-.components > div:nth-last-child(-n+1) {
+.components__card:nth-last-child(-n+1) {
   border: 2px solid var(--yellow);
 }
-.components > div:hover {
+.components__card:hover {
   box-shadow: 0 14px 28px var(--box_shadow_one), 0 10px 10px var(--box_shadow_two);
 }
 
