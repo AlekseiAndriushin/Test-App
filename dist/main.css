@@ -2,22 +2,22 @@
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/index.scss ***!
   \****************************************************************************************************************/
 :root {
-  --text: #222;
+  --main-text-color: #222;
   --box_shadow_one: rgba(0, 0, 0, 0.25);
   --box_shadow_two: rgba(0, 0, 0, 0.22);
-  --green: rgb(56, 182, 24);
-  --yellow: rgba(247, 191, 8, 0.986) ;
+  --secondary-border: rgb(56, 182, 24);
+  --last-cell-color: rgba(247, 191, 8, 0.986) ;
 }
 
 html.red {
   --blockbg: #f96855;
-  --color: #c4c4c4;
+  --text-color: #c4c4c4;
   --border: #ee1717;
 }
 
 html.blue {
   --blockbg: #2b3cd3;
-  --color: #8f7c7c;
+  --text-color: #8f7c7c;
   --border: #3a4cf5;
 }
 
@@ -30,7 +30,7 @@ body {
 
 body {
   background-color: #fad4b2;
-  color: var(--text);
+  color: var(--main-text-color);
   font-size: 36px;
 }
 
@@ -47,24 +47,20 @@ body {
   text-align: center;
   grid-area: header;
   background: var(--blockbg);
-  color: var(--color);
+  color: var(--text-color);
   width: 100%;
 }
 
 .content {
   grid-area: content;
   background: var(--blockbg);
-  color: var(--color);
-}
-.content__wrapper {
-  max-width: 100px;
-  font-size: 24px;
+  color: var(--text-color);
 }
 
 .menu {
   grid-area: menu;
   background: var(--blockbg);
-  color: var(--color);
+  color: var(--text-color);
   padding: 0;
   margin: 0;
 }
@@ -72,7 +68,7 @@ body {
 .form {
   grid-area: form;
   background: var(--blockbg);
-  color: var(--color);
+  color: var(--text-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -87,7 +83,7 @@ body {
 .footer {
   grid-area: footer;
   background: var(--blockbg);
-  color: var(--color);
+  color: var(--text-color);
   justify-items: center;
   display: grid;
   align-items: end;
@@ -102,16 +98,16 @@ body {
 }
 .components__card {
   font-style: 20px;
-  color: var(--color);
+  color: var(--text-color);
   border: 2px solid var(--border);
   font-size: 20px;
   display: grid;
 }
 .components__card:nth-child(2n) {
-  border: 2px solid var(--green);
+  border: 2px solid var(--secondary-border);
 }
 .components__card:nth-last-child(-n+1) {
-  border: 2px solid var(--yellow);
+  border: 2px solid var(--last-cell-color);
 }
 .components__card:hover {
   box-shadow: 0 14px 28px var(--box_shadow_one), 0 10px 10px var(--box_shadow_two);
