@@ -24,6 +24,7 @@
 	grid-area: content;
 	background: var(--blockbg);
 	color: var(--text-color);
+
 }
 
 .menu {
@@ -60,6 +61,10 @@
 	align-items: end;
 }
 
+.result {
+	list-style-type: none;
+}
+
 .components {
 	margin: 20px;
 	display: grid;
@@ -73,6 +78,7 @@
 		border: 2px solid var(--border);
 		font-size: 20px;
 		display: grid;
+
 
 		&:nth-child(2n) {
 			border: 2px solid var(--secondary-border);
