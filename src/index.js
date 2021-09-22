@@ -17,9 +17,6 @@ document
 const submitForm = document.querySelector('.add');
 const addButton = document.querySelector('.add_component');
 const component = document.querySelector('.components');
-const list = document.querySelectorAll('.components li');
-
-let listLenght = list.lenght;
 
 const generateTempalate = (
   companyName,
@@ -27,20 +24,13 @@ const generateTempalate = (
   email,
   telephone
 ) => {
-  const html = `<li>
-                  <label for="result_${listLenght}">
-                    <span class="check"></span>
-                    Название компании: ${companyName}
-                    <br/>
-                    Адрес: ${address}
-                    <br/>
-                    Email: ${email}
-                    <br/>
-                    Телефон: ${telephone}
-                    <br/>
-                  </label>
-                </li>`;
-  component.innerHTML += html;
+  let liElement = document.createElement('li');
+  liElement.innerHTML = `<span>Название компании: ${companyName}</span>
+                     <span>Адрес: ${address}</span>
+                    <span>Email: ${email}</span>
+                    <span>Телефон: ${telephone}</span>`;
+  liElement.classList.add('components__card');
+  component.prepend(liElement);
 };
 
 function addBlock(e) {
@@ -55,7 +45,6 @@ function addBlock(e) {
     email.length &&
     telephone.length
   ) {
-    listLenght = listLenght + 1;
     generateTempalate(
       companyName,
       address,
