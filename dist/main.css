@@ -89,10 +89,6 @@ body {
   align-items: end;
 }
 
-.result {
-  list-style-type: none;
-}
-
 .components {
   margin: 20px;
   display: grid;

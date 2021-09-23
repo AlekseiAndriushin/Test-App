@@ -24,17 +24,25 @@ const generateTempalate = (
   email,
   telephone
 ) => {
+  let child_nodes = component.childNodes;
+  let child_nodes_length = child_nodes.length;
   let liElement = document.createElement('li');
   liElement.innerHTML = `<span>Название компании: ${companyName}</span>
                      <span>Адрес: ${address}</span>
                     <span>Email: ${email}</span>
                     <span>Телефон: ${telephone}</span>`;
-  liElement.classList.add('components__card');
+  liElement.classList.add(`components__card`);
+  liElement.id = `${child_nodes_length}`;
   component.prepend(liElement);
+  component.addEventListener('click', function (e) {
+    if (e.target === child_nodes_length) {
+      console.log('hello', `${child_nodes_length}`);
+    }
+  });
 };
 
-function addBlock(e) {
-  e.preventDefault();
+const addBlock = (e) => {
+  e.preventDefault(e);
   const companyName = submitForm.companyName.value.trim();
   const address = submitForm.address.value.trim();
   const email = submitForm.email.value.trim();
@@ -53,7 +61,7 @@ function addBlock(e) {
     );
     submitForm.reset();
   }
-}
+};
 
 submitForm.addEventListener('submit', addBlock);
 addButton.addEventListener('click', addBlock);
