@@ -3,7 +3,8 @@ const submitForm = document.querySelector('.add');
 const addButton = document.querySelector('.add_component');
 const component = document.querySelector('.components');
 const findButton = document.querySelector('.findList');
-
+const componentsElem =
+  document.getElementById('components');
 document
   .querySelector('.themes')
   .addEventListener('change', (event) => {
@@ -41,25 +42,21 @@ reverseColor.forEach((element) =>
 );
 
 function findList() {
-  const findElem = document.querySelector('.components');
-
   const searchCompanies =
-    findElem.querySelectorAll('.changedCard');
+    document.querySelectorAll('.changedCard');
   const findCompanyName =
-    findElem.querySelector('.company');
-  const output = [];
-  [...document.querySelectorAll('.changedCard')].forEach(
-    (item) => {
-      output.push({
-        name: item.getAttribute('company'),
-      });
-    }
-  );
-
-  console.log(output, 'output');
-
-  if (searchCompanies.length) {
-    console.log(findCompanyName);
+    document.querySelector('.company');
+  const child = component.querySelector('.changeCard');
+  console.log(child);
+  if (
+    searchCompanies.length &&
+    componentsElem.getElementsByClassName('changedCard')
+  ) {
+    console.log(
+      componentsElem.getElementsByClassName('changedCard')
+    );
+    console.log(componentsElem.textContent);
+    console.log(findCompanyName.textContent);
   } else {
     console.log('тут пусто');
   }
