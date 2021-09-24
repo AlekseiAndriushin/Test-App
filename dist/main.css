@@ -6,7 +6,8 @@
   --box_shadow_one: rgba(0, 0, 0, 0.25);
   --box_shadow_two: rgba(0, 0, 0, 0.22);
   --secondary-border: rgb(56, 182, 24);
-  --last-cell-color: rgba(247, 191, 8, 0.986) ;
+  --last-cell-color: rgba(247, 191, 8, 0.986);
+  --clicked_color: rgb(16, 113, 240);
 }
 
 html.red {
@@ -63,6 +64,9 @@ body {
   color: var(--text-color);
   padding: 0;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .form {
@@ -89,10 +93,9 @@ body {
   align-items: end;
 }
 
-.example {
-  color: blue;
+.changedCard {
   font-style: 20px;
-  border: 2px solid var(--border);
+  border: 2px solid var(--clicked_color);
   font-size: 20px;
   display: grid;
 }

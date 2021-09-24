@@ -1,4 +1,8 @@
 import './styles/index.scss';
+const submitForm = document.querySelector('.add');
+const addButton = document.querySelector('.add_component');
+const component = document.querySelector('.components');
+const findButton = document.querySelector('.findList');
 
 document
   .querySelector('.themes')
@@ -14,9 +18,6 @@ document
     }
   });
 
-const submitForm = document.querySelector('.add');
-const addButton = document.querySelector('.add_component');
-const component = document.querySelector('.components');
 function adding() {
   const result = document.getElementById(this.id);
   let classChange = document.getElementById(
@@ -31,26 +32,50 @@ function adding() {
   }
 }
 
+function findList() {
+  const findElem = document.querySelector('.components');
+
+  const searchCompanies =
+    findElem.querySelectorAll('.changedCard');
+  const findCompanyName =
+    findElem.querySelector('.company');
+  const output = [];
+  [...document.querySelectorAll('.changedCard')].forEach(
+    (item) => {
+      output.push({
+        name: item.getAttribute('company'),
+      });
+    }
+  );
+
+  console.log(output, 'output');
+
+  if (searchCompanies.length) {
+    console.log(findCompanyName);
+  } else {
+    console.log('тут пусто');
+  }
+}
+
 const generateTempalate = (
   companyName,
   address,
   email,
   telephone
 ) => {
-  let child_nodes = component.childNodes;
-  let child_nodes_length = child_nodes.length;
+  let child_nodes = component.childNodes.length;
   let liElement = document.createElement('li');
-  liElement.innerHTML = `<span>Название компании: ${companyName}</span>
+  liElement.innerHTML = `<span class="company">Название компании: ${companyName}</span>
                      <span>Адрес: ${address}</span>
                     <span>Email: ${email}</span>
                     <span>Телефон: ${telephone}</span>`;
   liElement.classList.add(`components__card`);
-  liElement.id = `${child_nodes_length}`;
+  liElement.id = `${child_nodes}`;
   liElement.addEventListener('click', adding);
   component.prepend(liElement);
   component.addEventListener('click', function (e) {
-    if (e.target === child_nodes_length) {
-      console.log('hello', `${child_nodes_length}`);
+    if (e.target === child_nodes) {
+      console.log('hello', `${child_nodes}`);
     }
   });
 };
@@ -79,3 +104,4 @@ const addBlock = (e) => {
 
 submitForm.addEventListener('submit', addBlock);
 addButton.addEventListener('click', addBlock);
+findButton.addEventListener('click', findList);
