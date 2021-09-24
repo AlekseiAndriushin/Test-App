@@ -61,10 +61,9 @@
 	align-items: end;
 }
 
-.example {
-	color: blue;
+.changedCard {
 	font-style: 20px;
-	border: 2px solid var(--border);
+	border: 2px solid var(--clicked_color);
 	font-size: 20px;
 	display: grid;
 }

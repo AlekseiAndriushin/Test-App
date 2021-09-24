@@ -17,6 +17,19 @@ document
 const submitForm = document.querySelector('.add');
 const addButton = document.querySelector('.add_component');
 const component = document.querySelector('.components');
+function adding() {
+  const result = document.getElementById(this.id);
+  let classChange = document.getElementById(
+    this.id
+  ).classList;
+  if (classChange.contains('components__card')) {
+    result.classList.remove('components__card');
+    result.classList.add('changedCard');
+  } else {
+    result.classList.remove('changedCard');
+    result.classList.add('components__card');
+  }
+}
 
 const generateTempalate = (
   companyName,
@@ -33,6 +46,7 @@ const generateTempalate = (
                     <span>Телефон: ${telephone}</span>`;
   liElement.classList.add(`components__card`);
   liElement.id = `${child_nodes_length}`;
+  liElement.addEventListener('click', adding);
   component.prepend(liElement);
   component.addEventListener('click', function (e) {
     if (e.target === child_nodes_length) {

@@ -89,6 +89,14 @@ body {
   align-items: end;
 }
 
+.example {
+  color: blue;
+  font-style: 20px;
+  border: 2px solid var(--border);
+  font-size: 20px;
+  display: grid;
+}
+
 .components {
   margin: 20px;
   display: grid;
@@ -110,6 +118,22 @@ body {
   border: 2px solid var(--last-cell-color);
 }
 .components__card:hover {
+  box-shadow: 0 14px 28px var(--box_shadow_one), 0 10px 10px var(--box_shadow_two);
+}
+.components__card__child_nodes {
+  font-style: 20px;
+  color: var(--text-color);
+  border: 2px solid var(--border);
+  font-size: 20px;
+  display: grid;
+}
+.components__card__child_nodes:nth-child(2n) {
+  border: 2px solid var(--secondary-border);
+}
+.components__card__child_nodes:nth-last-child(-n+1) {
+  border: 2px solid var(--last-cell-color);
+}
+.components__card__child_nodes:hover {
   box-shadow: 0 14px 28px var(--box_shadow_one), 0 10px 10px var(--box_shadow_two);
 }
 
