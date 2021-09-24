@@ -32,6 +32,14 @@ function adding() {
   }
 }
 
+const reverseColor = document.querySelectorAll(
+  '.components__card'
+);
+
+reverseColor.forEach((element) =>
+  element.addEventListener('click', adding)
+);
+
 function findList() {
   const findElem = document.querySelector('.components');
 
