@@ -44,19 +44,16 @@ reverseColor.forEach((element) =>
 function findList() {
   const searchCompanies =
     document.querySelectorAll('.changedCard');
-  const findCompanyName =
-    document.querySelector('.company');
-  const child = component.querySelector('.changeCard');
-  console.log(child);
+  const findName = document.querySelector('.company');
   if (
     searchCompanies.length &&
     componentsElem.getElementsByClassName('changedCard')
   ) {
-    console.log(
-      componentsElem.getElementsByClassName('changedCard')
-    );
-    console.log(componentsElem.textContent);
-    console.log(findCompanyName.textContent);
+    const findCompanyName = [...searchCompanies];
+    findCompanyName.forEach(function (child) {
+      console.log('child', child.textContent);
+      console.log(findName.textContent);
+    });
   } else {
     console.log('тут пусто');
   }
@@ -68,19 +65,19 @@ const generateTempalate = (
   email,
   telephone
 ) => {
-  let child_nodes = component.childNodes.length;
+  let children = component.children.length;
   let liElement = document.createElement('li');
   liElement.innerHTML = `<span class="company">Название компании: ${companyName}</span>
                      <span>Адрес: ${address}</span>
                     <span>Email: ${email}</span>
                     <span>Телефон: ${telephone}</span>`;
   liElement.classList.add(`components__card`);
-  liElement.id = `${child_nodes}`;
+  liElement.id = `${children}`;
   liElement.addEventListener('click', adding);
   component.prepend(liElement);
   component.addEventListener('click', function (e) {
-    if (e.target === child_nodes) {
-      console.log('hello', `${child_nodes}`);
+    if (e.target === children) {
+      console.log('hello', `${children}`);
     }
   });
 };
