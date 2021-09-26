@@ -44,15 +44,14 @@ reverseColor.forEach((element) =>
 function findList() {
   const searchCompanies =
     document.querySelectorAll('.changedCard');
-  const findName = document.querySelector('.company');
   if (
     searchCompanies.length &&
     componentsElem.getElementsByClassName('changedCard')
   ) {
     const findCompanyName = [...searchCompanies];
+    console.clear();
     findCompanyName.forEach(function (child) {
-      console.log('child', child.textContent);
-      console.log(findName.textContent);
+      console.log(child.firstChild.textContent);
     });
   } else {
     console.log('тут пусто');
