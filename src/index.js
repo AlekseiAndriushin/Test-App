@@ -5,6 +5,9 @@ const component = document.querySelector('.components');
 const findButton = document.querySelector('.findList');
 const componentsElem =
   document.getElementById('components');
+const takeCard = document.querySelector(
+  '.components__card'
+);
 document
   .querySelector('.themes')
   .addEventListener('change', (event) => {
@@ -103,6 +106,23 @@ const addBlock = (e) => {
   }
 };
 
+function onClickField(e) {
+  if (e.button === 2 && e.target.nodeName === 'UL') {
+    alert('Меню для списка компаний');
+  }
+}
+
+function onClickCard(event) {
+  if (
+    event.which === 3 &&
+    event.target.nodeName === 'SPAN'
+  ) {
+    alert('Меню для карточки');
+  }
+}
+
 submitForm.addEventListener('submit', addBlock);
 addButton.addEventListener('click', addBlock);
 findButton.addEventListener('click', findList);
+component.addEventListener('mousedown', onClickField);
+takeCard.addEventListener('mousedown', onClickCard);
