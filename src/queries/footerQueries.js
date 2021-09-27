@@ -20,7 +20,6 @@ export function getFollowers(repoFollowers) {
       image.width = 50;
 
       ulList.appendChild(listItem).appendChild(image);
-
       document.querySelector('#footer').appendChild(ulList);
     });
   } else {
