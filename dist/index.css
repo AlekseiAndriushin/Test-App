@@ -51,8 +51,9 @@ body {
   color: var(--text-color);
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: end;
+  font-size: 30px;
 }
 
 .content {
@@ -97,9 +98,8 @@ body {
 }
 
 .changedCard {
-  font-style: 20px;
   border: 2px solid var(--clicked_color);
-  font-size: 20px;
+  font-size: 14px;
   display: grid;
 }
 
@@ -111,10 +111,9 @@ body {
   grid-auto-rows: 100px;
 }
 .components__card {
-  font-style: 20px;
   color: var(--text-color);
   border: 2px solid var(--border);
-  font-size: 20px;
+  font-size: 14px;
   display: grid;
 }
 .components__card:nth-child(2n) {
@@ -127,10 +126,9 @@ body {
   box-shadow: 0 14px 28px var(--box_shadow_one), 0 10px 10px var(--box_shadow_two);
 }
 .components__card__child_nodes {
-  font-style: 20px;
   color: var(--text-color);
   border: 2px solid var(--border);
-  font-size: 20px;
+  font-size: 14px;
   display: grid;
 }
 .components__card__child_nodes:nth-child(2n) {

@@ -1,10 +1,10 @@
-const component = document.querySelector('.components');
+const component = document.querySelector('.content');
 const takeCard = document.querySelector(
   '.components__card'
 );
 export const checkingElementHit = () => {
   function onClickField(e) {
-    if (e.button === 2 && e.target.nodeName === 'UL') {
+    if (e.button === 2) {
       alert('Меню для списка компаний');
     }
   }
