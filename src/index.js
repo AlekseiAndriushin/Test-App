@@ -121,6 +121,68 @@ function onClickCard(event) {
   }
 }
 
+async function getData(url) {
+  let data = await fetch(url);
+  let json = await data.json();
+  return json;
+}
+
+function createElementFollowers(repoFollowers) {
+  const ulList = document.createElement('ul');
+  ulList.classList.add('followersWrapper');
+  if ([...repoFollowers]) {
+    repoFollowers.forEach((repoItem) => {
+      const listItem = document.createElement('li');
+      listItem.classList.add('followersItem');
+      const listItemTextNode = document.createTextNode(
+        repoItem.login
+      );
+      listItem.appendChild(listItemTextNode);
+      let image = document.createElement('img');
+      image.src = repoItem.avatar_url;
+      image.width = 50;
+      ulList.appendChild(listItem).appendChild(image);
+      document.querySelector('#footer').appendChild(ulList);
+    });
+  } else {
+    return;
+  }
+}
+
+function createProfile(profileData) {
+  if (
+    profileData.avatar_url &&
+    profileData.company &&
+    profileData.name
+  ) {
+    const heading = document.createElement('span');
+    const headingTextNode = document.createTextNode(
+      `Github profile: ${profileData.name}
+			Company: ${profileData.company}`
+    );
+    heading.appendChild(headingTextNode);
+    document.querySelector('#footer').appendChild(heading);
+
+    let image = document.createElement('img');
+    image.src = profileData.avatar_url;
+    image.width = 100;
+    document.querySelector('#footer').appendChild(image);
+  } else {
+    return;
+  }
+}
+
+getData('https://api.github.com/users/gaearon').then(
+  (data) => {
+    createProfile(data);
+  }
+);
+getData(
+  'https://api.github.com/users/gaearon/followers'
+).then((data) => {
+  createElementFollowers(data);
+});
+
 submitForm.addEventListener('submit', addBlock);
 addButton.addEventListener('click', addBlock);
 findButton.addEventListener('click', findList);
