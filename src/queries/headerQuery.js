@@ -18,7 +18,7 @@ export function getUser(profileData) {
     let image = document.createElement('img');
     image.src = profileData.avatar_url;
     image.alt = profileData.name;
-    image.width = 100;
+    image.classList.add('header_image');
 
     const followers = document.createElement('span');
     const followersTextNode = document.createTextNode(
