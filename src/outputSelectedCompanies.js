@@ -7,9 +7,8 @@ export const outputSelectedCompanies = () => {
     const selectedCards =
       document.querySelectorAll('.changedCard');
     if (selectedCards.length) {
-      const findCompanyName = [...selectedCards];
       console.clear();
-      findCompanyName.forEach(function (child) {
+      selectedCards.forEach(function (child) {
         console.log(child.firstChild.textContent);
       });
     } else {
