@@ -1,16 +1,18 @@
-const findButton = document.querySelector('.findList');
+const findButton = document.querySelector(
+  '.findListButton'
+);
 
-export const showedTakenElements = () => {
+export const outputSelectedCompanies = () => {
   const componentsElem =
     document.getElementById('components');
   function findList() {
-    const searchCompanies =
+    const selectedCards =
       document.querySelectorAll('.changedCard');
     if (
-      searchCompanies.length &&
+      selectedCards.length &&
       componentsElem.getElementsByClassName('changedCard')
     ) {
-      const findCompanyName = [...searchCompanies];
+      const findCompanyName = [...selectedCards];
       console.clear();
       findCompanyName.forEach(function (child) {
         console.log(child.firstChild.textContent);

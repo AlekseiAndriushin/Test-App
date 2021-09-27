@@ -1,4 +1,5 @@
-export function getMe(profileData) {
+const header = document.querySelector('#header');
+export function getUser(profileData) {
   if (
     profileData.avatar_url &&
     profileData.name &&
@@ -16,19 +17,16 @@ export function getMe(profileData) {
     let image = document.createElement('img');
     image.src = profileData.avatar_url;
     image.width = 100;
-    document.querySelector('#header');
 
     const followers = document.createElement('span');
     const followersTextNode = document.createTextNode(
       `Number of my subscribers: ${profileData.followers}`
     );
     followers.appendChild(followersTextNode);
-    document.querySelector('#header').appendChild(heading);
+    header.appendChild(heading);
 
-    document.querySelector('#header').appendChild(image);
-    document
-      .querySelector('#header')
-      .appendChild(followers);
+    header.appendChild(image);
+    header.appendChild(followers);
   } else {
     return;
   }

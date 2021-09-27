@@ -1,17 +1,17 @@
 export const htmlTemplate = () => {
-  const submitForm = document.querySelector('.add');
-  const component = document.querySelector('.components');
+  const submitForm = document.querySelector('.form');
+  const components = document.querySelector('.components');
   const addButton = document.querySelector(
     '.add_component'
   );
 
-  const generateTempalate = (
+  const generateTemplate = (
     companyName,
     address,
     email,
     telephone
   ) => {
-    let children = component.children.length;
+    let children = components.children.length;
     let liElement = document.createElement('li');
     liElement.innerHTML = `<span class="company">Название компании: ${companyName}</span>
                      <span>Адрес: ${address}</span>
@@ -23,7 +23,7 @@ export const htmlTemplate = () => {
       'click',
       processCardStyleOnClick
     );
-    component.prepend(liElement);
+    components.prepend(liElement);
   };
 
   function processCardStyleOnClick() {
@@ -55,7 +55,7 @@ export const htmlTemplate = () => {
       email.length &&
       telephone.length
     ) {
-      generateTempalate(
+      generateTemplate(
         companyName,
         address,
         email,

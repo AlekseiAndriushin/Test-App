@@ -1,8 +1,8 @@
 import {
-  createElementFollowers,
+  getFollowers,
   createProfile,
 } from './footerQuerys';
-import { getMe } from './headerQuery';
+import { getUser } from './headerQuery';
 
 async function getData(url) {
   let data = await fetch(url);
@@ -19,12 +19,12 @@ export const queries = () => {
   getData(
     'https://api.github.com/users/gaearon/followers'
   ).then((data) => {
-    createElementFollowers(data);
+    getFollowers(data);
   });
 
   getData(
     'https://api.github.com/users/AlexeyAndryushin'
   ).then((data) => {
-    getMe(data);
+    getUser(data);
   });
 };

@@ -1,9 +1,9 @@
-const component = document.querySelector('.content');
+const takeContentBlock = document.querySelector('.content');
 const takeCard = document.querySelector(
   '.components__card'
 );
 export const checkingElementHit = () => {
-  function onClickField(e) {
+  function onClickContentBlock(e) {
     if (e.button === 2) {
       alert('Меню для списка компаний');
     }
@@ -18,6 +18,9 @@ export const checkingElementHit = () => {
     }
   }
 
-  component.addEventListener('mousedown', onClickField);
+  takeContentBlock.addEventListener(
+    'mousedown',
+    onClickContentBlock
+  );
   takeCard.addEventListener('mousedown', onClickCard);
 };

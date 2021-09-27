@@ -1,6 +1,6 @@
 export const takeTheme = () => {
   document
-    .querySelector('.themes')
+    .querySelector('.changeTheme')
     .addEventListener('change', (event) => {
       if (event.target.nodeName === 'INPUT') {
         document.documentElement.classList.remove(
