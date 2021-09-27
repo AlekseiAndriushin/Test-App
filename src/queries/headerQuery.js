@@ -1,6 +1,7 @@
 const header = document.querySelector('#header');
 export function getUser(profileData) {
   if (
+    profileData &&
     profileData.avatar_url &&
     profileData.name &&
     profileData.followers
