@@ -48,7 +48,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _checkingElementHit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./checkingElementHit */ \"./src/checkingElementHit.js\");\n/* harmony import */ var _htmlTemplate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./htmlTemplate */ \"./src/htmlTemplate.js\");\n/* harmony import */ var _queries__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./queries */ \"./src/queries/index.js\");\n/* harmony import */ var _outputSelectedCompanies__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./outputSelectedCompanies */ \"./src/outputSelectedCompanies.js\");\n/* harmony import */ var _takeTheme__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./takeTheme */ \"./src/takeTheme.js\");\n/* harmony import */ var _styles_index_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./styles/index.scss */ \"./src/styles/index.scss\");\n\n\n\n\n\n\n(0,_outputSelectedCompanies__WEBPACK_IMPORTED_MODULE_3__.outputSelectedCompanies)();\n(0,_htmlTemplate__WEBPACK_IMPORTED_MODULE_1__.htmlTemplate)();\n(0,_checkingElementHit__WEBPACK_IMPORTED_MODULE_0__.checkingElementHit)();\n(0,_takeTheme__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\n(0,_queries__WEBPACK_IMPORTED_MODULE_2__.queries)();\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _checkingElementHit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./checkingElementHit */ \"./src/checkingElementHit.js\");\n/* harmony import */ var _htmlTemplate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./htmlTemplate */ \"./src/htmlTemplate.js\");\n/* harmony import */ var _queries__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./queries */ \"./src/queries/index.js\");\n/* harmony import */ var _outputSelectedCompanies__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./outputSelectedCompanies */ \"./src/outputSelectedCompanies.js\");\n/* harmony import */ var _takeTheme__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./takeTheme */ \"./src/takeTheme.js\");\n/* harmony import */ var _styles_index_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./styles/index.scss */ \"./src/styles/index.scss\");\n\n\n\n\n\n\n(0,_htmlTemplate__WEBPACK_IMPORTED_MODULE_1__.htmlTemplate)();\n(0,_queries__WEBPACK_IMPORTED_MODULE_2__.queries)();\n(0,_outputSelectedCompanies__WEBPACK_IMPORTED_MODULE_3__.outputSelectedCompanies)();\n(0,_takeTheme__WEBPACK_IMPORTED_MODULE_4__.takeTheme)();\n(0,_checkingElementHit__WEBPACK_IMPORTED_MODULE_0__.checkingElementHit)();\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
@@ -70,7 +70,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"getFollowers\": () => (/* binding */ getFollowers),\n/* harmony export */   \"createProfile\": () => (/* binding */ createProfile)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ \"./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js\");\n\nvar ulList = document.createElement('ul');\nulList.classList.add('followersWrapper');\nfunction getFollowers(repoFollowers) {\n  if ((0,_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(repoFollowers)) {\n    repoFollowers.forEach(function (repoItem) {\n      var listItem = document.createElement('li');\n      listItem.classList.add('followersItem');\n      var listItemTextNode = document.createTextNode(repoItem.login);\n      listItem.appendChild(listItemTextNode);\n      var image = document.createElement('img');\n      image.src = repoItem.avatar_url;\n      image.width = 50;\n      ulList.appendChild(listItem).appendChild(image);\n      document.querySelector('#footer').appendChild(ulList);\n    });\n  } else {\n    return;\n  }\n}\nfunction createProfile(profileData) {\n  if (profileData.avatar_url && profileData.company && profileData.name) {\n    var heading = document.createElement('a');\n    var headingTextNode = document.createTextNode(\"Github profile: \".concat(profileData.name, \"\\n\\t\\t\\tCompany: \").concat(profileData.company));\n    heading.appendChild(headingTextNode);\n    document.querySelector('#footer').appendChild(heading);\n    var image = document.createElement('img');\n    image.src = profileData.avatar_url;\n    image.width = 100;\n    document.querySelector('#footer').appendChild(image);\n  } else {\n    return;\n  }\n}\n\n//# sourceURL=webpack:///./src/queries/footerQueries.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"getFollowers\": () => (/* binding */ getFollowers),\n/* harmony export */   \"createProfile\": () => (/* binding */ createProfile)\n/* harmony export */ });\nvar ulList = document.createElement('ul');\nulList.classList.add('followersWrapper');\nfunction getFollowers(repoFollowers) {\n  if (repoFollowers) {\n    console.log(repoFollowers);\n    repoFollowers.forEach(function (repoItem) {\n      var listItem = document.createElement('li');\n      listItem.classList.add('followersItem');\n      var listItemTextNode = document.createTextNode(repoItem.login);\n      listItem.appendChild(listItemTextNode);\n      var image = document.createElement('img');\n      image.src = repoItem.avatar_url;\n      image.width = 50;\n      ulList.appendChild(listItem).appendChild(image);\n      document.querySelector('#footer').appendChild(ulList);\n    });\n  } else {\n    return;\n  }\n}\nfunction createProfile(profileData) {\n  if (profileData.avatar_url && profileData.company && profileData.name) {\n    var heading = document.createElement('a');\n    var headingTextNode = document.createTextNode(\"Github profile: \".concat(profileData.name, \"\\n\\t\\t\\tCompany: \").concat(profileData.company));\n    heading.appendChild(headingTextNode);\n    document.querySelector('#footer').appendChild(heading);\n    var image = document.createElement('img');\n    image.src = profileData.avatar_url;\n    image.width = 100;\n    document.querySelector('#footer').appendChild(image);\n  } else {\n    return;\n  }\n}\n\n//# sourceURL=webpack:///./src/queries/footerQueries.js?");
 
 /***/ }),
 
@@ -92,7 +92,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"queries\": () => (/* binding */ queries)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ \"./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ \"./node_modules/@babel/runtime/regenerator/index.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _footerQueries__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./footerQueries */ \"./src/queries/footerQueries.js\");\n/* harmony import */ var _headerQuery__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./headerQuery */ \"./src/queries/headerQuery.js\");\n\n\n\n\n\nfunction getData(_x) {\n  return _getData.apply(this, arguments);\n}\n\nfunction _getData() {\n  _getData = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__[\"default\"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee(url) {\n    var data, json;\n    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            _context.next = 2;\n            return fetch(url);\n\n          case 2:\n            data = _context.sent;\n            _context.next = 5;\n            return data.json();\n\n          case 5:\n            json = _context.sent;\n            return _context.abrupt(\"return\", json);\n\n          case 7:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    }, _callee);\n  }));\n  return _getData.apply(this, arguments);\n}\n\nvar queries = function queries() {\n  getData('https://api.github.com/users/gaearon').then(function (data) {\n    (0,_footerQueries__WEBPACK_IMPORTED_MODULE_2__.createProfile)(data);\n  });\n  getData('https://api.github.com/users/gaearon/followers').then(function (data) {\n    (0,_footerQueries__WEBPACK_IMPORTED_MODULE_2__.getFollowers)(data);\n  });\n  getData('https://api.github.com/users/AlexeyAndryushin').then(function (data) {\n    (0,_headerQuery__WEBPACK_IMPORTED_MODULE_3__.getUser)(data);\n  });\n};\n\n//# sourceURL=webpack:///./src/queries/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"queries\": () => (/* binding */ queries)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ \"./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ \"./node_modules/@babel/runtime/regenerator/index.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _footerQueries__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./footerQueries */ \"./src/queries/footerQueries.js\");\n/* harmony import */ var _headerQuery__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./headerQuery */ \"./src/queries/headerQuery.js\");\n\n\n\n\n\nfunction getData(_x) {\n  return _getData.apply(this, arguments);\n}\n\nfunction _getData() {\n  _getData = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__[\"default\"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee(url) {\n    var data, json;\n    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            _context.next = 2;\n            return fetch(url);\n\n          case 2:\n            data = _context.sent;\n            _context.next = 5;\n            return data.json();\n\n          case 5:\n            json = _context.sent;\n            return _context.abrupt(\"return\", json);\n\n          case 7:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    }, _callee);\n  }));\n  return _getData.apply(this, arguments);\n}\n\nvar queries = function queries() {\n  getData('https://api.github.com/users/gaearon').then(function (data) {\n    (0,_footerQueries__WEBPACK_IMPORTED_MODULE_2__.createProfile)(data);\n  });\n  getData('').then(function (data) {\n    (0,_footerQueries__WEBPACK_IMPORTED_MODULE_2__.getFollowers)(data);\n  });\n  getData('https://api.github.com/users/AlexeyAndryushin').then(function (data) {\n    (0,_headerQuery__WEBPACK_IMPORTED_MODULE_3__.getUser)(data);\n  });\n};\n\n//# sourceURL=webpack:///./src/queries/index.js?");
 
 /***/ }),
 
@@ -103,7 +103,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (document.querySelector('.changeTheme').addEventListener('change', function (event) {\n  if (event.target.nodeName === 'INPUT') {\n    document.documentElement.classList.remove('red', 'blue');\n    document.documentElement.classList.add(event.target.value);\n  }\n}));\n\n//# sourceURL=webpack:///./src/takeTheme.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"takeTheme\": () => (/* binding */ takeTheme)\n/* harmony export */ });\nvar takeTheme = function takeTheme() {\n  return document.querySelector('.changeTheme').addEventListener('change', function (event) {\n    if (event.target.nodeName === 'INPUT') {\n      document.documentElement.classList.remove('red', 'blue');\n      document.documentElement.classList.add(event.target.value);\n    }\n  });\n};\n\n//# sourceURL=webpack:///./src/takeTheme.js?");
 
 /***/ }),
 
@@ -128,28 +128,6 @@ eval("/**\n * Copyright (c) 2014-present, Facebook, Inc.\n *\n * This source cod
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js ***!
-  \*********************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _arrayLikeToArray)\n/* harmony export */ });\nfunction _arrayLikeToArray(arr, len) {\n  if (len == null || len > arr.length) len = arr.length;\n\n  for (var i = 0, arr2 = new Array(len); i < len; i++) {\n    arr2[i] = arr[i];\n  }\n\n  return arr2;\n}\n\n//# sourceURL=webpack:///./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js ***!
-  \**********************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _arrayWithoutHoles)\n/* harmony export */ });\n/* harmony import */ var _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayLikeToArray.js */ \"./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js\");\n\nfunction _arrayWithoutHoles(arr) {\n  if (Array.isArray(arr)) return (0,_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(arr);\n}\n\n//# sourceURL=webpack:///./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js?");
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js":
 /*!*********************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js ***!
@@ -158,50 +136,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _asyncToGenerator)\n/* harmony export */ });\nfunction asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {\n  try {\n    var info = gen[key](arg);\n    var value = info.value;\n  } catch (error) {\n    reject(error);\n    return;\n  }\n\n  if (info.done) {\n    resolve(value);\n  } else {\n    Promise.resolve(value).then(_next, _throw);\n  }\n}\n\nfunction _asyncToGenerator(fn) {\n  return function () {\n    var self = this,\n        args = arguments;\n    return new Promise(function (resolve, reject) {\n      var gen = fn.apply(self, args);\n\n      function _next(value) {\n        asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value);\n      }\n\n      function _throw(err) {\n        asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err);\n      }\n\n      _next(undefined);\n    });\n  };\n}\n\n//# sourceURL=webpack:///./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/iterableToArray.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/iterableToArray.js ***!
-  \********************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _iterableToArray)\n/* harmony export */ });\nfunction _iterableToArray(iter) {\n  if (typeof Symbol !== \"undefined\" && iter[Symbol.iterator] != null || iter[\"@@iterator\"] != null) return Array.from(iter);\n}\n\n//# sourceURL=webpack:///./node_modules/@babel/runtime/helpers/esm/iterableToArray.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js ***!
-  \**********************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _nonIterableSpread)\n/* harmony export */ });\nfunction _nonIterableSpread() {\n  throw new TypeError(\"Invalid attempt to spread non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\");\n}\n\n//# sourceURL=webpack:///./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js ***!
-  \**********************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _toConsumableArray)\n/* harmony export */ });\n/* harmony import */ var _arrayWithoutHoles_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayWithoutHoles.js */ \"./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js\");\n/* harmony import */ var _iterableToArray_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./iterableToArray.js */ \"./node_modules/@babel/runtime/helpers/esm/iterableToArray.js\");\n/* harmony import */ var _unsupportedIterableToArray_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./unsupportedIterableToArray.js */ \"./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js\");\n/* harmony import */ var _nonIterableSpread_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./nonIterableSpread.js */ \"./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js\");\n\n\n\n\nfunction _toConsumableArray(arr) {\n  return (0,_arrayWithoutHoles_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(arr) || (0,_iterableToArray_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(arr) || (0,_unsupportedIterableToArray_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(arr) || (0,_nonIterableSpread_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n}\n\n//# sourceURL=webpack:///./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js ***!
-  \*******************************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _unsupportedIterableToArray)\n/* harmony export */ });\n/* harmony import */ var _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayLikeToArray.js */ \"./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js\");\n\nfunction _unsupportedIterableToArray(o, minLen) {\n  if (!o) return;\n  if (typeof o === \"string\") return (0,_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(o, minLen);\n  var n = Object.prototype.toString.call(o).slice(8, -1);\n  if (n === \"Object\" && o.constructor) n = o.constructor.name;\n  if (n === \"Map\" || n === \"Set\") return Array.from(o);\n  if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return (0,_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(o, minLen);\n}\n\n//# sourceURL=webpack:///./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js?");
 
 /***/ })
 

@@ -1,7 +1,8 @@
 const ulList = document.createElement('ul');
 ulList.classList.add('followersWrapper');
 export function getFollowers(repoFollowers) {
-  if ([...repoFollowers]) {
+  console.log(repoFollowers);
+  if (repoFollowers) {
     repoFollowers.forEach((repoItem) => {
       const listItem = document.createElement('li');
 
