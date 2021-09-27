@@ -5,8 +5,8 @@ import { outputSelectedCompanies } from './outputSelectedCompanies';
 import { takeTheme } from './takeTheme';
 import './styles/index.scss';
 
-outputSelectedCompanies();
 htmlTemplate();
-checkingElementHit();
-takeTheme();
 queries();
+outputSelectedCompanies();
+takeTheme();
+checkingElementHit();

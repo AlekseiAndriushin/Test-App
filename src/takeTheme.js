@@ -1,4 +1,4 @@
-export const takeTheme = () => {
+export const takeTheme = () =>
   document
     .querySelector('.changeTheme')
     .addEventListener('change', (event) => {
@@ -12,4 +12,3 @@ export const takeTheme = () => {
         );
       }
     });
-};
