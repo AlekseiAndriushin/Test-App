@@ -1,7 +1,6 @@
 const ulList = document.createElement('ul');
 ulList.classList.add('followersWrapper');
 export function getFollowers(repoFollowers) {
-  console.log(repoFollowers);
   if (repoFollowers) {
     repoFollowers.forEach((repoItem) => {
       const listItem = document.createElement('li');
@@ -31,6 +30,7 @@ export function getFollowers(repoFollowers) {
 
 export function createProfile(profileData) {
   if (
+    profileData &&
     profileData.avatar_url &&
     profileData.company &&
     profileData.name
