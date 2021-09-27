@@ -29,7 +29,7 @@ export const htmlTemplate = () => {
   function processCardStyleOnClick() {
     const result = document.getElementById(this.id);
     result.classList.toggle('components__card');
-    result.classList.toggle('changedCard');
+    result.classList.toggle('components__card_selected');
   }
 
   const reverseColor = document.querySelectorAll(
@@ -66,4 +66,5 @@ export const htmlTemplate = () => {
   };
 
   submitForm.addEventListener('submit', addBlock);
+  addButton.addEventListener('click', addBlock);
 };
