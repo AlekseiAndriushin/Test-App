@@ -5,12 +5,12 @@ export const htmlTemplate = () => {
     '.add_component'
   );
 
-  const generateTemplate = (
+  const generateTemplate = ({
     companyName,
     address,
     email,
-    telephone
-  ) => {
+    telephone,
+  }) => {
     let children = components.children.length;
     let liElement = document.createElement('li');
     liElement.innerHTML = `<span class="company">Название компании: ${companyName}</span>
@@ -55,12 +55,12 @@ export const htmlTemplate = () => {
       email.length &&
       telephone.length
     ) {
-      generateTemplate(
+      generateTemplate({
         companyName,
         address,
         email,
-        telephone
-      );
+        telephone,
+      });
       submitForm.reset();
     }
   };
