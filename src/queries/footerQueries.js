@@ -16,7 +16,7 @@ export function getFollowers(repoFollowers) {
       let image = document.createElement('img');
 
       image.src = repoItem.avatar_url;
-
+      image.alt = repoItem.login;
       image.width = 50;
 
       ulList.appendChild(listItem).appendChild(image);
@@ -45,6 +45,7 @@ export function createProfile(profileData) {
 
     let image = document.createElement('img');
     image.src = profileData.avatar_url;
+    image.alt = profileData.login;
     image.width = 100;
     document.querySelector('#footer').appendChild(image);
   } else {

@@ -16,6 +16,7 @@ export function getUser(profileData) {
     heading.addEventListener('click', click);
     let image = document.createElement('img');
     image.src = profileData.avatar_url;
+    image.alt = profileData.name;
     image.width = 100;
 
     const followers = document.createElement('span');
