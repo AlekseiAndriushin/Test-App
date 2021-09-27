@@ -1,10 +1,13 @@
 const takeContentBlock = document.querySelector('.content');
-const takeCard = document.querySelector(
+const takeCard = document.querySelectorAll(
   '.components__card'
 );
 export const checkingElementHit = () => {
   function onClickContentBlock(e) {
-    if (e.button === 2) {
+    if (
+      (e.button === 2 && e.target.nodeName === 'SECTION') ||
+      (e.button === 2 && e.target.nodeName === 'UL')
+    ) {
       alert('Меню для списка компаний');
     }
   }
@@ -22,5 +25,7 @@ export const checkingElementHit = () => {
     'mousedown',
     onClickContentBlock
   );
-  takeCard.addEventListener('mousedown', onClickCard);
+  takeCard.forEach((clickCard) =>
+    clickCard.addEventListener('mousedown', onClickCard)
+  );
 };
