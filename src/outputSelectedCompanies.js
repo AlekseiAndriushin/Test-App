@@ -3,15 +3,10 @@ const findButton = document.querySelector(
 );
 
 export const outputSelectedCompanies = () => {
-  const componentsElem =
-    document.getElementById('components');
   function findList() {
     const selectedCards =
       document.querySelectorAll('.changedCard');
-    if (
-      selectedCards.length &&
-      componentsElem.getElementsByClassName('changedCard')
-    ) {
+    if (selectedCards.length) {
       const findCompanyName = [...selectedCards];
       console.clear();
       findCompanyName.forEach(function (child) {
