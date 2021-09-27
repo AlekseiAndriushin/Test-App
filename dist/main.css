@@ -50,6 +50,9 @@ body {
   background: var(--blockbg);
   color: var(--text-color);
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
 }
 
 .content {

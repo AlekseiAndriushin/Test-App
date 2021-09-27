@@ -22,18 +22,10 @@ document
     }
   });
 
-function adding() {
+function processCardStyleOnClick() {
   const result = document.getElementById(this.id);
-  let classChange = document.getElementById(
-    this.id
-  ).classList;
-  if (classChange.contains('components__card')) {
-    result.classList.remove('components__card');
-    result.classList.add('changedCard');
-  } else {
-    result.classList.remove('changedCard');
-    result.classList.add('components__card');
-  }
+  result.classList.toggle('components__card');
+  result.classList.toggle('changedCard');
 }
 
 const reverseColor = document.querySelectorAll(
@@ -41,7 +33,7 @@ const reverseColor = document.querySelectorAll(
 );
 
 reverseColor.forEach((element) =>
-  element.addEventListener('click', adding)
+  element.addEventListener('click', processCardStyleOnClick)
 );
 
 function findList() {
@@ -75,7 +67,10 @@ const generateTempalate = (
                     <span>Телефон: ${telephone}</span>`;
   liElement.classList.add(`components__card`);
   liElement.id = `${children}`;
-  liElement.addEventListener('click', adding);
+  liElement.addEventListener(
+    'click',
+    processCardStyleOnClick
+  );
   component.prepend(liElement);
 };
 
