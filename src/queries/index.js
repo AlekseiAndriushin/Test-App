@@ -1,7 +1,7 @@
 import {
   getFollowers,
   createProfile,
-} from './footerQuerys';
+} from './footerQueries';
 import { getUser } from './headerQuery';
 
 async function getData(url) {
