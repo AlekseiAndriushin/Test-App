@@ -5,11 +5,21 @@ export const htmlTemplate = () => {
     '.add_component'
   );
 
+  const onClickCard = (event) => {
+    if (
+      event.which === 3 &&
+      event.target.nodeName === 'SPAN'
+    ) {
+      alert('Меню для карточки');
+    }
+  };
+
   const generateTemplate = ({
     companyName,
     address,
     email,
     telephone,
+    event,
   }) => {
     let children = components.children.length;
     let liElement = document.createElement('li');
@@ -24,6 +34,12 @@ export const htmlTemplate = () => {
       processCardStyleOnClick
     );
     components.prepend(liElement);
+
+    document
+      .querySelectorAll('.components__card')
+      .forEach((click) => {
+        click.addEventListener('mousedown', onClickCard);
+      });
   };
 
   function processCardStyleOnClick() {
