@@ -1,9 +1,6 @@
 export const htmlTemplate = () => {
   const submitForm = document.querySelector('.form');
   const components = document.querySelector('.components');
-  const addButton = document.querySelector(
-    '.add_component'
-  );
 
   const onClickCard = (event) => {
     if (
