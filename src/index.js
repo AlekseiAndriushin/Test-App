@@ -1,12 +1,14 @@
 import { checkingElementHit } from './checkingElementHit';
 import { htmlTemplate } from './htmlTemplate';
-import { queries } from './queries';
+import { getInfo, getFollowers, getUser } from './Api';
 import { outputSelectedCompanies } from './outputSelectedCompanies';
 import { takeTheme } from './takeTheme';
 import './styles/index.scss';
 
 htmlTemplate();
-queries();
+getUser();
+getInfo();
+getFollowers();
 outputSelectedCompanies();
 takeTheme();
 checkingElementHit();
