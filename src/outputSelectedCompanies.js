@@ -5,7 +5,7 @@ const findButton = document.querySelector(
 export const outputSelectedCompanies = () => {
   function findList() {
     const selectedCards = document.querySelectorAll(
-      '.components__card_selected '
+      '.components__card__selected '
     );
     if (selectedCards.length) {
       console.clear();

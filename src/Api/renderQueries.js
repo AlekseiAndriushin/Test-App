@@ -48,7 +48,7 @@ export const getFollowers = () => {
 
       image.src = repoItem.avatar_url;
       image.alt = repoItem.login;
-      image.classList.add('footer_image');
+      image.classList.add('footer__image');
 
       ulList.appendChild(listItem).appendChild(image);
       document.querySelector('#footer').appendChild(ulList);

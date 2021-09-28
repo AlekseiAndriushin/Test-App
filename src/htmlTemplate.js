@@ -45,7 +45,7 @@ export const htmlTemplate = () => {
   function processCardStyleOnClick() {
     const result = document.getElementById(this.id);
     result.classList.toggle('components__card');
-    result.classList.toggle('components__card_selected');
+    result.classList.toggle('components__card__selected');
   }
 
   const reverseColor = document.querySelectorAll(
