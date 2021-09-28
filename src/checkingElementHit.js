@@ -2,6 +2,16 @@ const takeContentBlock = document.querySelector('.content');
 const takeCard = document.querySelectorAll(
   '.components__card'
 );
+
+export function onClickCard(event) {
+  if (
+    event.which === 3 &&
+    event.target.nodeName === 'SPAN'
+  ) {
+    alert('Меню для карточки');
+  }
+}
+
 export const checkingElementHit = () => {
   function onClickContentBlock(e) {
     if (
@@ -9,15 +19,6 @@ export const checkingElementHit = () => {
       (e.button === 2 && e.target.nodeName === 'UL')
     ) {
       alert('Меню для списка компаний');
-    }
-  }
-
-  function onClickCard(event) {
-    if (
-      event.which === 3 &&
-      event.target.nodeName === 'SPAN'
-    ) {
-      alert('Меню для карточки');
     }
   }
 

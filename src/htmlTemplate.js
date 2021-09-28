@@ -1,15 +1,8 @@
+import { onClickCard } from './checkingElementHit';
+
 export const htmlTemplate = () => {
   const submitForm = document.querySelector('.form');
   const components = document.querySelector('.components');
-
-  const onClickCard = (event) => {
-    if (
-      event.which === 3 &&
-      event.target.nodeName === 'SPAN'
-    ) {
-      alert('Меню для карточки');
-    }
-  };
 
   const generateTemplate = ({
     companyName,
