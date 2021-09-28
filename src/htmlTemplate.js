@@ -19,7 +19,6 @@ export const htmlTemplate = () => {
     address,
     email,
     telephone,
-    event,
   }) => {
     let children = components.children.length;
     let liElement = document.createElement('li');
@@ -35,11 +34,7 @@ export const htmlTemplate = () => {
     );
     components.prepend(liElement);
 
-    document
-      .querySelectorAll('.components__card')
-      .forEach((click) => {
-        click.addEventListener('mousedown', onClickCard);
-      });
+    liElement.addEventListener('mousedown', onClickCard);
   };
 
   function processCardStyleOnClick() {
