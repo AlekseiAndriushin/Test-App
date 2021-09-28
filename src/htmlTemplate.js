@@ -82,5 +82,4 @@ export const htmlTemplate = () => {
   };
 
   submitForm.addEventListener('submit', addBlock);
-  addButton.addEventListener('click', addBlock);
 };
