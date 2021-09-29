@@ -21,7 +21,7 @@ const renderFollower = (repoItem) => {
   ulList.appendChild(listItem).appendChild(image);
   document.querySelector('#footer').appendChild(ulList);
 };
-export const getInfo = () => {
+export const getRenderGaearon = () => {
   NetworkService.getGaearon().then((profileData) => {
     if (
       profileData &&
@@ -50,7 +50,7 @@ export const getInfo = () => {
   });
 };
 
-export const getFollowers = () => {
+export const getRenderFollowers = () => {
   NetworkService.getGaearonApi().then((profileData) => {
     if (profileData) {
       profileData.forEach((repoItem) => {
@@ -62,7 +62,7 @@ export const getFollowers = () => {
   });
 };
 
-export const getUser = () => {
+export const getRenderUser = () => {
   NetworkService.getUser().then((profileData) => {
     if (
       profileData &&

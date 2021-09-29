@@ -1,7 +1,11 @@
 import {
-  getFollowers,
-  getInfo,
-  getUser,
+  getRenderFollowers,
+  getRenderGaearon,
+  getRenderUser,
 } from './renderQueries';
 
-export { getFollowers, getInfo, getUser };
+export {
+  getRenderFollowers,
+  getRenderGaearon,
+  getRenderUser,
+};
