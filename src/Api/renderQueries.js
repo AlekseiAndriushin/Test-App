@@ -52,7 +52,6 @@ export const getInfo = () => {
 
 export const getFollowers = () => {
   NetworkService.getGaearonApi().then((profileData) => {
-    console.log(renderFollower);
     if (profileData) {
       profileData.forEach((repoItem) => {
         renderFollower(repoItem);
