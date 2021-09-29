@@ -78,10 +78,11 @@ export const getUser = () => {
       heading.appendChild(headingTextNode);
       heading.href = `${profileData.html_url}`;
       heading.target = '_blank';
+      heading.classList.add('header__link');
       let image = document.createElement('img');
       image.src = profileData.avatar_url;
       image.alt = profileData.name;
-      image.classList.add('header_image');
+      image.classList.add('header__image');
 
       const followers = document.createElement('span');
       const followersTextNode = document.createTextNode(

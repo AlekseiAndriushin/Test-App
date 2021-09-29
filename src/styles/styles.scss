@@ -22,6 +22,16 @@
 	justify-content: space-around;
 	align-items: end;
 	font-size: 30px;
+
+	&__image {
+		width: 100px;
+	}
+
+	&__link {
+		color: var(--text-color);
+		text-decoration: none;
+		cursor: pointer;
+	}
 }
 
 .content {
@@ -31,9 +41,6 @@
 
 }
 
-.header_image {
-	width: 100px;
-}
 
 .menu {
 	grid-area: menu;
