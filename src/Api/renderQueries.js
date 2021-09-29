@@ -29,7 +29,7 @@ export const getInfo = () => {
       profileData.company &&
       profileData.name
     ) {
-      const heading = document.createElement('a');
+      const heading = document.createElement('span');
       const headingTextNode = document.createTextNode(
         `Github profile: ${profileData.name}
 			Company: ${profileData.company}`
@@ -71,15 +71,13 @@ export const getUser = () => {
       profileData.name &&
       profileData.followers
     ) {
-      const heading = document.createElement('span');
+      const heading = document.createElement('a');
       const headingTextNode = document.createTextNode(
         `Github profile: ${profileData.name}`
       );
-      function click() {
-        window.open(profileData.html_url);
-      }
       heading.appendChild(headingTextNode);
-      heading.addEventListener('click', click);
+      heading.href = `${profileData.html_url}`;
+      heading.target = '_blank';
       let image = document.createElement('img');
       image.src = profileData.avatar_url;
       image.alt = profileData.name;
