@@ -92,7 +92,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var _checkingElementHit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./checkingElementHit */ \"./src/checkingElementHit.js\");\n/* harmony import */ var _htmlTemplate__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./htmlTemplate */ \"./src/htmlTemplate.js\");\n/* harmony import */ var _Api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Api */ \"./src/Api/index.js\");\n/* harmony import */ var _outputSelectedCompanies__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./outputSelectedCompanies */ \"./src/outputSelectedCompanies.js\");\n/* harmony import */ var _takeTheme__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./takeTheme */ \"./src/takeTheme.js\");\n/* harmony import */ var _styles_index_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./styles/index.scss */ \"./src/styles/index.scss\");\n\n\n\n\n\n\n\n\n(0,_htmlTemplate__WEBPACK_IMPORTED_MODULE_3__.htmlTemplate)();\n(0,_Api__WEBPACK_IMPORTED_MODULE_4__.getRenderUser)();\n(0,_Api__WEBPACK_IMPORTED_MODULE_4__.getRenderGaearon)();\n(0,_Api__WEBPACK_IMPORTED_MODULE_4__.getRenderFollowers)();\n(0,_outputSelectedCompanies__WEBPACK_IMPORTED_MODULE_5__.outputSelectedCompanies)();\n(0,_takeTheme__WEBPACK_IMPORTED_MODULE_6__.takeTheme)();\n(0,_checkingElementHit__WEBPACK_IMPORTED_MODULE_2__.checkingElementHit)();\n(0,react_dom__WEBPACK_IMPORTED_MODULE_1__.render)( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.StrictMode, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(App, null)), document.getElementById('app'));\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App */ \"./src/App.tsx\");\n/* harmony import */ var _checkingElementHit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./checkingElementHit */ \"./src/checkingElementHit.js\");\n/* harmony import */ var _htmlTemplate__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./htmlTemplate */ \"./src/htmlTemplate.js\");\n/* harmony import */ var _Api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Api */ \"./src/Api/index.js\");\n/* harmony import */ var _outputSelectedCompanies__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./outputSelectedCompanies */ \"./src/outputSelectedCompanies.js\");\n/* harmony import */ var _takeTheme__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./takeTheme */ \"./src/takeTheme.js\");\n/* harmony import */ var _styles_index_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./styles/index.scss */ \"./src/styles/index.scss\");\n\n\n\n\n\n\n\n\n\n(0,_htmlTemplate__WEBPACK_IMPORTED_MODULE_4__.htmlTemplate)();\n(0,_Api__WEBPACK_IMPORTED_MODULE_5__.getRenderUser)();\n(0,_Api__WEBPACK_IMPORTED_MODULE_5__.getRenderGaearon)();\n(0,_Api__WEBPACK_IMPORTED_MODULE_5__.getRenderFollowers)();\n(0,_outputSelectedCompanies__WEBPACK_IMPORTED_MODULE_6__.outputSelectedCompanies)();\n(0,_takeTheme__WEBPACK_IMPORTED_MODULE_7__.takeTheme)();\n(0,_checkingElementHit__WEBPACK_IMPORTED_MODULE_3__.checkingElementHit)();\n(0,react_dom__WEBPACK_IMPORTED_MODULE_1__.render)( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.StrictMode, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_App__WEBPACK_IMPORTED_MODULE_2__.App, null)), document.getElementById('app'));\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
@@ -235,6 +235,28 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 
 "use strict";
 eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs/scheduler-tracing.development.js */ \"./node_modules/scheduler/cjs/scheduler-tracing.development.js\");\n}\n\n\n//# sourceURL=webpack:///./node_modules/scheduler/tracing.js?");
+
+/***/ }),
+
+/***/ "./src/App.tsx":
+/*!*********************!*\
+  !*** ./src/App.tsx ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"App\": () => (/* binding */ App)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Header */ \"./src/components/Header.tsx\");\n\r\n\r\nconst App = () => {\r\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null,\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_1__.Header, null)));\r\n};\r\n\r\n\n\n//# sourceURL=webpack:///./src/App.tsx?");
+
+/***/ }),
+
+/***/ "./src/components/Header.tsx":
+/*!***********************************!*\
+  !*** ./src/components/Header.tsx ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Header\": () => (/* binding */ Header)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\r\nconst Header = () => {\r\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"header\", null));\r\n};\r\n\r\n\n\n//# sourceURL=webpack:///./src/components/Header.tsx?");
 
 /***/ }),
 
