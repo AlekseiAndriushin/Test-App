@@ -1,3 +1,6 @@
+import React from 'react';
+import { render } from 'react-dom';
+
 import { checkingElementHit } from './checkingElementHit';
 import { htmlTemplate } from './htmlTemplate';
 import {
@@ -16,3 +19,5 @@ getRenderFollowers();
 outputSelectedCompanies();
 takeTheme();
 checkingElementHit();
+
+render(<h2>test</h2>, document.getElementById('app'));
