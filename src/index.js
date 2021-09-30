@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-
+import { App } from './App';
 import { checkingElementHit } from './checkingElementHit';
 import { htmlTemplate } from './htmlTemplate';
 import {
@@ -20,4 +20,9 @@ outputSelectedCompanies();
 takeTheme();
 checkingElementHit();
 
-render(<h2>test</h2>, document.getElementById('app'));
+render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('app')
+);
