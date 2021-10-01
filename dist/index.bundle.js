@@ -256,7 +256,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Header\": () => (/* binding */ Header)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\r\nconst Header = () => {\r\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"header\", null));\r\n};\r\n\r\n\n\n//# sourceURL=webpack:///./src/components/Header.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Header\": () => (/* binding */ Header)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\r\nconst Header = () => {\r\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"header\", { className: \"header\" }, \"hello \"));\r\n};\r\n\r\n\n\n//# sourceURL=webpack:///./src/components/Header.tsx?");
 
 /***/ }),
 
