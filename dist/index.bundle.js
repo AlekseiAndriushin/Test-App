@@ -245,7 +245,29 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"App\": () => (/* binding */ App)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _components_Header_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Header/Header */ \"./src/components/Header/Header.tsx\");\n/* harmony import */ var _components_Content_Content__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Content/Content */ \"./src/components/Content/Content.tsx\");\n\r\n\r\n\r\nconst App = () => {\r\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null,\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Header_Header__WEBPACK_IMPORTED_MODULE_1__.Header, null),\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Content_Content__WEBPACK_IMPORTED_MODULE_2__.Content, null)));\r\n};\r\n\r\n\n\n//# sourceURL=webpack:///./src/App.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"App\": () => (/* binding */ App)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _components_Header_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Header/Header */ \"./src/components/Header/Header.tsx\");\n/* harmony import */ var _components_Content_Content__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Content/Content */ \"./src/components/Content/Content.tsx\");\n/* harmony import */ var _components_Menu_Menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Menu/Menu */ \"./src/components/Menu/Menu.tsx\");\n/* harmony import */ var _components_Form_Form__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Form/Form */ \"./src/components/Form/Form.tsx\");\n/* harmony import */ var _components_Footer_Footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/Footer/Footer */ \"./src/components/Footer/Footer.tsx\");\n\r\n\r\n\r\n\r\n\r\n\r\nconst App = () => {\r\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", { className: \"container\" },\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Header_Header__WEBPACK_IMPORTED_MODULE_1__.Header, null),\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Content_Content__WEBPACK_IMPORTED_MODULE_2__.Content, null),\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Menu_Menu__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null),\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Form_Form__WEBPACK_IMPORTED_MODULE_4__[\"default\"], null),\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_5__[\"default\"], null)));\r\n};\r\n\r\n\n\n//# sourceURL=webpack:///./src/App.tsx?");
+
+/***/ }),
+
+/***/ "./src/components/Button/Button.tsx":
+/*!******************************************!*\
+  !*** ./src/components/Button/Button.tsx ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\r\nconst Button = ({ title, onClick }) => {\r\n    let Component = 'button';\r\n    const onClickWrapper = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(e => {\r\n        if (onClick) {\r\n            onClick(e);\r\n        }\r\n    }, [onClick]);\r\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(Component, { className: \"findListButton\", onClick: onClickWrapper }, title));\r\n};\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Button);\r\n\n\n//# sourceURL=webpack:///./src/components/Button/Button.tsx?");
+
+/***/ }),
+
+/***/ "./src/components/Card/Card.tsx":
+/*!**************************************!*\
+  !*** ./src/components/Card/Card.tsx ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\r\nconst Card = ({ index, text = \"\" }) => {\r\n    const [isActive, setIsActive] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);\r\n    const toggleClass = () => {\r\n        setIsActive(!isActive);\r\n    };\r\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"li\", { className: isActive\r\n            ? \"components__card__selected\"\r\n            : \"components__card\", id: `${index}`, onClick: toggleClass },\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"span\", null,\r\n            \"\\u041D\\u0430\\u0437\\u0432\\u0430\\u043D\\u0438\\u0435 \\u043A\\u043E\\u043C\\u043F\\u0430\\u043D\\u0438\\u0438:\",\r\n            text),\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"span\", null, \"\\u0410\\u0434\\u0440\\u0435\\u0441:\"),\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"span\", null, \"Email:\"),\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"span\", null, \"\\u0422\\u0435\\u043B\\u0435\\u0444\\u043E\\u043D:\")));\r\n};\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Card);\r\n\n\n//# sourceURL=webpack:///./src/components/Card/Card.tsx?");
 
 /***/ }),
 
@@ -256,7 +278,29 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Content\": () => (/* binding */ Content)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\r\nconst Content = () => {\r\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", { className: \"content\" }, \"content\"));\r\n};\r\n\n\n//# sourceURL=webpack:///./src/components/Content/Content.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Content\": () => (/* binding */ Content)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _Card_Card__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Card/Card */ \"./src/components/Card/Card.tsx\");\n\r\n\r\nconst Content = () => {\r\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", { className: \"content\" },\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"ul\", { className: \"components\", id: \"components\" }, [1, 2, 3, 4, 5, 6, 7, 8].map(index => {\r\n            return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Card_Card__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { index: index, key: index, text: '' }));\r\n        }))));\r\n};\r\n\n\n//# sourceURL=webpack:///./src/components/Content/Content.tsx?");
+
+/***/ }),
+
+/***/ "./src/components/Footer/Footer.tsx":
+/*!******************************************!*\
+  !*** ./src/components/Footer/Footer.tsx ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\r\nconst Footer = () => {\r\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"footer\", { className: \"footer\" }, \"\\u0444\\u0443\\u0442\\u0435\\u0440\"));\r\n};\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Footer);\r\n\n\n//# sourceURL=webpack:///./src/components/Footer/Footer.tsx?");
+
+/***/ }),
+
+/***/ "./src/components/Form/Form.tsx":
+/*!**************************************!*\
+  !*** ./src/components/Form/Form.tsx ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _Button_Button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Button/Button */ \"./src/components/Button/Button.tsx\");\n\r\n\r\nconst Form = () => {\r\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"form\", { className: \"form\" },\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"input\", { className: \"form__input\", type: \"text\", name: \"companyName\", placeholder: \"\\u0412\\u0432\\u0435\\u0434\\u0438\\u0442\\u0435 \\u043D\\u0430\\u0437\\u0432\\u0430\\u043D\\u0438\\u0435 \\u043A\\u043E\\u043C\\u043F\\u0430\\u043D\\u0438\\u0438\", required: true }),\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"input\", { className: \"form__input\", type: \"text\", name: \"address\", placeholder: \"\\u0412\\u0432\\u0435\\u0434\\u0438\\u0442\\u0435 \\u0412\\u0430\\u0448 \\u0430\\u0434\\u0440\\u0435\\u0441\", required: true }),\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"input\", { className: \"form__input\", type: \"email\", name: \"email\", placeholder: \"\\u0412\\u0432\\u0435\\u0434\\u0438\\u0442\\u0435 \\u0412\\u0430\\u0448 e-mail\", required: true }),\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"input\", { className: \"form__input\", type: \"tel\", name: \"telephone\", placeholder: \"\\u0412\\u0432\\u0435\\u0434\\u0438\\u0442\\u0435 \\u0412\\u0430\\u0448 \\u0442\\u0435\\u043B\\u0435\\u0444\\u043E\\u043D\", required: true }),\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Button_Button__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { title: \"\\u0434\\u043E\\u0431\\u0430\\u0432\\u0438\\u0442\\u044C\" })));\r\n};\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Form);\r\n\n\n//# sourceURL=webpack:///./src/components/Form/Form.tsx?");
 
 /***/ }),
 
@@ -268,6 +312,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Header\": () => (/* binding */ Header)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\r\nconst Header = () => {\r\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"header\", { className: \"header\" }, \"header\"));\r\n};\r\n\r\n\n\n//# sourceURL=webpack:///./src/components/Header/Header.tsx?");
+
+/***/ }),
+
+/***/ "./src/components/Menu/Menu.tsx":
+/*!**************************************!*\
+  !*** ./src/components/Menu/Menu.tsx ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _Button_Button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Button/Button */ \"./src/components/Button/Button.tsx\");\n\r\n\r\nconst Menu = () => {\r\n    const findList = () => {\r\n        const selectedCards = document.querySelectorAll('.components__card__selected ');\r\n        if (selectedCards.length) {\r\n            console.clear();\r\n            selectedCards.forEach((child) => {\r\n                console.log(child.firstChild.textContent);\r\n            });\r\n        }\r\n        else {\r\n            console.log('тут пусто');\r\n        }\r\n    };\r\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"menu\", { className: \"menu\" },\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Button_Button__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { title: \"\\u0443\\u0437\\u043D\\u0430\\u0442\\u044C \\u0441\\u043F\\u0438\\u0441\\u043E\\u043A \\u043A\\u043E\\u043C\\u043F\\u0430\\u043D\\u0438\\u0439\", onClick: findList })));\r\n};\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Menu);\r\n\n\n//# sourceURL=webpack:///./src/components/Menu/Menu.tsx?");
 
 /***/ }),
 
