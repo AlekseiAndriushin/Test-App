@@ -14,6 +14,7 @@ const Form = () => {
 				name="companyName"
 				placeholder="Введите название компании"
 				required
+				value={company}
 				onChange={(e) => setCompany(e.target.value)}
 			/>
 			<input
@@ -22,6 +23,7 @@ const Form = () => {
 				name="address"
 				placeholder="Введите Ваш адрес"
 				required
+				value={address}
 				onChange={(e) => setAddress(e.target.value)}
 			/>
 
@@ -31,6 +33,7 @@ const Form = () => {
 				name="email"
 				placeholder="Введите Ваш e-mail"
 				required
+				value={email}
 				onChange={(e) => setEmail(e.target.value)}
 			/>
 			<input
@@ -39,6 +42,7 @@ const Form = () => {
 				name="telephone"
 				placeholder="Введите Ваш телефон"
 				required
+				value={phone}
 				onChange={(e) => setPhone(e.target.value)}
 			/>
 			<Button title="добавить" />
