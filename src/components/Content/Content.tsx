@@ -4,7 +4,7 @@ import { RootState } from '../../app/store'
 import { selectCards } from '../../features/cards/cardsSlice';
 import Card from '../Card/Card'
 
-const useTypedSelector: TypedUseSelectorHook<RootState> = useSelector;
+export const useTypedSelector: TypedUseSelectorHook<RootState> = useSelector;
 export const Content = () => {
 	const cards = useTypedSelector(selectCards)
 
