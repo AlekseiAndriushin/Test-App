@@ -8,10 +8,11 @@ const useTypedSelector: TypedUseSelectorHook<RootState> = useSelector;
 export const Content = () => {
 	const cards = useTypedSelector(selectCards)
 
-	const rightClick = (e) => {
+	const rightClick = (event) => {
+		event.preventDefault()
 		if (
-			(e.target.nodeName === 'SECTION') ||
-			(e.target.nodeName === 'UL')
+			(event.target.nodeName === 'SECTION') ||
+			(event.target.nodeName === 'UL')
 		) {
 			alert('Меню для списка компаний');
 		}

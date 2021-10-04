@@ -11,6 +11,7 @@ const Card = ({ company = "", address = "", email = "", phone = "" }: Readonly<I
 	const [isActive, setIsActive] = useState<boolean>(false)
 
 	const rightClick = (event) => {
+		event.preventDefault()
 		if (
 			event.target.nodeName === 'SPAN'
 		) {
