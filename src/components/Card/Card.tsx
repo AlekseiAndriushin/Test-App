@@ -10,12 +10,20 @@ interface IProps {
 const Card = ({ company = "", address = "", email = "", phone = "" }: Readonly<IProps>): React.ReactElement => {
 	const [isActive, setIsActive] = useState<boolean>(false)
 
+	const rightClick = (event) => {
+		if (
+			event.target.nodeName === 'SPAN'
+		) {
+			alert('Меню для карточки');
+		}
+	}
+
 	const toggleClass = () => {
 		setIsActive(!isActive)
 	}
 
 	return (
-		<li
+		<li onContextMenu={rightClick}
 			className=
 			{isActive
 				? "components__card__selected"

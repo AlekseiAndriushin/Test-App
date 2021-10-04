@@ -7,9 +7,19 @@ import Card from '../Card/Card'
 const useTypedSelector: TypedUseSelectorHook<RootState> = useSelector;
 export const Content = () => {
 	const cards = useTypedSelector(selectCards)
+
+	const rightClick = (e) => {
+		if (
+			(e.target.nodeName === 'SECTION') ||
+			(e.target.nodeName === 'UL')
+		) {
+			alert('Меню для списка компаний');
+		}
+	}
+
 	return (
-		<div className="content">
-			<ul className="components" id="components">
+		<section className="content" onContextMenu={rightClick}>
+			<ul className="components" id="components" >
 				{(cards.concat().reverse().map((card) => (
 					<Card key={card.id} company={card.company} address={card.address} email={card.email} phone={card.phone} />
 				)))}
@@ -20,6 +30,8 @@ export const Content = () => {
 				})
 				}
 			</ul>
-		</div>
+		</section>
 	)
 }
+
+console.log(Content)
