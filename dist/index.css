@@ -55,15 +55,19 @@ body {
   align-items: end;
   font-size: 30px;
 }
+.header__image {
+  width: 100px;
+}
+.header__link {
+  color: var(--text-color);
+  text-decoration: none;
+  cursor: pointer;
+}
 
 .content {
   grid-area: content;
   background: var(--blockbg);
   color: var(--text-color);
-}
-
-.header_image {
-  width: 100px;
 }
 
 .menu {
