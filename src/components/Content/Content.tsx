@@ -34,5 +34,3 @@ export const Content = () => {
 		</section>
 	)
 }
-
-console.log(Content)
