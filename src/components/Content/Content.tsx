@@ -10,13 +10,15 @@ export const Content = () => {
 	return (
 		<div className="content">
 			<ul className="components" id="components">
+				{(cards.concat().reverse().map((card) => (
+					<Card text={card.address} key={card.id} />
+				)))}
 				{[1, 2, 3, 4, 5, 6, 7, 8].map(index => {
 					return (
 						<Card key={index} text={''} />
 					)
-				}).concat(cards.map((card) => (
-					<Card text={card.address} key={card.id} />
-				)))}
+				})
+				}
 			</ul>
 		</div>
 	)
