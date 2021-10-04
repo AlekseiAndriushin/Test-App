@@ -11,11 +11,11 @@ export const Content = () => {
 		<div className="content">
 			<ul className="components" id="components">
 				{(cards.concat().reverse().map((card) => (
-					<Card text={card.address} key={card.id} />
+					<Card key={card.id} company={card.company} address={card.address} email={card.email} phone={card.phone} />
 				)))}
 				{[1, 2, 3, 4, 5, 6, 7, 8].map(index => {
 					return (
-						<Card key={index} text={''} />
+						<Card key={index} />
 					)
 				})
 				}

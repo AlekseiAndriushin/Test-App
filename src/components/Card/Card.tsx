@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 
 interface IProps {
-	text: string;
+	company?: string;
+	address?: string;
+	email?: string;
+	phone?: string;
 }
 
-const Card = ({ text = "" }: Readonly<IProps>): React.ReactElement => {
+const Card = ({ company = "", address = "", email = "", phone = "" }: Readonly<IProps>): React.ReactElement => {
 	const [isActive, setIsActive] = useState<boolean>(false)
 
 	const toggleClass = () => {
@@ -19,10 +22,10 @@ const Card = ({ text = "" }: Readonly<IProps>): React.ReactElement => {
 				: "components__card"
 			}
 			onClick={toggleClass}>
-			<span>Название компании:{text}</span>
-			<span>Адрес:</span>
-			<span>Email:</span>
-			<span>Телефон:</span>
+			<span>Название компании:{company}</span>
+			<span>Адрес:{address}</span>
+			<span>Email:{email}</span>
+			<span>Телефон:{phone}</span>
 		</li >
 	)
 }
