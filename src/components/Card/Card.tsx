@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 
 interface IProps {
-	index: number;
 	text: string;
 }
 
-const Card = ({ index, text = "" }: Readonly<IProps>): React.ReactElement => {
+const Card = ({ text = "" }: Readonly<IProps>): React.ReactElement => {
 	const [isActive, setIsActive] = useState<boolean>(false)
 
 	const toggleClass = () => {
@@ -19,7 +18,6 @@ const Card = ({ index, text = "" }: Readonly<IProps>): React.ReactElement => {
 				? "components__card__selected"
 				: "components__card"
 			}
-			id={`${index}`}
 			onClick={toggleClass}>
 			<span>Название компании:{text}</span>
 			<span>Адрес:</span>

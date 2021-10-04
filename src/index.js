@@ -10,6 +10,8 @@ import {
 } from './Api';
 import { outputSelectedCompanies } from './outputSelectedCompanies';
 import { takeTheme } from './takeTheme';
+import { store } from './App/store';
+import { Provider } from 'react-redux';
 import './styles/index.scss';
 
 htmlTemplate();
@@ -22,7 +24,9 @@ checkingElementHit();
 
 render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('app')
 );

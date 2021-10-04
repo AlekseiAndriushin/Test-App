@@ -1,13 +1,31 @@
-import React, { useState } from 'react'
+import React, { SyntheticEvent, useState } from 'react'
+import { useDispatch } from 'react-redux';
+import { addCard } from '../../features/cards/cardsSlice';
 import Button from '../Button/Button'
 
 const Form = () => {
+	const dispatch = useDispatch();
 	const [company, setCompany] = useState<string>("")
 	const [address, setAddress] = useState<string>("")
 	const [email, setEmail] = useState<string>("")
 	const [phone, setPhone] = useState<string>("")
+
+	const handleSubmit = (event: SyntheticEvent) => {
+		event.preventDefault()
+		setCompany("")
+		setAddress("")
+		setEmail("")
+		setPhone("")
+		dispatch(addCard({
+			id: Date.now().toString(),
+			address,
+			company,
+			email,
+			phone
+		}))
+	}
 	return (
-		<form className="form" >
+		<form className="form" onSubmit={handleSubmit}>
 			<input
 				className="form__input"
 				type="text"
