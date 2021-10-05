@@ -9,8 +9,8 @@ const Footer = () => {
 	return (
 		<>
 			<footer className="footer" >
-				<h5>{gaearon?.name}</h5>
-				<h5>{gaearon?.company}</h5>
+				<h5 className='footer__name'>{gaearon?.name}</h5>
+				<h5 className="footer__company">{gaearon?.company}</h5>
 				<img src={`${gaearon?.avatar_url}`} alt={`${gaearon?.name}`} className="footer__gaearon__image" />
 				<ul className="followersWrapper">
 					{followers.map((follower) => {
