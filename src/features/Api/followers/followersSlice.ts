@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../../../app/store";
 
 export type Followers = {
-	name: string;
+	login: string;
 	avatar_url: string;
 };
 

@@ -2,10 +2,10 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../../../app/store";
 
 export type User = {
-	name: string;
-	avatar_url: string;
-	html_url: string;
-	followers: number;
+	name: string | undefined;
+	avatar_url: string | undefined;
+	html_url: string | undefined;
+	followers: number | undefined;
 };
 
 type userState = {
