@@ -2,7 +2,7 @@ import React, { SyntheticEvent, useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { addCard } from '../../features/cards/cardsSlice';
 import Button from '../Button/Button'
-
+import './Form.scss'
 const Form = () => {
 
 	const dispatch = useDispatch();

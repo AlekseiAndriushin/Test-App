@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 import { RootState } from '../../app/store';
-import "./Header.module.scss"
+import "./Header.scss"
 const Header = () => {
 
 	const user = useSelector((state: RootState) => state.user.user)

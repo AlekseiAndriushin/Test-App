@@ -1,0 +1,10 @@
+.menu {
+	grid-area: menu;
+	background: var(--blockbg);
+	color: var(--text-color);
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

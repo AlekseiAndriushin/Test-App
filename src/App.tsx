@@ -8,6 +8,7 @@ import { fetchFollowers } from './features/Api/followers/fetchFollowers'
 import { useDispatch } from 'react-redux'
 import { fetchGaearon } from './features/Api/gaearon/fetchGaearon'
 import { fetchUser } from './features/Api/User/fetchUser'
+import './App.scss'
 const App = () => {
 	const dispatch = useDispatch()
 	useEffect(() => {

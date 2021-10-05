@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../app/store'
-import './Footer.module.scss'
+import './Footer.scss'
 
 const Footer = () => {
 	const followers = useSelector((state: RootState) => state.followers.followers)
