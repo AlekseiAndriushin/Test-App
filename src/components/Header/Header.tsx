@@ -1,5 +1,4 @@
 import React from 'react'
-import { fetchGaearon } from '../../features/Api/fetchGaearon'
 const Header = () => {
 	return (
 		<>

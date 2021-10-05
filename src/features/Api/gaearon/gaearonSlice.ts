@@ -1,5 +1,6 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { RootState } from "../../app/store";
+import { createSlice } from "@reduxjs/toolkit";
+import { RootState } from "../../../app/store";
+import { fetchGaearon } from "./fetchGaearon";
 
 export type Gaearon = {
 	name: string;
@@ -19,14 +20,6 @@ const initialState = {
 	gaearon: undefined,
 } as GaearonState
 
-const fetchGaearon = createAsyncThunk(
-	'gaearon/fetch',
-	async () => {
-		const response = await fetch(`https://api.github.com/users/gaearon`)
-		return await response.json() as Gaearon
-	}
-)
-
 export const gaearonSlice = createSlice({
 	name: "gaearon",
 	initialState,
@@ -40,11 +33,7 @@ export const gaearonSlice = createSlice({
 		})
 		builder.addCase(fetchGaearon.fulfilled,
 			(state, action) => {
-				state.gaearon.push(action.payload)
-				state.status = "idle"
-			})
-		builder.addCase(fetchGaearon.rejected,
-			(state, { payload }) => {
+				state.gaearon = action.payload
 				state.status = "idle"
 			})
 	}
