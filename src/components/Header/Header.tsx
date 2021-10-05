@@ -13,7 +13,7 @@ const Header = () => {
 				Github profile:{user?.name}
 			</a>
 			<img className='header__image' src={`${user?.avatar_url}`} />
-			<div>Number of my subscribers:{user?.followers}</div>
+			<span>Number of my subscribers:{user?.followers}</span>
 		</header>
 	)
 }
