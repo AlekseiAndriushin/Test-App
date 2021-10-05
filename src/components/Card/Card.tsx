@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
-
+import './Card.scss'
 interface IProps {
 	company?: string;
 	address?: string;
 	email?: string;
 	phone?: string;
+	className?: string;
 }
 
-const Card = ({ company = "", address = "", email = "", phone = "" }: Readonly<IProps>): React.ReactElement => {
+const Card = ({ company = "", address = "", email = "", phone = "", className = "" }: Readonly<IProps>): React.ReactElement => {
 	const [isActive, setIsActive] = useState<boolean>(false)
 
 	const rightClick = (event) => {

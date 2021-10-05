@@ -1,0 +1,36 @@
+.footer {
+	grid-area: footer;
+	background: var(--blockbg);
+	color: var(--text-color);
+	justify-items: center;
+	display: grid;
+	align-items: end;
+	font-size: 25px;
+
+	&__image {
+		width: 50px;
+	}
+	&__gaearon {
+		&__image {
+			width: 100px;
+		}
+	}
+	&__name {
+		padding: 0;
+		margin: 0;
+	}
+	&__company {
+		padding: 5px;
+		margin: 5px;
+	}
+}
+
+.followersWrapper {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.followersItem {
+	display: block;
+	margin: 5px;
+}
