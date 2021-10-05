@@ -20,17 +20,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App */ \"./src/App.tsx\");\n/* harmony import */ var _App_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./App/store */ \"./src/App/store.ts\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var _styles_index_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./styles/index.scss */ \"./src/styles/index.scss\");\n\n\n\n\n\n\n(0,react_dom__WEBPACK_IMPORTED_MODULE_1__.render)( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.StrictMode, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_redux__WEBPACK_IMPORTED_MODULE_4__.Provider, {\n  store: _App_store__WEBPACK_IMPORTED_MODULE_3__.store\n}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_App__WEBPACK_IMPORTED_MODULE_2__.App, null))), document.getElementById('app'));\n\n//# sourceURL=webpack:///./src/index.js?");
-
-/***/ }),
-
 /***/ "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js":
 /*!**********************************************************************************!*\
   !*** ./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js ***!
@@ -675,7 +664,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var _Footer_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Footer.scss */ \"./src/components/Footer/Footer.scss\");\n\r\n\r\n\r\nconst Footer = () => {\r\n    const followers = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)((state) => state.followers.followers);\r\n    const gaearon = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)((state) => state.gaearon.gaearon);\r\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null,\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"footer\", { className: \"footer\" },\r\n            react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"h5\", null, gaearon === null || gaearon === void 0 ? void 0 : gaearon.name),\r\n            react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"h5\", null, gaearon === null || gaearon === void 0 ? void 0 : gaearon.company),\r\n            react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"img\", { src: `${gaearon === null || gaearon === void 0 ? void 0 : gaearon.avatar_url}`, alt: `${gaearon === null || gaearon === void 0 ? void 0 : gaearon.name}`, className: \"footer__gaearon__image\" }),\r\n            react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"ul\", { className: \"followersWrapper\" }, followers.map((follower) => {\r\n                return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"li\", { className: \"followersItem\", key: follower.login },\r\n                    follower.login,\r\n                    \" \",\r\n                    react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"img\", { src: `${follower.avatar_url}`, alt: follower.login, className: \"footer__image\" })));\r\n            })))));\r\n};\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Footer);\r\n\n\n//# sourceURL=webpack:///./src/components/Footer/Footer.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var _Footer_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Footer.scss */ \"./src/components/Footer/Footer.scss\");\n\r\n\r\n\r\nconst Footer = () => {\r\n    const followers = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)((state) => state.followers.followers);\r\n    const gaearon = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)((state) => state.gaearon.gaearon);\r\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null,\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"footer\", { className: \"footer\" },\r\n            react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"h5\", { className: 'footer__name' }, gaearon === null || gaearon === void 0 ? void 0 : gaearon.name),\r\n            react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"h5\", { className: \"footer__company\" }, gaearon === null || gaearon === void 0 ? void 0 : gaearon.company),\r\n            react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"img\", { src: `${gaearon === null || gaearon === void 0 ? void 0 : gaearon.avatar_url}`, alt: `${gaearon === null || gaearon === void 0 ? void 0 : gaearon.name}`, className: \"footer__gaearon__image\" }),\r\n            react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"ul\", { className: \"followersWrapper\" }, followers.map((follower) => {\r\n                return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"li\", { className: \"followersItem\", key: follower.login },\r\n                    follower.login,\r\n                    \" \",\r\n                    react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"img\", { src: `${follower.avatar_url}`, alt: follower.login, className: \"footer__image\" })));\r\n            })))));\r\n};\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Footer);\r\n\n\n//# sourceURL=webpack:///./src/components/Footer/Footer.tsx?");
 
 /***/ }),
 
@@ -786,6 +775,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"selectCards\": () => (/* binding */ selectCards),\n/* harmony export */   \"cardsSlice\": () => (/* binding */ cardsSlice),\n/* harmony export */   \"addCard\": () => (/* binding */ addCard),\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @reduxjs/toolkit */ \"./node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js\");\n\r\n;\r\nconst selectCards = (state) => state.cards.card;\r\nconst initialState = {\r\n    card: [],\r\n};\r\nconst cardsSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createSlice)({\r\n    name: \"cards\",\r\n    initialState,\r\n    reducers: {\r\n        addCard(state, action) {\r\n            state.card.push(action.payload);\r\n        },\r\n    },\r\n});\r\nconst { addCard } = cardsSlice.actions;\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (cardsSlice.reducer);\r\n\n\n//# sourceURL=webpack:///./src/features/cards/cardsSlice.tsx?");
+
+/***/ }),
+
+/***/ "./src/index.tsx":
+/*!***********************!*\
+  !*** ./src/index.tsx ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App */ \"./src/App.tsx\");\n/* harmony import */ var _App_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./App/store */ \"./src/App/store.ts\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var _styles_index_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./styles/index.scss */ \"./src/styles/index.scss\");\n\r\n\r\n\r\n\r\n\r\n\r\n(0,react_dom__WEBPACK_IMPORTED_MODULE_1__.render)(react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.StrictMode, null,\r\n    react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_redux__WEBPACK_IMPORTED_MODULE_4__.Provider, { store: _App_store__WEBPACK_IMPORTED_MODULE_3__.store },\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_App__WEBPACK_IMPORTED_MODULE_2__.App, null))), document.getElementById('app'));\r\n\n\n//# sourceURL=webpack:///./src/index.tsx?");
 
 /***/ }),
 
@@ -905,7 +905,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.tsx");
 /******/ 	
 /******/ })()
 ;
