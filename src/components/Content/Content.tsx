@@ -22,7 +22,7 @@ export const Content = () => {
 		<section className="content" onContextMenu={rightClick}>
 			<ul className="components" >
 				{(cards.concat().reverse().map((card) => (
-					<Card className={"components__card"} key={card.id} company={card.company} address={card.address} email={card.email} phone={card.phone} />
+					<Card className={"card"} key={card.id} company={card.company} address={card.address} email={card.email} phone={card.phone} />
 				)))}
 				{[1, 2, 3, 4, 5, 6, 7, 8].map(index => {
 					return (

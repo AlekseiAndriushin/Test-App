@@ -6,7 +6,7 @@ const Menu = () => {
 
 	const findList = () => {
 		const selectedCards = document.querySelectorAll(
-			'.components__card__selected '
+			'.card__selected '
 		);
 		if (selectedCards.length) {
 			console.clear();
