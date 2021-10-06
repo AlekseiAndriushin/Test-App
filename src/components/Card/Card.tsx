@@ -29,8 +29,8 @@ const Card = ({ company = "", address = "", email = "", phone = "" }: Readonly<I
 		<li onContextMenu={rightClick}
 			className=
 			{isActive
-				? "components__card__selected"
-				: "components__card"
+				? "card__selected"
+				: "card"
 			}
 			onClick={toggleClass}>
 			<span>Название компании:{company}</span>
