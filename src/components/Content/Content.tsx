@@ -1,10 +1,9 @@
 import React from 'react'
-import { TypedUseSelectorHook, useSelector } from 'react-redux'
-import { RootState } from '../../app/store'
+
 import { selectCards } from '../../features/cards/cardsSlice';
+import { useTypedSelector } from '../../hooks/useTypedSelector';
 import Card from '../Card/Card'
 import './Content.scss'
-export const useTypedSelector: TypedUseSelectorHook<RootState> = useSelector;
 export const Content = () => {
 	const cards = useTypedSelector(selectCards)
 
