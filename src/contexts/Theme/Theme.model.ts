@@ -6,4 +6,5 @@ export interface Theme {
 	'--primary': Color;
 	'--secondary': Color;
 	'--text-color': Color;
+	'--card-color': Color;
 }
