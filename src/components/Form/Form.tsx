@@ -15,11 +15,6 @@ const Form = () => {
 
 		event.preventDefault()
 
-		setCompany("")
-		setAddress("")
-		setEmail("")
-		setPhone("")
-
 		dispatch(addCard({
 			id: Date.now().toString(),
 			address,
@@ -27,6 +22,11 @@ const Form = () => {
 			email,
 			phone
 		}))
+
+		setCompany("")
+		setAddress("")
+		setEmail("")
+		setPhone("")
 	}
 	return (
 		<form className="form" onSubmit={handleSubmit}>
