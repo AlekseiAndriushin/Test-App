@@ -39,8 +39,8 @@ export const followersSlice = createSlice({
 			state.error = null;
 		})
 		builder.addCase(fetchFollowers.fulfilled,
-			(state, { payload }) => {
-				state.followers.push(...payload)
+			(state, action) => {
+				state.followers = action.payload
 				state.status = "idle"
 			})
 	}
