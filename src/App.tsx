@@ -11,13 +11,17 @@ import { fetchUser } from './features/Api/User/fetchUser'
 import './App.scss'
 import { useTheme } from './contexts/Theme/Theme.context'
 import Button from './components/Button/Button'
+
 const App = () => {
+
 	const { theme, setCurrentTheme } = useTheme()
 	const dispatch = useDispatch()
 	useEffect(() => {
+
 		dispatch(fetchFollowers())
 		dispatch(fetchGaearon())
 		dispatch(fetchUser())
+
 	}, [])
 
 	return (

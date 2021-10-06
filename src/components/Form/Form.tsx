@@ -12,11 +12,14 @@ const Form = () => {
 	const [phone, setPhone] = useState<string>("")
 
 	const handleSubmit = (event: SyntheticEvent) => {
+
 		event.preventDefault()
+
 		setCompany("")
 		setAddress("")
 		setEmail("")
 		setPhone("")
+
 		dispatch(addCard({
 			id: Date.now().toString(),
 			address,
@@ -36,6 +39,7 @@ const Form = () => {
 				value={company}
 				onChange={(e) => setCompany(e.target.value)}
 			/>
+
 			<input
 				className="form__input"
 				type="text"
@@ -55,6 +59,7 @@ const Form = () => {
 				value={email}
 				onChange={(e) => setEmail(e.target.value)}
 			/>
+
 			<input
 				className="form__input"
 				type="tel"
@@ -64,6 +69,7 @@ const Form = () => {
 				value={phone}
 				onChange={(e) => setPhone(e.target.value)}
 			/>
+
 			<Button title="добавить" />
 		</form>
 	)

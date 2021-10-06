@@ -4,8 +4,11 @@ import { RootState } from '../../app/store'
 import './Footer.scss'
 
 const Footer = () => {
+
 	const followers = useSelector((state: RootState) => state.followers.followers)
+
 	const gaearon = useSelector((state: RootState) => state.gaearon.gaearon)
+
 	return (
 		<>
 			<footer className="footer" >

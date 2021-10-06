@@ -9,11 +9,14 @@ interface ThemeContextProps {
 }
 
 export const ThemeContext = React.createContext<ThemeContextProps>({
+
 	themeType: 'red',
 	theme: THEMES['red'],
+
 } as ThemeContextProps);
 
 export const ThemeProvider: React.FC = ({ children }) => {
+
 	const [currentTheme, setCurrentTheme] = React.useState<ThemeType>('red');
 
 	return (

@@ -4,6 +4,7 @@ import { selectCards } from '../../features/cards/cardsSlice';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
 import Card from '../Card/Card'
 import './Content.scss'
+
 export const Content = () => {
 	const cards = useTypedSelector(selectCards)
 

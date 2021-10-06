@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './Card.scss'
+
 interface IProps {
 	company?: string;
 	address?: string;
