@@ -23,14 +23,12 @@
 		padding: 5px;
 		margin: 5px;
 	}
-}
-
-.followersWrapper {
-	display: flex;
-	flex-flow: row wrap;
-}
-
-.followersItem {
-	display: block;
-	margin: 5px;
+	&__followers__wrapper {
+		display: flex;
+		flex-flow: row wrap;
+	}
+	&__followers__item {
+		display: block;
+		margin: 5px;
+	}
 }
