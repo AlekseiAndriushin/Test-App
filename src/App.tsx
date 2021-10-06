@@ -13,7 +13,6 @@ import { useTheme } from './contexts/Theme/Theme.context'
 import Button from './components/Button/Button'
 const App = () => {
 	const { theme, setCurrentTheme } = useTheme()
-	console.log(theme)
 	const dispatch = useDispatch()
 	useEffect(() => {
 		dispatch(fetchFollowers())
