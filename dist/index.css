@@ -23,37 +23,37 @@
 /*!************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/Card/Card.scss ***!
   \************************************************************************************************************************/
-.components__card {
+.card {
   color: var(--text-color);
   border: 2px solid var(--card-color);
   font-size: 14px;
   display: grid;
 }
-.components__card:nth-child(2n) {
+.card:nth-child(2n) {
   border: 2px solid var(--secondary-border);
 }
-.components__card:nth-last-child(-n+1) {
+.card:nth-last-child(-n+1) {
   border: 2px solid var(--last-cell-color);
 }
-.components__card:hover {
+.card:hover {
   box-shadow: 0 14px 28px var(--box_shadow_one), 0 10px 10px var(--box_shadow_two);
 }
-.components__card__child_nodes {
+.card__child_nodes {
   color: var(--text-color);
   border: 2px solid var(--secondary);
   font-size: 14px;
   display: grid;
 }
-.components__card__child_nodes:nth-child(2n) {
+.card__child_nodes:nth-child(2n) {
   border: 2px solid var(--secondary-border);
 }
-.components__card__child_nodes:nth-last-child(-n+1) {
+.card__child_nodes:nth-last-child(-n+1) {
   border: 2px solid var(--last-cell-color);
 }
-.components__card__child_nodes:hover {
+.card__child_nodes:hover {
   box-shadow: 0 14px 28px var(--box_shadow_one), 0 10px 10px var(--box_shadow_two);
 }
-.components__card__selected {
+.card__selected {
   border: 2px solid var(--clicked_color);
   font-size: 14px;
   display: grid;
