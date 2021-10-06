@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { RootState } from "../../../app/store";
-import { fetchGaearon } from "./fetchGaearon";
+import { RootState } from "../../app/store";
+import { fetchGaearon } from "../Api/gaearon/fetchGaearon";
 
 export type Gaearon = {
 	name: string;

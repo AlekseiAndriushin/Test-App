@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { Followers } from "./followersSlice";
+import { Followers } from "../../followers/followersSlice";
 
 export const fetchFollowers = createAsyncThunk<Followers[]>(
 	"followers/fetch",
