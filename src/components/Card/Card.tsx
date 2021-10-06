@@ -22,7 +22,7 @@ const Card = ({ company = "", address = "", email = "", phone = "" }: Readonly<I
 	}
 
 	const toggleClass = () => {
-		setIsActive(!isActive)
+		setIsActive(isActive => !isActive)
 	}
 
 	return (
