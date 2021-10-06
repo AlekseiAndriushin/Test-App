@@ -9,7 +9,7 @@ interface IProps {
 	className?: string;
 }
 
-const Card = ({ company = "", address = "", email = "", phone = "", className = "" }: Readonly<IProps>): React.ReactElement => {
+const Card = ({ company = "", address = "", email = "", phone = "" }: Readonly<IProps>): React.ReactElement => {
 	const [isActive, setIsActive] = useState<boolean>(false)
 
 	const rightClick = (event) => {
