@@ -1,6 +1,6 @@
 .content {
 	grid-area: content;
-	background: var(--blockbg);
+	background: var(--primary);
 	color: var(--text-color);
 }
 
@@ -11,6 +11,7 @@
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-auto-rows: 100px;
 }
+
 @media only screen and (max-width: 1024px) {
 	.components {
 		grid-template-columns: 1fr;
