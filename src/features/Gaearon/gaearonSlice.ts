@@ -1,12 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../../app/store";
 import { fetchGaearon } from "../Api/gaearon/fetchGaearon";
-
-export type Gaearon = {
-	name: string;
-	avatar_url: string;
-	company: string;
-};
+import { Gaearon } from "../types/types";
 
 type GaearonState = {
 	status: "loading" | "idle";
