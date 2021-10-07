@@ -24,13 +24,13 @@ const Form = () => {
 	const handleSubmit = (event: SyntheticEvent) => {
 
 		event.preventDefault()
-
 		dispatch(addCard({
 			id: Date.now().toString(),
 			address,
 			company,
 			email,
-			phone
+			phone,
+			taken: false
 		}))
 	}
 	return (

@@ -6,10 +6,11 @@ interface IProps {
 	address?: string;
 	email?: string;
 	phone?: string;
-	className?: string;
+	taken?: boolean;
+	changeCard?: (event) => void;
 }
 
-const Card = ({ company = "", address = "", email = "", phone = "" }: Readonly<IProps>): React.ReactElement => {
+const Card: React.FC<IProps> = ({ company = "", address = "", email = "", phone = "", changeCard, taken }): React.ReactElement => {
 	const [isActive, setIsActive] = useState<boolean>(false)
 
 	const rightClick = (event) => {
@@ -32,7 +33,9 @@ const Card = ({ company = "", address = "", email = "", phone = "" }: Readonly<I
 				? "card__selected"
 				: "card"
 			}
-			onClick={toggleClass}>
+			onClick={changeCard}
+			onClickCapture={toggleClass}
+		>
 			<span>Название компании:{company}</span>
 			<span>Адрес:{address}</span>
 			<span>Email:{email}</span>
