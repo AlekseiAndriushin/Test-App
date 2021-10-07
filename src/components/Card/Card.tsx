@@ -18,6 +18,7 @@ const Card: React.FC<IProps> = ({ company = "", address = "", email = "", phone 
 	const rightClick = (event: React.MouseEvent) => {
 		event.preventDefault();
 		const node = event.target;
+		event.stopPropagation()
 		node.addEventListener('contextmenu', alertText);
 	};
 

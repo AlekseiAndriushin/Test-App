@@ -13,15 +13,13 @@ export const Content = () => {
 
 	const dispatch = useDispatch()
 
-	const rightClick = (event) => {
-		event.preventDefault()
-		if (
-			(event.target.nodeName === 'SECTION') ||
-			(event.target.nodeName === 'UL')
-		) {
-			alert('Меню для списка компаний');
-		}
-	}
+	const alertText = () => alert('Меню для списка компаний');
+
+	const rightClick = (event: React.MouseEvent) => {
+		event.preventDefault();
+		const node = event.target;
+		node.addEventListener('contextmenu', alertText);
+	};
 
 	const changeSelectedCard = () => {
 		dispatch(changeSelectedCard())
