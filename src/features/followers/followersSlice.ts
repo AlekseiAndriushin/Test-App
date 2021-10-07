@@ -2,18 +2,11 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../../app/store";
 import { Followers } from "../types/types";
 
-
-type FollowersState = {
-	status: "loading" | "idle";
-	error: string | null;
-	followers: Followers[];
-};
-
 const initialState = {
 	status: 'idle',
 	error: null,
 	followers: [],
-} as FollowersState
+}
 
 const fetchFollowers = createAsyncThunk<Followers[]>(
 	'followers/fetch',

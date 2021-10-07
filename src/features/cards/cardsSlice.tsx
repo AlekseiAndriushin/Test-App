@@ -16,7 +16,7 @@ type CardsState = {
 };
 const initialState = {
 	card: [],
-} as CardsState;
+};
 
 export const cardsSlice = createSlice({
 	name: "cards",
