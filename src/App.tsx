@@ -8,13 +8,10 @@ import { fetchFollowers } from './features/Api/followers/fetchFollowers'
 import { useDispatch } from 'react-redux'
 import { fetchGaearon } from './features/Api/gaearon/fetchGaearon'
 import { fetchUser } from './features/Api/User/fetchUser'
-import './App.scss'
-import { useTheme } from './contexts/Theme/Theme.context'
-import Button from './components/Button/Button'
+import { Container } from './components/Container/Container'
 
 const App = () => {
 
-	const { theme, setCurrentTheme } = useTheme()
 	const dispatch = useDispatch()
 	useEffect(() => {
 
@@ -25,17 +22,14 @@ const App = () => {
 	}, [])
 
 	return (
-		<div className={"container"} style={{ ...theme as React.CSSProperties }}>
+		<Container>
 			<Header />
 			<Content />
 			<Menu />
 			<Form />
 			<Footer />
-			<section className={'container__buttons'}>
-				<Button title='Сменить на красную тему' onClick={() => setCurrentTheme('red')} />
-				<Button title='Сменить на синюю тему' onClick={() => setCurrentTheme('blue')} />
-			</section>
-		</div>
+		</Container>
+
 	)
 }
 
