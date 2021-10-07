@@ -1,41 +1,21 @@
-import React, { SyntheticEvent, useState } from 'react'
-import { useDispatch } from 'react-redux';
-import { addCard } from '../../features/cards/cardsSlice';
+import React from 'react'
 import Button from '../Button/Button'
 import './Form.scss'
 
-const Form = () => {
+interface IFormData {
+	company: string;
+	address: string;
+	email: string;
+	phone: string;
+}
+interface IForm {
+	formData: IFormData;
+	onChange: (e: any) => void;
+	handleSubmit: (e: any) => void;
+}
 
-	const dispatch = useDispatch();
+export const Form: React.FC<IForm> = ({ formData, onChange, handleSubmit }) => {
 
-	const initialState = {
-		company: '',
-		address: '',
-		email: '',
-		phone: ''
-	}
-
-	const [formData, setFormData] = useState(initialState)
-
-	const { company, address, email, phone } = formData;
-
-	const onChange = (e) =>
-		setFormData({ ...formData, [e.target.name]: e.target.value });
-
-	const handleSubmit = (event: SyntheticEvent) => {
-
-		event.preventDefault()
-		dispatch(addCard({
-			id: Date.now().toString(),
-			address,
-			company,
-			email,
-			phone,
-			taken: false
-		}))
-
-		setFormData(initialState)
-	}
 	return (
 		<form className="form" onSubmit={handleSubmit}>
 			<input
@@ -82,4 +62,3 @@ const Form = () => {
 	)
 }
 
-export default Form

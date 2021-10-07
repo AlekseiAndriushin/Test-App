@@ -6,7 +6,7 @@ import { fetchGaearon } from '../../features/Api/gaearon/fetchGaearon'
 import Footer from './Footer'
 import './Footer.scss'
 
-const FooterContainer = () => {
+export const FooterContainer = () => {
 	const dispatch = useDispatch()
 	useEffect(() => {
 
@@ -25,4 +25,3 @@ const FooterContainer = () => {
 	)
 }
 
-export default FooterContainer

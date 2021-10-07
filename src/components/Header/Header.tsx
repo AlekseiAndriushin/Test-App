@@ -2,7 +2,11 @@ import React from 'react'
 import { User } from '../../features/types/types';
 import "./Header.scss"
 
-const Header: React.FC<{ user: User }> = ({ user }) => {
+interface IUserProps {
+	user: User
+}
+
+const Header: React.FC<IUserProps> = ({ user }) => {
 
 	return (
 		<header className="header">

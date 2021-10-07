@@ -1,22 +1,13 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { RootState } from '../../app/store'
 import Button from '../Button/Button'
 import './Menu.scss'
 
-const Menu = () => {
-	const takenCards = useSelector((state: RootState) => state.cards.card)
-	const answer: Array<string> = []
-	const findList = () => {
-		takenCards.map((card) => card.taken ? answer.push(card.company) : null)
-		if (answer.length) {
-			console.clear()
-			console.log(answer)
-		} else {
-			console.log("тут пусто")
-		}
+interface IMenuProps {
+	findList?: () => void;
+}
 
-	};
+export const Menu: React.FC<IMenuProps> = ({ findList }) => {
+
 	return (
 		<menu className="menu">
 			<Button title="узнать список компаний" onClick={findList} />
@@ -24,4 +15,3 @@ const Menu = () => {
 	)
 }
 
-export default Menu
