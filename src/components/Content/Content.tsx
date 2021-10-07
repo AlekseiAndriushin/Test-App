@@ -17,6 +17,7 @@ export const Content = () => {
 
 	const rightClick = (event: React.MouseEvent) => {
 		event.preventDefault();
+		event.stopPropagation();
 		const node = event.target;
 		node.addEventListener('contextmenu', alertText);
 	};
