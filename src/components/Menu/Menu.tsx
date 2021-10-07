@@ -9,8 +9,12 @@ const Menu = () => {
 	const answer: Array<string> = []
 	const findList = () => {
 		takenCards.map((card) => card.taken ? answer.push(card.company) : null)
-		console.clear()
-		console.log(answer)
+		if (answer.length) {
+			console.clear()
+			console.log(answer)
+		} else {
+			console.log("тут пусто")
+		}
 
 	};
 	return (
