@@ -13,14 +13,13 @@ interface IProps {
 const Card: React.FC<IProps> = ({ company = "", address = "", email = "", phone = "", changeCard, taken }): React.ReactElement => {
 	const [isActive, setIsActive] = useState<boolean>(false)
 
-	const rightClick = (event) => {
-		event.preventDefault()
-		if (
-			event.target.nodeName === 'SPAN'
-		) {
-			alert('Меню для карточки');
-		}
-	}
+	const alertText = () => alert('Меню для карточки');
+
+	const rightClick = (event: React.MouseEvent) => {
+		event.preventDefault();
+		const node = event.target;
+		node.addEventListener('contextmenu', alertText);
+	};
 
 	const toggleClass = () => {
 		setIsActive(isActive => !isActive)
