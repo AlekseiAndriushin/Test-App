@@ -1,22 +1,12 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { RootState } from "../../../app/store";
-
-export type Followers = {
-	login: string;
-	avatar_url: string;
-};
-
-type FollowersState = {
-	status: "loading" | "idle";
-	error: string | null;
-	followers: Followers[];
-};
+import { RootState } from "../../app/store";
+import { Followers } from "../types/types";
 
 const initialState = {
 	status: 'idle',
 	error: null,
 	followers: [],
-} as FollowersState
+}
 
 const fetchFollowers = createAsyncThunk<Followers[]>(
 	'followers/fetch',
@@ -39,8 +29,8 @@ export const followersSlice = createSlice({
 			state.error = null;
 		})
 		builder.addCase(fetchFollowers.fulfilled,
-			(state, { payload }) => {
-				state.followers.push(...payload)
+			(state, action) => {
+				state.followers = action.payload
 				state.status = "idle"
 			})
 	}

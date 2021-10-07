@@ -1,49 +1,41 @@
-import React, { SyntheticEvent, useState } from 'react'
-import { useDispatch } from 'react-redux';
-import { addCard } from '../../features/cards/cardsSlice';
+import React from 'react'
 import Button from '../Button/Button'
 import './Form.scss'
-const Form = () => {
 
-	const dispatch = useDispatch();
-	const [company, setCompany] = useState<string>("")
-	const [address, setAddress] = useState<string>("")
-	const [email, setEmail] = useState<string>("")
-	const [phone, setPhone] = useState<string>("")
+interface IFormData {
+	company: string;
+	address: string;
+	email: string;
+	phone: string;
+}
+interface IForm {
+	formData: IFormData;
+	onChange: (e: any) => void;
+	handleSubmit: (e: any) => void;
+}
 
-	const handleSubmit = (event: SyntheticEvent) => {
-		event.preventDefault()
-		setCompany("")
-		setAddress("")
-		setEmail("")
-		setPhone("")
-		dispatch(addCard({
-			id: Date.now().toString(),
-			address,
-			company,
-			email,
-			phone
-		}))
-	}
+export const Form: React.FC<IForm> = ({ formData, onChange, handleSubmit }) => {
+
 	return (
 		<form className="form" onSubmit={handleSubmit}>
 			<input
 				className="form__input"
 				type="text"
-				name="companyName"
+				name="company"
 				placeholder="Введите название компании"
 				required
-				value={company}
-				onChange={(e) => setCompany(e.target.value)}
+				value={formData.company}
+				onChange={onChange}
 			/>
+
 			<input
 				className="form__input"
 				type="text"
 				name="address"
 				placeholder="Введите Ваш адрес"
 				required
-				value={address}
-				onChange={(e) => setAddress(e.target.value)}
+				value={formData.address}
+				onChange={onChange}
 			/>
 
 			<input
@@ -52,21 +44,21 @@ const Form = () => {
 				name="email"
 				placeholder="Введите Ваш e-mail"
 				required
-				value={email}
-				onChange={(e) => setEmail(e.target.value)}
-			/>
+				value={formData.email}
+				onChange={onChange} />
+
 			<input
 				className="form__input"
 				type="tel"
-				name="telephone"
+				name="phone"
 				placeholder="Введите Ваш телефон"
 				required
-				value={phone}
-				onChange={(e) => setPhone(e.target.value)}
+				value={formData.phone}
+				onChange={onChange}
 			/>
+
 			<Button title="добавить" />
 		</form>
 	)
 }
 
-export default Form

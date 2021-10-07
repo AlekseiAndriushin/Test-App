@@ -1,24 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { RootState } from "../../../app/store";
-import { fetchGaearon } from "./fetchGaearon";
-
-export type Gaearon = {
-	name: string;
-	avatar_url: string;
-	company: string;
-};
-
-type GaearonState = {
-	status: "loading" | "idle";
-	error: string | null;
-	gaearon: Gaearon;
-};
+import { RootState } from "../../app/store";
+import { fetchGaearon } from "../Api/gaearon/fetchGaearon";
+import { Gaearon } from "../types/types";
 
 const initialState = {
 	status: 'idle',
 	error: null,
 	gaearon: undefined,
-} as GaearonState
+}
 
 export const gaearonSlice = createSlice({
 	name: "gaearon",

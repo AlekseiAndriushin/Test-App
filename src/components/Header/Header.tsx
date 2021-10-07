@@ -1,13 +1,14 @@
 import React from 'react'
-import { useSelector } from 'react-redux';
-import { RootState } from '../../app/store';
+import { User } from '../../features/types/types';
 import "./Header.scss"
-const Header = () => {
 
-	const user = useSelector((state: RootState) => state.user.user)
+interface IUserProps {
+	user: User
+}
+
+const Header: React.FC<IUserProps> = ({ user }) => {
 
 	return (
-
 		<header className="header">
 			<a href={user?.html_url} target="_blank" className='header__link'>
 				Github profile:{user?.name}
@@ -18,4 +19,4 @@ const Header = () => {
 	)
 }
 
-export { Header }
+export default Header;

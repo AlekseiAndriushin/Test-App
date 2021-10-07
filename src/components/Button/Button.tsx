@@ -7,8 +7,6 @@ interface IProps {
 
 const Button = ({ title, onClick }: Readonly<IProps>): React.ReactElement => {
 
-	let Component: any = 'button';
-
 	const onClickWrapper = useCallback(
 		e => {
 			if (onClick) {
@@ -18,9 +16,9 @@ const Button = ({ title, onClick }: Readonly<IProps>): React.ReactElement => {
 	)
 
 	return (
-		<Component className="findListButton" onClick={onClickWrapper}>
+		<button className="findListButton" onClick={onClickWrapper}>
 			{title}
-		</Component>
+		</button>
 	)
 }
 

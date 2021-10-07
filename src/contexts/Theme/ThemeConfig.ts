@@ -1,4 +1,4 @@
-import { Color } from '../../models/color.model';
+import { Color } from './color.model';
 import { ThemeType, Theme } from './Theme.model';
 
 export const THEMES: Record<ThemeType, Theme> = {
