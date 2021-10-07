@@ -1,15 +1,11 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { User } from "../../types/types";
+import RequestService from "../RequestService";
 
 export const fetchUser = createAsyncThunk<User>(
 	"user/fetch",
 	async () => {
-		try {
-			const response = await fetch(`https://api.github.com/users/AlexeyAndryushin`)
-			const data: User = await response.json();
-			return data;
-		} catch (error) {
-			console.log(error)
-		}
+		const url = `https://api.github.com/users/AlexeyAndryushin`
+		return RequestService.getRequest(url)
 	}
 )

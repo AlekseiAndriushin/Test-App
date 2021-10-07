@@ -1,15 +1,12 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { Gaearon } from "../../types/types";
+import RequestService from "../RequestService";
 
 export const fetchGaearon = createAsyncThunk<Gaearon>(
 	"gaearon/fetch",
 	async () => {
-		try {
-			const response = await fetch(`https://api.github.com/users/gaearon`)
-			const data: Gaearon = await response.json();
-			return data;
-		} catch (error) {
-			console.log("Что-то пошло не так")
-		}
+		const url = (`https://api.github.com/users/gaearon`)
+		return RequestService.getRequest(url)
+
 	}
 )
