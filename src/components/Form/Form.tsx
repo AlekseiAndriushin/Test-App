@@ -8,13 +8,14 @@ const Form = () => {
 
 	const dispatch = useDispatch();
 
-
-	const [formData, setFormData] = useState({
+	const initialState = {
 		company: '',
 		address: '',
 		email: '',
 		phone: ''
-	})
+	}
+
+	const [formData, setFormData] = useState(initialState)
 
 	const { company, address, email, phone } = formData;
 
@@ -32,6 +33,8 @@ const Form = () => {
 			phone,
 			taken: false
 		}))
+
+		setFormData(initialState)
 	}
 	return (
 		<form className="form" onSubmit={handleSubmit}>
