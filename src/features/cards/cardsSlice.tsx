@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 type CardId = string;
 type taken = boolean;
-interface ICard {
+export interface ICard {
 	id: CardId;
 	company: string;
 	address: string;
