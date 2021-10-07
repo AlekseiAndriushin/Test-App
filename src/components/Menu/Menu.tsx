@@ -1,21 +1,17 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { RootState } from '../../app/store'
 import Button from '../Button/Button'
 import './Menu.scss'
 
 const Menu = () => {
-
+	const takenCards = useSelector((state: RootState) => state.cards.card)
+	const answer: Array<string> = []
 	const findList = () => {
-		const selectedCards = document.querySelectorAll(
-			'.card__selected '
-		);
-		if (selectedCards.length) {
-			console.clear();
-			selectedCards.forEach((child) => {
-				console.log(child.firstChild.textContent);
-			});
-		} else {
-			console.log('тут пусто');
-		}
+		takenCards.map((card) => card.taken ? answer.push(card.company) : null)
+		console.clear()
+		console.log(answer)
+
 	};
 	return (
 		<menu className="menu">
