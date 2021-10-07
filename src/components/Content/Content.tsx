@@ -1,14 +1,15 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
+import { RootState } from '../../app/store';
 
-import { selectCards, toggleCard } from '../../features/cards/cardsSlice';
+import { toggleCard } from '../../features/cards/cardsSlice';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
 import Card from '../Card/Card'
 import './Content.scss'
 
 export const Content = () => {
 
-	const cards = useTypedSelector(selectCards)
+	const cards = useTypedSelector((state: RootState) => state.cards.card)
 
 	const dispatch = useDispatch()
 

@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { RootState } from "../../app/store";
 
 type CardId = string;
 type taken = boolean;
@@ -15,7 +14,6 @@ interface ICard {
 type CardsState = {
 	card: ICard[];
 };
-export const selectCards = (state: RootState) => state.cards.card;
 const initialState = {
 	card: [],
 } as CardsState;
