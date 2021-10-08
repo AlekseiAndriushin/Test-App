@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { SyntheticEvent } from 'react'
 import Button from '../Button/Button'
 import './Form.scss'
 
@@ -10,8 +10,8 @@ interface IFormData {
 }
 interface IForm {
 	formData: IFormData;
-	onChange: (e: any) => void;
-	handleSubmit: (e: any) => void;
+	onChange: (event: SyntheticEvent) => void;
+	handleSubmit: (event: SyntheticEvent) => void;
 }
 
 export const Form: React.FC<IForm> = ({ formData, onChange, handleSubmit }) => {
