@@ -8,6 +8,12 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
   },
+  devServer: {
+    historyApiFallback: true,
+    compress: true,
+    hot: true,
+    port: 3000,
+  },
   module: {
     rules: [
       {
