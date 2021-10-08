@@ -1,29 +1,19 @@
-import React from 'react'
+import React, { SyntheticEvent } from 'react'
 import { useDispatch } from 'react-redux';
-import { RootState } from '../../app/store';
-
-import { toggleCard } from '../../features/cards/cardsSlice';
-import { useTypedSelector } from '../../hooks/useTypedSelector';
+import { ICard, toggleCard } from '../../features/cards/cardsSlice';
 import Card from '../Card/Card'
 import './Content.scss'
 
-export const Content = () => {
+interface IContentProps {
+	cards: ICard[];
+}
 
-	const cards = useTypedSelector((state: RootState) => state.cards.card)
+export const Content: React.FC<IContentProps> = ({ cards }) => {
 
 	const dispatch = useDispatch()
 
-	const alertText = () => alert('Меню для списка компаний');
-
-	const rightClick = (event: React.MouseEvent) => {
-		event.preventDefault();
-		event.stopPropagation();
-		const node = event.target;
-		node.addEventListener('contextmenu', alertText);
-	};
-
 	return (
-		<section className="content" onContextMenu={rightClick}>
+		<section className="content">
 			<ul className="components" >
 				{(cards.concat().reverse().map((card) => (
 					<Card

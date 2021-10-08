@@ -7,13 +7,14 @@ import { HeaderContainer } from './components/Header/HeaderContainer'
 import { MenuContainer } from './components/Menu/MenuContainer'
 import { useTheme } from './contexts/Theme/Theme.context'
 import './App.scss'
+import { ContentContainer } from './components/Content/ContentContainer'
 export const App = () => {
 	const { theme } = useTheme()
 
 	return (
 		<div className="container" style={{ ...theme as React.CSSProperties }}>
 			<HeaderContainer />
-			<Content />
+			<ContentContainer />
 			<MenuContainer />
 			<FormContainer />
 			<ChangeButtons />
