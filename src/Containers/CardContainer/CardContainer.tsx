@@ -31,7 +31,9 @@ export const CardContainer: React.FC<IProps> = ({ card }): React.ReactElement =>
 	const dispatch = useDispatch()
 
 	const clickCard = () => {
-		dispatch(toggleCard(card.id))
+		if (card !== undefined) {
+			dispatch(toggleCard(card.id))
+		}
 	}
 
 	return (
