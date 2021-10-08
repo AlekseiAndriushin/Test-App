@@ -1,6 +1,12 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { User } from "../../types/types";
 import RequestService from "../RequestService";
+
+type User = {
+	name: string | undefined;
+	avatar_url: string | undefined;
+	html_url: string | undefined;
+	followers: number | undefined;
+};
 
 export const fetchUser = createAsyncThunk<User>(
 	"user/fetch",
