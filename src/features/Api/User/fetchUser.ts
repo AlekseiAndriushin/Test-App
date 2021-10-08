@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import RequestService from "../RequestService";
+import NetworkService from "../NetworkService";
 
 type User = {
 	name: string | undefined;
@@ -10,8 +10,5 @@ type User = {
 
 export const fetchUser = createAsyncThunk<User>(
 	"user/fetch",
-	async () => {
-		const url = `https://api.github.com/users/AlexeyAndryushin`
-		return RequestService.getRequest(url)
-	}
+	NetworkService.getUser
 )
