@@ -22,10 +22,6 @@ export const Content = () => {
 		node.addEventListener('contextmenu', alertText);
 	};
 
-	const changeSelectedCard = () => {
-		dispatch(changeSelectedCard())
-	};
-
 	return (
 		<section className="content" onContextMenu={rightClick}>
 			<ul className="components" >
