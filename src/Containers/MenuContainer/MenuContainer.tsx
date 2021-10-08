@@ -1,8 +1,7 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { RootState } from '../../app/store'
-import { Menu } from './Menu'
-import './Menu.scss'
+import { Menu } from '../../components/Menu/Menu'
 
 export const MenuContainer = () => {
 	const takenCards = useSelector((state: RootState) => state.cards.card)

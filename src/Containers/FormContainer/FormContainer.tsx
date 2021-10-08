@@ -1,8 +1,7 @@
 import React, { SyntheticEvent, useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { addCard } from '../../features/Slices/cards/cardsSlice';
-import { Form } from './Form';
-import './Form.scss'
+import { Form } from '../../components/Form/Form';
 
 export const FormContainer = () => {
 

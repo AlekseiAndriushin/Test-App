@@ -1,13 +1,12 @@
 import React from 'react'
 import { ChangeButtons } from './components/ChangeButtons/ChangeButtons'
-import { Content } from './components/Content/Content'
-import { FooterContainer } from './components/Footer/FooterContainer'
-import { FormContainer } from './components/Form/FormContainer'
-import { HeaderContainer } from './components/Header/HeaderContainer'
-import { MenuContainer } from './components/Menu/MenuContainer'
+import { FooterContainer } from './Containers/FooterContainer/FooterContainer'
+import { FormContainer } from './Containers/FormContainer/FormContainer'
+import { HeaderContainer } from './Containers/HeaderContainer/HeaderContainer'
+import { MenuContainer } from './Containers/MenuContainer/MenuContainer'
 import { useTheme } from './contexts/Theme/Theme.context'
+import { ContentContainer } from './Containers/ContentContainer/ContentContainer'
 import './App.scss'
-import { ContentContainer } from './components/Content/ContentContainer'
 export const App = () => {
 	const { theme } = useTheme()
 

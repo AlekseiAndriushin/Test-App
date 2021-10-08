@@ -2,8 +2,7 @@ import React, { useCallback } from 'react'
 import { RootState } from '../../app/store';
 
 import { useTypedSelector } from '../../hooks/useTypedSelector';
-import { Content } from './Content';
-import './Content.scss'
+import { Content } from '../../components/Content/Content';
 
 export const ContentContainer = () => {
 	const cards = useTypedSelector((state: RootState) => state.cards.card)
