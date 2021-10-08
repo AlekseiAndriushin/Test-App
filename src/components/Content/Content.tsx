@@ -1,25 +1,34 @@
-import React, { SyntheticEvent } from 'react'
-import { ICard } from '../../features/Slices/cards/cardsSlice';
-import Card from '../Card/Card'
+import React, { useCallback } from 'react'
+import { CardContainer } from '../../Containers/CardContainer/CardContainer';
 import './Content.scss'
 
+interface ICard {
+	id: string;
+	company: string;
+	address: string;
+	email: string;
+	phone: string;
+	taken: boolean;
+};
 interface IContentProps {
 	cards: ICard[];
-	onContextMenu: (e: SyntheticEvent) => void;
 }
 
-export const Content: React.FC<IContentProps> = ({ cards, onContextMenu }) => {
-
+export const Content: React.FC<IContentProps> = ({ cards }) => {
+	const onContextMenu = useCallback((event: React.MouseEvent) => {
+		event.preventDefault();
+		alert('Меню для списка компаний');
+	}, []);
 	return (
 		<section className="content" onContextMenu={onContextMenu}>
 			<ul className="components" >
 				{(cards.map((card) => (
-					<Card
+					<CardContainer
 						card={card} key={card.id} />
 				)))}
 				{[1, 2, 3, 4, 5, 6, 7, 8].map(index => {
 					return (
-						<Card key={index} />
+						<CardContainer key={index} />
 					)
 				})
 				}

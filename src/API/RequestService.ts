@@ -5,7 +5,7 @@ class RequestService {
 				return res.json();
 			})
 			.catch((err) => {
-				console.log('Oh we have a error', { err });
+				{ throw new Error(`Oh we have a error${err}`) };
 			});
 		return data;
 	}

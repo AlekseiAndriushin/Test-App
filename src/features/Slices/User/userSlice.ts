@@ -19,7 +19,7 @@ const initialState: userState = {
 	status: 'idle',
 	error: null,
 	user: undefined,
-} as userState
+}
 
 export const userSlice = createSlice({
 	name: "user",

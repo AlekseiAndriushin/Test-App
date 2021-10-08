@@ -1,12 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../../../app/store";
-import { Gaearon } from "../../../components/Footer/Footer";
 import { fetchGaearon } from "../../Queries/gaearon/fetchGaearon";
 
 type GaearonState = {
 	status: "loading" | "idle";
 	error: string | null;
 	gaearon: Gaearon;
+};
+
+export type Gaearon = {
+	name: string;
+	avatar_url: string;
+	company: string;
 };
 
 const initialState: GaearonState = {
