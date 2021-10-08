@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { Gaearon } from "../../types/types";
+import { Gaearon } from "../../../components/Footer/Footer";
 import RequestService from "../RequestService";
 
 export const fetchGaearon = createAsyncThunk<Gaearon>(

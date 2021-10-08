@@ -1,6 +1,10 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../../app/store";
-import { Followers } from "../types/types";
+
+export type Followers = {
+	login: string;
+	avatar_url: string;
+};
 
 const initialState = {
 	status: 'idle',

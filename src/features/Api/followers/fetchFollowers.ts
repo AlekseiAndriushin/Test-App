@@ -1,6 +1,10 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { Followers } from "../../types/types";
 import RequestService from "../RequestService";
+
+export type Followers = {
+	login: string;
+	avatar_url: string;
+};
 
 export const fetchFollowers = createAsyncThunk<Followers[]>(
 	"followers/fetch",

@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../../app/store";
 import { fetchGaearon } from "../Api/gaearon/fetchGaearon";
-import { Gaearon } from "../types/types";
 
 const initialState = {
 	status: 'idle',
