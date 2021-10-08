@@ -1,9 +1,12 @@
-import React from 'react'
-import { useTheme } from '../../contexts/Theme/Theme.context';
+import React, { Dispatch, SetStateAction } from 'react'
+import { ThemeType } from '../../contexts/Theme/Theme.model';
 import Button from '../Button/Button';
 
-export const ChangeButtons: React.FC = () => {
-	const { setCurrentTheme } = useTheme();
+interface IChangeButtonsProps {
+	setCurrentTheme: Dispatch<SetStateAction<ThemeType>>
+}
+
+export const ChangeButtons: React.FC<IChangeButtonsProps> = ({ setCurrentTheme }) => {
 	return (
 		<div className='container__buttons'>
 			<Button title='Сменить на красную тему' onClick={() => setCurrentTheme('red')} />

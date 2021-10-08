@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { ChangeButtons } from './components/ChangeButtons/ChangeButtons'
 import { FooterContainer } from './Containers/FooterContainer/FooterContainer'
 import { FormContainer } from './Containers/FormContainer/FormContainer'
@@ -8,7 +8,8 @@ import { useTheme } from './contexts/Theme/Theme.context'
 import { ContentContainer } from './Containers/ContentContainer/ContentContainer'
 import './App.scss'
 export const App = () => {
-	const { theme } = useTheme()
+
+	const { theme, setCurrentTheme } = useTheme()
 
 	return (
 		<div className="container" style={{ ...theme as React.CSSProperties }}>
@@ -16,7 +17,7 @@ export const App = () => {
 			<ContentContainer />
 			<MenuContainer />
 			<FormContainer />
-			<ChangeButtons />
+			<ChangeButtons setCurrentTheme={setCurrentTheme} />
 			<FooterContainer />
 		</div>
 	)
