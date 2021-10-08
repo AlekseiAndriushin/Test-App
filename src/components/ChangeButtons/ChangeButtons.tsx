@@ -3,7 +3,7 @@ import { useTheme } from '../../contexts/Theme/Theme.context';
 import Button from '../Button/Button';
 
 export const ChangeButtons: React.FC = () => {
-	const { theme, setCurrentTheme } = useTheme();
+	const { setCurrentTheme } = useTheme();
 	return (
 		<div className='container__buttons'>
 			<Button title='Сменить на красную тему' onClick={() => setCurrentTheme('red')} />
