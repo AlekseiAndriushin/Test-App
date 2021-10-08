@@ -1,8 +1,15 @@
 import React, { useCallback } from 'react'
-import { ICard } from '../../features/Slices/cards/cardsSlice';
 import { CardContainer } from '../../Containers/CardContainer/CardContainer';
 import './Content.scss'
 
+interface ICard {
+	id: string;
+	company: string;
+	address: string;
+	email: string;
+	phone: string;
+	taken: boolean;
+};
 interface IContentProps {
 	cards: ICard[];
 }
