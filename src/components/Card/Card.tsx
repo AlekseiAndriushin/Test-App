@@ -1,35 +1,17 @@
-import React, { useCallback, useState } from 'react'
-import { useDispatch } from 'react-redux';
-import { toggleCard } from '../../features/Slices/cards/cardsSlice';
+import React, { SyntheticEvent } from 'react'
+
 import './Card.scss'
+import { ICard } from '../../Containers/CardContainer/CardContainer';
 
-type ICardProps = {
-	company?: string;
-	address?: string;
-	email?: string;
-	phone?: string;
-	taken?: boolean;
-	id?: string;
+interface ICardProps {
+	card: ICard;
+	rightClick: (e: SyntheticEvent) => void;
+	isActive: boolean;
+	toggleClass: (e: SyntheticEvent) => void;
+	clickCard: (e: SyntheticEvent) => void
 }
 
-interface IProps {
-	card?: ICardProps;
-}
-
-const Card: React.FC<IProps> = ({ card }): React.ReactElement => {
-	const [isActive, setIsActive] = useState<boolean>(false)
-
-	const rightClick = useCallback((event: React.MouseEvent) => {
-		event.preventDefault();
-		event.stopPropagation();
-		alert('Меню для карточки');
-	}, []);
-	const toggleClass = () => {
-		setIsActive(oldActive => !oldActive)
-	}
-
-	const dispatch = useDispatch()
-
+const Card: React.FC<ICardProps> = ({ card, rightClick, isActive, clickCard, toggleClass }): React.ReactElement => {
 
 	return (
 		<li onContextMenu={rightClick}
@@ -38,7 +20,7 @@ const Card: React.FC<IProps> = ({ card }): React.ReactElement => {
 				? "card__selected"
 				: "card"
 			}
-			onClick={() => dispatch(toggleCard(card.id))}
+			onClick={clickCard}
 			onClickCapture={toggleClass}
 		>
 			<span>Название компании:{card?.company}</span>

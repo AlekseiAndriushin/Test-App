@@ -1,6 +1,6 @@
-import React, { SyntheticEvent, useCallback } from 'react'
+import React, { useCallback } from 'react'
 import { ICard } from '../../features/Slices/cards/cardsSlice';
-import Card from '../Card/Card'
+import { CardContainer } from '../../Containers/CardContainer/CardContainer';
 import './Content.scss'
 
 interface IContentProps {
@@ -16,12 +16,12 @@ export const Content: React.FC<IContentProps> = ({ cards }) => {
 		<section className="content" onContextMenu={onContextMenu}>
 			<ul className="components" >
 				{(cards.map((card) => (
-					<Card
+					<CardContainer
 						card={card} key={card.id} />
 				)))}
 				{[1, 2, 3, 4, 5, 6, 7, 8].map(index => {
 					return (
-						<Card key={index} />
+						<CardContainer key={index} />
 					)
 				})
 				}
