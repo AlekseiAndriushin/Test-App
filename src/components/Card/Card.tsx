@@ -25,7 +25,7 @@ const Card: React.FC<IProps> = ({ card }): React.ReactElement => {
 		alert('Меню для карточки');
 	}, []);
 	const toggleClass = () => {
-		setIsActive(!isActive)
+		setIsActive(oldActive => !oldActive)
 	}
 
 	const dispatch = useDispatch()
