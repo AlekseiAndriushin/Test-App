@@ -1,6 +1,11 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { Gaearon } from "../../../components/Footer/Footer";
 import NetworkService from "../../../API/NetworkService";
+
+export type Gaearon = {
+	name: string;
+	avatar_url: string;
+	company: string;
+};
 
 export const fetchGaearon = createAsyncThunk<Gaearon>(
 	"gaearon/fetch",
