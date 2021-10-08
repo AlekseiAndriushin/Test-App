@@ -1,8 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../../app/store";
+import { Gaearon } from "../../components/Footer/Footer";
 import { fetchGaearon } from "../Api/gaearon/fetchGaearon";
 
-const initialState = {
+type GaearonState = {
+	status: "loading" | "idle";
+	error: string | null;
+	gaearon: Gaearon;
+};
+
+const initialState: GaearonState = {
 	status: 'idle',
 	error: null,
 	gaearon: undefined,

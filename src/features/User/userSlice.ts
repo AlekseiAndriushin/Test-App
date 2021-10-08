@@ -15,7 +15,7 @@ type userState = {
 	user: User;
 };
 
-const initialState = {
+const initialState: userState = {
 	status: 'idle',
 	error: null,
 	user: undefined,

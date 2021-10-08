@@ -14,7 +14,7 @@ export interface ICard {
 type CardsState = {
 	card: ICard[];
 };
-const initialState = {
+const initialState: CardsState = {
 	card: [],
 };
 
