@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import NetworkService from "../NetworkService";
+import NetworkService from "../../../API/NetworkService";
 
 type User = {
 	name: string | undefined;

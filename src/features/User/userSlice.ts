@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../../app/store";
-import { fetchUser } from "../Api/User/fetchUser";
+import { fetchUser } from "../Queries/User/fetchUser";
 
 type User = {
 	name: string | undefined;

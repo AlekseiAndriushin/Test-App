@@ -5,7 +5,7 @@ class NetworkService {
 		const url = 'https://api.github.com/users/gaearon';
 		return RequestService.getRequest(url);
 	}
-	getGaearonApi() {
+	getFollowers() {
 		const url =
 			'https://api.github.com/users/gaearon/followers';
 		return RequestService.getRequest(url);
