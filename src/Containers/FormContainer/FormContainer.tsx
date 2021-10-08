@@ -1,4 +1,4 @@
-import React, { SyntheticEvent, useState } from 'react'
+import React, { ChangeEvent, FocusEvent, SyntheticEvent, useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { addCard } from '../../features/Slices/cards/cardsSlice';
 import { Form } from '../../components/Form/Form';
@@ -18,7 +18,7 @@ export const FormContainer = () => {
 
 	const { company, address, email, phone } = formData;
 
-	const onChange = (e) =>
+	const onChange = (e: FocusEvent<HTMLInputElement>) =>
 		setFormData({ ...formData, [e.target.name]: e.target.value });
 
 	const handleSubmit = (event: SyntheticEvent) => {
