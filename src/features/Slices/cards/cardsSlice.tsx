@@ -27,6 +27,7 @@ export const cardsSlice = createSlice({
 			action: PayloadAction<ICard>
 		) {
 			state.card.push(action.payload);
+			state.card.reverse()
 		},
 		toggleCard(
 			state: CardsState,

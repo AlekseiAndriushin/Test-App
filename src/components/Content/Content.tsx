@@ -16,7 +16,7 @@ export const Content: React.FC<IContentProps> = ({ cards, onContextMenu }) => {
 	return (
 		<section className="content" onContextMenu={onContextMenu}>
 			<ul className="components" >
-				{(cards.concat().reverse().map((card) => (
+				{(cards.map((card) => (
 					<Card
 						key={card.id}
 						company={card.company}
