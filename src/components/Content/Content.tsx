@@ -6,14 +6,15 @@ import './Content.scss'
 
 interface IContentProps {
 	cards: ICard[];
+	onContextMenu: (e: SyntheticEvent) => void;
 }
 
-export const Content: React.FC<IContentProps> = ({ cards }) => {
+export const Content: React.FC<IContentProps> = ({ cards, onContextMenu }) => {
 
 	const dispatch = useDispatch()
 
 	return (
-		<section className="content">
+		<section className="content" onContextMenu={onContextMenu}>
 			<ul className="components" >
 				{(cards.concat().reverse().map((card) => (
 					<Card
