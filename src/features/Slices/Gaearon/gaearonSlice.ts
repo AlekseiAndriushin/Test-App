@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { RootState } from "../../app/store";
-import { Gaearon } from "../../components/Footer/Footer";
-import { fetchGaearon } from "../Queries/gaearon/fetchGaearon";
+import { RootState } from "../../../app/store";
+import { Gaearon } from "../../../components/Footer/Footer";
+import { fetchGaearon } from "../../Queries/gaearon/fetchGaearon";
 
 type GaearonState = {
 	status: "loading" | "idle";

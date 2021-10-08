@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import cardsReducer from "../features/cards/cardsSlice";
-import gaearonReducer from "../features/Gaearon/gaearonSlice";
-import followersReducer from '../features/followers/followersSlice'
-import userReducer from '../features/User/userSlice';
+import cardsReducer from "../features/Slices/cards/cardsSlice";
+import gaearonReducer from "../features/Slices/Gaearon/gaearonSlice";
+import followersReducer from '../features/Slices/followers/followersSlice'
+import userReducer from '../features/Slices/User/userSlice';
 
 export const store = configureStore({
 	reducer: {

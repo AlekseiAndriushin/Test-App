@@ -1,6 +1,6 @@
 import React, { SyntheticEvent } from 'react'
 import { useDispatch } from 'react-redux';
-import { ICard, toggleCard } from '../../features/cards/cardsSlice';
+import { ICard, toggleCard } from '../../features/Slices/cards/cardsSlice';
 import Card from '../Card/Card'
 import './Content.scss'
 

@@ -1,6 +1,6 @@
 import React, { SyntheticEvent, useState } from 'react'
 import { useDispatch } from 'react-redux';
-import { addCard } from '../../features/cards/cardsSlice';
+import { addCard } from '../../features/Slices/cards/cardsSlice';
 import { Form } from './Form';
 import './Form.scss'
 
