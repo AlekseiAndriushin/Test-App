@@ -23,7 +23,7 @@ const Card: React.FC<IProps> = ({ company = "", address = "", email = "", phone 
 	};
 
 	const toggleClass = () => {
-		setIsActive(isActive => !isActive)
+		setIsActive(!isActive)
 	}
 
 	return (
