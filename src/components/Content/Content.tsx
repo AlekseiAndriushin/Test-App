@@ -1,6 +1,5 @@
 import React, { SyntheticEvent } from 'react'
-import { useDispatch } from 'react-redux';
-import { ICard, toggleCard } from '../../features/Slices/cards/cardsSlice';
+import { ICard } from '../../features/Slices/cards/cardsSlice';
 import Card from '../Card/Card'
 import './Content.scss'
 
@@ -11,20 +10,12 @@ interface IContentProps {
 
 export const Content: React.FC<IContentProps> = ({ cards, onContextMenu }) => {
 
-	const dispatch = useDispatch()
-
 	return (
 		<section className="content" onContextMenu={onContextMenu}>
 			<ul className="components" >
 				{(cards.map((card) => (
 					<Card
-						key={card.id}
-						company={card.company}
-						address={card.address}
-						email={card.email}
-						phone={card.phone}
-						taken={card.taken}
-						changeCard={() => dispatch(toggleCard(card.id))} />
+						card={card} key={card.id} />
 				)))}
 				{[1, 2, 3, 4, 5, 6, 7, 8].map(index => {
 					return (
