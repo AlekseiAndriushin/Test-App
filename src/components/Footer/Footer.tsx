@@ -1,7 +1,17 @@
 import React from 'react'
-import { Followers, Gaearon } from '../../features/types/types'
 import './Footer.scss'
 
+export type Followers = {
+	login: string;
+	avatar_url: string;
+};
+
+
+export type Gaearon = {
+	name: string;
+	avatar_url: string;
+	company: string;
+};
 interface IFooterProps {
 	gaearon: Gaearon;
 	followers: Followers[];
