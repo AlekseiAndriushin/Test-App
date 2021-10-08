@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { toggleCard } from '../../features/Slices/cards/cardsSlice';
 import Card from '../../components/Card/Card';
 
-export interface ICard {
+interface ICard {
 	company?: string;
 	address?: string;
 	email?: string;

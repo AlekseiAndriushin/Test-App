@@ -1,8 +1,15 @@
 import React, { SyntheticEvent } from 'react'
 
 import './Card.scss'
-import { ICard } from '../../Containers/CardContainer/CardContainer';
 
+export interface ICard {
+	company?: string;
+	address?: string;
+	email?: string;
+	phone?: string;
+	taken?: boolean;
+	id?: string;
+}
 interface ICardProps {
 	card: ICard;
 	rightClick: (e: SyntheticEvent) => void;

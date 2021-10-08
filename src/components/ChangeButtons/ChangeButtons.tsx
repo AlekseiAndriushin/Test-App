@@ -1,6 +1,7 @@
 import React, { Dispatch, SetStateAction } from 'react'
-import { ThemeType } from '../../contexts/Theme/Theme.model';
 import Button from '../Button/Button';
+
+type ThemeType = 'red' | 'blue';
 
 interface IChangeButtonsProps {
 	setCurrentTheme: Dispatch<SetStateAction<ThemeType>>

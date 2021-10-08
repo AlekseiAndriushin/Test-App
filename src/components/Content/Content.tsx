@@ -2,6 +2,7 @@ import React, { useCallback } from 'react'
 import { CardContainer } from '../../Containers/CardContainer/CardContainer';
 import './Content.scss'
 
+
 interface ICard {
 	id: string;
 	company: string;
