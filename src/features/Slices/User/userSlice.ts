@@ -1,9 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { RootState } from "../../app/store";
-import { fetchUser } from "../Api/User/fetchUser";
-import { User } from "../types/types";
+import { RootState } from "../../../app/store";
+import { fetchUser } from "../../Queries/User/fetchUser";
 
-
+type User = {
+	name: string | undefined;
+	avatar_url: string | undefined;
+	html_url: string | undefined;
+	followers: number | undefined;
+};
 
 type userState = {
 	status: "loading" | "idle";
@@ -11,7 +15,7 @@ type userState = {
 	user: User;
 };
 
-const initialState = {
+const initialState: userState = {
 	status: 'idle',
 	error: null,
 	user: undefined,

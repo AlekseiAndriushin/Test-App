@@ -1,6 +1,13 @@
 import React from 'react'
-import { User } from '../../features/types/types';
 import "./Header.scss"
+
+
+export type User = {
+	name: string | undefined;
+	avatar_url: string | undefined;
+	html_url: string | undefined;
+	followers: number | undefined;
+};
 
 interface IUserProps {
 	user: User

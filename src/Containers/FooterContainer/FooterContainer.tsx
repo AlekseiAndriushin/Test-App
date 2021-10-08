@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../../app/store'
-import { fetchFollowers } from '../../features/Api/followers/fetchFollowers'
-import { fetchGaearon } from '../../features/Api/gaearon/fetchGaearon'
-import Footer from './Footer'
-import './Footer.scss'
+import { fetchFollowers } from '../../features/Queries/followers/fetchFollowers'
+import { fetchGaearon } from '../../features/Queries/gaearon/fetchGaearon'
+import Footer from '../../components/Footer/Footer'
 
 export const FooterContainer = () => {
 	const dispatch = useDispatch()
