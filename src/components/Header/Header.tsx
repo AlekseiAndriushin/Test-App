@@ -2,7 +2,7 @@ import React from 'react'
 import "./Header.scss"
 
 
-export type User = {
+type User = {
 	name: string | undefined;
 	avatar_url: string | undefined;
 	html_url: string | undefined;

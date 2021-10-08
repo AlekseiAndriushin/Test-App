@@ -1,13 +1,13 @@
 import React from 'react'
 import './Footer.scss'
 
-export type Followers = {
+type Followers = {
 	login: string;
 	avatar_url: string;
 };
 
 
-export type Gaearon = {
+type Gaearon = {
 	name: string;
 	avatar_url: string;
 	company: string;
