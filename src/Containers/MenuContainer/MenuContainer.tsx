@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../app/store'
 import { Menu } from '../../components/Menu/Menu'
+import { removingDuplicateItems } from '../../utils/removingDuplicateItems'
 
 export const MenuContainer = () => {
 	const takenCards = useSelector((state: RootState) => state.cards.card)
@@ -10,7 +11,7 @@ export const MenuContainer = () => {
 		takenCards.map((card) => card.taken ? answer.push(card.company) : null)
 		if (answer.length) {
 			console.clear()
-			console.log(answer)
+			console.log(removingDuplicateItems(answer))
 		} else {
 			console.log("тут пусто")
 		}
