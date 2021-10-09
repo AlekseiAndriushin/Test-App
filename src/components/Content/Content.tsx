@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react'
-import { CardContainer } from '../../Containers/CardContainer/CardContainer';
+import Card from '../Card/Card';
 import './Content.scss'
 
 interface ICard {
@@ -10,28 +10,33 @@ interface ICard {
 	phone: string;
 	taken: boolean;
 };
+
 interface IContentProps {
 	cards: ICard[];
+	clickCard: (e: string) => void;
 }
 
-export const Content: React.FC<IContentProps> = ({ cards }) => {
+export const Content: React.FC<IContentProps> = ({ cards, clickCard }) => {
 	const onContextMenu = useCallback((event: React.MouseEvent) => {
 		event.preventDefault();
 		alert('Меню для списка компаний');
 	}, []);
+
 	return (
 		<section className="content" onContextMenu={onContextMenu}>
 			<ul className="components" >
 				{(cards.map((card) => (
-					<CardContainer
-						card={card} key={card.id} />
+					<Card
+						card={card} key={card.id} onClick={clickCard} />
 				)))}
+
 				{[1, 2, 3, 4, 5, 6, 7, 8].map(index => {
 					return (
-						<CardContainer key={index} />
+						<Card key={index} />
 					)
 				})
 				}
+
 			</ul>
 		</section>
 	)

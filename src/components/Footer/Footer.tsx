@@ -1,13 +1,13 @@
 import React from 'react'
 import './Footer.scss'
 
-export type Followers = {
+type Followers = {
 	login: string;
 	avatar_url: string;
 };
 
 
-export type Gaearon = {
+type Gaearon = {
 	name: string;
 	avatar_url: string;
 	company: string;
@@ -18,7 +18,7 @@ interface IFooterProps {
 }
 
 
-const Footer: React.FC<IFooterProps>
+export const Footer: React.FC<IFooterProps>
 	= ({ gaearon, followers }) => {
 
 		return (
@@ -41,4 +41,3 @@ const Footer: React.FC<IFooterProps>
 		)
 	}
 
-export default Footer

@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FocusEvent, SyntheticEvent, useState } from 'react'
+import React, { FocusEvent, SyntheticEvent, useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { addCard } from '../../features/Slices/cards/cardsSlice';
 import { Form } from '../../components/Form/Form';

@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import NetworkService from "../../../API/NetworkService";
 
-export type Followers = {
+type Followers = {
 	login: string;
 	avatar_url: string;
 };
