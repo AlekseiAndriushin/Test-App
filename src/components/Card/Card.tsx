@@ -1,4 +1,4 @@
-import React, { SyntheticEvent } from 'react'
+import React, { useCallback, useState } from 'react'
 
 import './Card.scss'
 
@@ -11,14 +11,29 @@ export interface ICard {
 	id?: string;
 }
 interface ICardProps {
-	card: ICard;
-	rightClick: (e: SyntheticEvent) => void;
-	isActive: boolean;
-	toggleClass: (e: SyntheticEvent) => void;
-	clickCard: (e: SyntheticEvent) => void
+	card?: ICard;
+	onClick?: (event: string) => void;
 }
 
-const Card: React.FC<ICardProps> = ({ card, rightClick, isActive, clickCard, toggleClass }): React.ReactElement => {
+const Card: React.FC<ICardProps> = ({ onClick, card }) => {
+
+	const [isActive, setIsActive] = useState<boolean>(false)
+
+
+	const clickCard = () => {
+		if (card !== undefined) {
+			onClick(card.id)
+		}
+	}
+
+	const rightClick = useCallback((event: React.MouseEvent) => {
+		event.preventDefault();
+		event.stopPropagation();
+		alert('Меню для карточки');
+	}, []);
+	const toggleClass = () => {
+		setIsActive(oldActive => !oldActive)
+	}
 
 	return (
 		<li onContextMenu={rightClick}
