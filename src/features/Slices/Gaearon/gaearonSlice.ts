@@ -8,7 +8,8 @@ type GaearonState = {
 	gaearon: Gaearon;
 };
 
-export type Gaearon = {
+
+type Gaearon = {
 	name: string;
 	avatar_url: string;
 	company: string;
@@ -20,7 +21,7 @@ const initialState: GaearonState = {
 	gaearon: undefined,
 }
 
-export const gaearonSlice = createSlice({
+const gaearonSlice = createSlice({
 	name: "gaearon",
 	initialState,
 	reducers: {

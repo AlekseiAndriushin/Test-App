@@ -13,7 +13,7 @@ interface IUserProps {
 	user: User
 }
 
-const Header: React.FC<IUserProps> = ({ user }) => {
+export const Header: React.FC<IUserProps> = ({ user }) => {
 
 	return (
 		<header className="header">
@@ -25,5 +25,3 @@ const Header: React.FC<IUserProps> = ({ user }) => {
 		</header>
 	)
 }
-
-export default Header;

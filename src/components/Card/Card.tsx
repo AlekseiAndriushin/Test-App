@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react'
 
 import './Card.scss'
 
-export interface ICard {
+interface ICard {
 	company?: string;
 	address?: string;
 	email?: string;

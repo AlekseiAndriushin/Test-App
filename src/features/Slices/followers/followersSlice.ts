@@ -7,7 +7,7 @@ type FollowersState = {
 	followers: Followers[];
 };
 
-export type Followers = {
+type Followers = {
 	login: string;
 	avatar_url: string;
 };
@@ -27,7 +27,7 @@ const fetchFollowers = createAsyncThunk<Followers[]>(
 	}
 )
 
-export const followersSlice = createSlice({
+const followersSlice = createSlice({
 	name: "followers",
 	initialState,
 	reducers: {

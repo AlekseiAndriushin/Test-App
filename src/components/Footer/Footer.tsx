@@ -18,7 +18,7 @@ interface IFooterProps {
 }
 
 
-const Footer: React.FC<IFooterProps>
+export const Footer: React.FC<IFooterProps>
 	= ({ gaearon, followers }) => {
 
 		return (
@@ -41,4 +41,3 @@ const Footer: React.FC<IFooterProps>
 		)
 	}
 
-export default Footer

@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 type CardId = string;
 type taken = boolean;
-export interface ICard {
+interface ICard {
 	id: CardId;
 	company: string;
 	address: string;
@@ -18,7 +18,7 @@ const initialState: CardsState = {
 	card: [],
 };
 
-export const cardsSlice = createSlice({
+const cardsSlice = createSlice({
 	name: "cards",
 	initialState,
 	reducers: {
