@@ -5,7 +5,7 @@ interface IProps {
 	onClick?: (e: React.MouseEvent) => void;
 }
 
-const Button = ({ title, onClick }: Readonly<IProps>): React.ReactElement => {
+export const Button = ({ title, onClick }: Readonly<IProps>): React.ReactElement => {
 
 	return (
 		<button className="findListButton" onClick={onClick}>
@@ -14,4 +14,3 @@ const Button = ({ title, onClick }: Readonly<IProps>): React.ReactElement => {
 	)
 }
 
-export default Button

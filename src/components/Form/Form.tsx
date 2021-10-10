@@ -1,5 +1,5 @@
 import React, { SyntheticEvent } from 'react'
-import Button from '../Button/Button'
+import { Button } from '../Button/Button'
 import './Form.scss'
 
 interface IFormData {

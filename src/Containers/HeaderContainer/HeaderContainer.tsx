@@ -4,7 +4,7 @@ import { RootState } from '../../app/store';
 import { fetchUser } from '../../features/Queries/User/fetchUser';
 import { Header } from '../../components/Header/Header';
 
-const HeaderContainer = () => {
+export const HeaderContainer = () => {
 	const dispatch = useDispatch()
 	useEffect(() => {
 
@@ -18,4 +18,3 @@ const HeaderContainer = () => {
 	)
 }
 
-export { HeaderContainer }
