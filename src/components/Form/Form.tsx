@@ -1,4 +1,4 @@
-import React, { SyntheticEvent } from 'react'
+import React, { FocusEvent, SyntheticEvent } from 'react'
 import { Button } from '../Button/Button'
 import './Form.scss'
 
@@ -10,7 +10,7 @@ interface IFormData {
 }
 interface IForm {
 	formData: IFormData;
-	onChange: (event: SyntheticEvent) => void;
+	onChange: (e: FocusEvent<HTMLInputElement>) => void;
 	handleSubmit: (event: SyntheticEvent) => void;
 }
 
