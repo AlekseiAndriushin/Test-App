@@ -11,12 +11,14 @@ interface IFormLogin {
 	formLogin: IFormLoginData;
 	onChange: (e: FocusEvent<HTMLInputElement>) => void;
 	handleSubmit: (event: SyntheticEvent) => void;
+	error: string
 }
 
-export const LoginForm: React.FC<IFormLogin> = ({ formLogin, onChange, handleSubmit }) => {
+export const LoginForm: React.FC<IFormLogin> = ({ error, formLogin, onChange, handleSubmit }) => {
 	return (
-		<>
-			<form className="LoginForm" onSubmit={handleSubmit}>
+		<div className="LoginForm">
+			<form onSubmit={handleSubmit}>
+				{error}
 				<input type="text"
 					className="LoginForm__input"
 					name="user"
@@ -35,6 +37,6 @@ export const LoginForm: React.FC<IFormLogin> = ({ formLogin, onChange, handleSub
 				/>
 				<Button title="войти" />
 			</form>
-		</>
+		</div>
 	)
 }

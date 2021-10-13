@@ -1,5 +1,6 @@
 import React, { FocusEvent, SyntheticEvent } from 'react'
 import { LoginForm } from '../../components/LoginForm/LoginForm'
+import './Login.module.scss'
 
 interface ILoginData {
 	user: string;
@@ -10,12 +11,13 @@ interface ILogin {
 	formLogin: ILoginData;
 	onChange: (e: FocusEvent<HTMLInputElement>) => void;
 	handleSubmit: (event: SyntheticEvent) => void;
+	error: string;
 }
 
-export const Login: React.FC<ILogin> = ({ formLogin, onChange, handleSubmit }) => {
+export const Login: React.FC<ILogin> = ({ error, formLogin, onChange, handleSubmit }) => {
 	return (
 		<>
-			<LoginForm formLogin={formLogin} onChange={onChange} handleSubmit={handleSubmit} />
+			<LoginForm error={error} formLogin={formLogin} onChange={onChange} handleSubmit={handleSubmit} />
 		</>
 	)
 }

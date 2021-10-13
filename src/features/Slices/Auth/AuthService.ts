@@ -5,7 +5,7 @@ import { authLocalStorage } from "../../../LocalStorage";
 
 interface IAuthService {
 	isLoading: boolean;
-	error: string | null;
+	error: string;
 	isAuth: boolean
 }
 
@@ -16,7 +16,7 @@ interface IUser {
 
 const initialState: IAuthService = {
 	isLoading: false,
-	error: null,
+	error: " ",
 	isAuth: localStorage.getItem('auth') ? true : false
 }
 
