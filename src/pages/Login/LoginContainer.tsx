@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { LoginForm } from '../../components/LoginForm/LoginForm'
 import { checkAuth } from '../../features/Slices/Auth/AuthService';
 
-const LoginContainer = () => {
+export const LoginContainer = () => {
 
 	const dispatch = useDispatch();
 
@@ -31,5 +31,3 @@ const LoginContainer = () => {
 			onChange={onChange} />
 	)
 }
-
-export default LoginContainer

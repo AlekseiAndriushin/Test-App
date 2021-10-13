@@ -53,28 +53,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
-/***/ "./src/components/Card/Card.scss":
-/*!***************************************!*\
-  !*** ./src/components/Card/Card.scss ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./src/components/Card/Card.scss?");
-
-/***/ }),
-
-/***/ "./src/components/Content/Content.scss":
-/*!*********************************************!*\
-  !*** ./src/components/Content/Content.scss ***!
-  \*********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./src/components/Content/Content.scss?");
-
-/***/ }),
-
 /***/ "./src/components/Footer/Footer.scss":
 /*!*******************************************!*\
   !*** ./src/components/Footer/Footer.scss ***!
@@ -83,17 +61,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./src/components/Footer/Footer.scss?");
-
-/***/ }),
-
-/***/ "./src/components/Form/Form.scss":
-/*!***************************************!*\
-  !*** ./src/components/Form/Form.scss ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./src/components/Form/Form.scss?");
 
 /***/ }),
 
@@ -108,25 +75,14 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
-/***/ "./src/components/Menu/Menu.scss":
-/*!***************************************!*\
-  !*** ./src/components/Menu/Menu.scss ***!
-  \***************************************/
+/***/ "./src/components/LoginForm/LoginForm.scss":
+/*!*************************************************!*\
+  !*** ./src/components/LoginForm/LoginForm.scss ***!
+  \*************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./src/components/Menu/Menu.scss?");
-
-/***/ }),
-
-/***/ "./src/pages/Home/Home.scss":
-/*!**********************************!*\
-  !*** ./src/pages/Home/Home.scss ***!
-  \**********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./src/pages/Home/Home.scss?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./src/components/LoginForm/LoginForm.scss?");
 
 /***/ }),
 
@@ -653,7 +609,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"App\": () => (/* binding */ App)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _App_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./App.scss */ \"./src/App.scss\");\n/* harmony import */ var _components_ChangeButtons_ChangeButtons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/ChangeButtons/ChangeButtons */ \"./src/components/ChangeButtons/ChangeButtons.tsx\");\n/* harmony import */ var _Containers_FooterContainer_FooterContainer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Containers/FooterContainer/FooterContainer */ \"./src/Containers/FooterContainer/FooterContainer.tsx\");\n/* harmony import */ var _Containers_HeaderContainer_HeaderContainer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Containers/HeaderContainer/HeaderContainer */ \"./src/Containers/HeaderContainer/HeaderContainer.tsx\");\n/* harmony import */ var _contexts_Theme_Theme_context__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./contexts/Theme/Theme.context */ \"./src/contexts/Theme/Theme.context.tsx\");\n/* harmony import */ var _pages_Home_Home__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/Home/Home */ \"./src/pages/Home/Home.tsx\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nconst App = () => {\r\n    const { theme, setCurrentTheme } = (0,_contexts_Theme_Theme_context__WEBPACK_IMPORTED_MODULE_5__.useTheme)();\r\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", { className: \"container\", style: Object.assign({}, theme) },\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Containers_HeaderContainer_HeaderContainer__WEBPACK_IMPORTED_MODULE_4__.HeaderContainer, null),\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_pages_Home_Home__WEBPACK_IMPORTED_MODULE_6__.Home, null),\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Containers_FooterContainer_FooterContainer__WEBPACK_IMPORTED_MODULE_3__.FooterContainer, null),\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_ChangeButtons_ChangeButtons__WEBPACK_IMPORTED_MODULE_2__.ChangeButtons, { setCurrentTheme: setCurrentTheme })));\r\n};\r\n\n\n//# sourceURL=webpack:///./src/App.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"App\": () => (/* binding */ App)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _App_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./App.scss */ \"./src/App.scss\");\n/* harmony import */ var _components_ChangeButtons_ChangeButtons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/ChangeButtons/ChangeButtons */ \"./src/components/ChangeButtons/ChangeButtons.tsx\");\n/* harmony import */ var _Containers_FooterContainer_FooterContainer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Containers/FooterContainer/FooterContainer */ \"./src/Containers/FooterContainer/FooterContainer.tsx\");\n/* harmony import */ var _Containers_HeaderContainer_HeaderContainer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Containers/HeaderContainer/HeaderContainer */ \"./src/Containers/HeaderContainer/HeaderContainer.tsx\");\n/* harmony import */ var _contexts_Theme_Theme_context__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./contexts/Theme/Theme.context */ \"./src/contexts/Theme/Theme.context.tsx\");\n/* harmony import */ var _pages_Login_LoginContainer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/Login/LoginContainer */ \"./src/pages/Login/LoginContainer.tsx\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nconst App = () => {\r\n    const { theme, setCurrentTheme } = (0,_contexts_Theme_Theme_context__WEBPACK_IMPORTED_MODULE_5__.useTheme)();\r\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", { className: \"container\", style: Object.assign({}, theme) },\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Containers_HeaderContainer_HeaderContainer__WEBPACK_IMPORTED_MODULE_4__.HeaderContainer, null),\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_pages_Login_LoginContainer__WEBPACK_IMPORTED_MODULE_6__[\"default\"], null),\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Containers_FooterContainer_FooterContainer__WEBPACK_IMPORTED_MODULE_3__.FooterContainer, null),\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_ChangeButtons_ChangeButtons__WEBPACK_IMPORTED_MODULE_2__.ChangeButtons, { setCurrentTheme: setCurrentTheme })));\r\n};\r\n\n\n//# sourceURL=webpack:///./src/App.tsx?");
 
 /***/ }),
 
@@ -668,17 +624,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./src/Containers/ContentContainer/ContentContainer.tsx":
-/*!**************************************************************!*\
-  !*** ./src/Containers/ContentContainer/ContentContainer.tsx ***!
-  \**************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"ContentContainer\": () => (/* binding */ ContentContainer)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _hooks_useTypedSelector__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../hooks/useTypedSelector */ \"./src/hooks/useTypedSelector.tsx\");\n/* harmony import */ var _components_Content_Content__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/Content/Content */ \"./src/components/Content/Content.tsx\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var _features_Slices_cards_cardsSlice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../features/Slices/cards/cardsSlice */ \"./src/features/Slices/cards/cardsSlice.tsx\");\n\r\n\r\n\r\n\r\n\r\nconst ContentContainer = () => {\r\n    const cards = (0,_hooks_useTypedSelector__WEBPACK_IMPORTED_MODULE_1__.useTypedSelector)((state) => state.cards.card);\r\n    const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useDispatch)();\r\n    const clickCard = (id) => {\r\n        dispatch((0,_features_Slices_cards_cardsSlice__WEBPACK_IMPORTED_MODULE_4__.toggleCard)(id));\r\n    };\r\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Content_Content__WEBPACK_IMPORTED_MODULE_2__.Content, { cards: cards, clickCard: clickCard }));\r\n};\r\n\n\n//# sourceURL=webpack:///./src/Containers/ContentContainer/ContentContainer.tsx?");
-
-/***/ }),
-
 /***/ "./src/Containers/FooterContainer/FooterContainer.tsx":
 /*!************************************************************!*\
   !*** ./src/Containers/FooterContainer/FooterContainer.tsx ***!
@@ -686,18 +631,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"FooterContainer\": () => (/* binding */ FooterContainer)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var _features_Queries_followers_fetchFollowers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../features/Queries/followers/fetchFollowers */ \"./src/features/Queries/followers/fetchFollowers.ts\");\n/* harmony import */ var _features_Queries_gaearon_fetchGaearon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../features/Queries/gaearon/fetchGaearon */ \"./src/features/Queries/gaearon/fetchGaearon.ts\");\n/* harmony import */ var _components_Footer_Footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/Footer/Footer */ \"./src/components/Footer/Footer.tsx\");\n/* harmony import */ var _API_AuthUserService__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../API/AuthUserService */ \"./src/API/AuthUserService.ts\");\n\r\n\r\n\r\n\r\n\r\n\r\nconst FooterContainer = () => {\r\n    const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();\r\n    (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {\r\n        dispatch((0,_features_Queries_followers_fetchFollowers__WEBPACK_IMPORTED_MODULE_2__.fetchFollowers)());\r\n        dispatch((0,_features_Queries_gaearon_fetchGaearon__WEBPACK_IMPORTED_MODULE_3__.fetchGaearon)());\r\n    }, []);\r\n    console.log(_API_AuthUserService__WEBPACK_IMPORTED_MODULE_5__[\"default\"].getAuth());\r\n    const followers = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)((state) => state.followers.followers);\r\n    const auth = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)((state) => state.auth.isAuth);\r\n    const gaearon = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)((state) => state.gaearon.gaearon);\r\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null,\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_4__.Footer, { gaearon: gaearon, followers: followers }),\r\n        console.log(auth)));\r\n};\r\n\n\n//# sourceURL=webpack:///./src/Containers/FooterContainer/FooterContainer.tsx?");
-
-/***/ }),
-
-/***/ "./src/Containers/FormContainer/FormContainer.tsx":
-/*!********************************************************!*\
-  !*** ./src/Containers/FormContainer/FormContainer.tsx ***!
-  \********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"FormContainer\": () => (/* binding */ FormContainer)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var _features_Slices_cards_cardsSlice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../features/Slices/cards/cardsSlice */ \"./src/features/Slices/cards/cardsSlice.tsx\");\n/* harmony import */ var _components_Form_Form__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/Form/Form */ \"./src/components/Form/Form.tsx\");\n\r\n\r\n\r\n\r\nconst FormContainer = () => {\r\n    const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();\r\n    const initialState = {\r\n        company: '',\r\n        address: '',\r\n        email: '',\r\n        phone: ''\r\n    };\r\n    const [formData, setFormData] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(initialState);\r\n    const { company, address, email, phone } = formData;\r\n    const onChange = (e) => setFormData(Object.assign(Object.assign({}, formData), { [e.target.name]: e.target.value }));\r\n    const handleSubmit = (event) => {\r\n        event.preventDefault();\r\n        dispatch((0,_features_Slices_cards_cardsSlice__WEBPACK_IMPORTED_MODULE_2__.addCard)({\r\n            id: Date.now().toString(),\r\n            address,\r\n            company,\r\n            email,\r\n            phone,\r\n            taken: false\r\n        }));\r\n        setFormData(initialState);\r\n    };\r\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Form_Form__WEBPACK_IMPORTED_MODULE_3__.Form, { formData: formData, onChange: onChange, handleSubmit: handleSubmit }));\r\n};\r\n\n\n//# sourceURL=webpack:///./src/Containers/FormContainer/FormContainer.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"FooterContainer\": () => (/* binding */ FooterContainer)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var _features_Queries_followers_fetchFollowers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../features/Queries/followers/fetchFollowers */ \"./src/features/Queries/followers/fetchFollowers.ts\");\n/* harmony import */ var _features_Queries_gaearon_fetchGaearon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../features/Queries/gaearon/fetchGaearon */ \"./src/features/Queries/gaearon/fetchGaearon.ts\");\n/* harmony import */ var _components_Footer_Footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/Footer/Footer */ \"./src/components/Footer/Footer.tsx\");\n/* harmony import */ var _API_AuthUserService__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../API/AuthUserService */ \"./src/API/AuthUserService.ts\");\n\r\n\r\n\r\n\r\n\r\n\r\nconst FooterContainer = () => {\r\n    const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();\r\n    (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {\r\n        dispatch((0,_features_Queries_followers_fetchFollowers__WEBPACK_IMPORTED_MODULE_2__.fetchFollowers)());\r\n        dispatch((0,_features_Queries_gaearon_fetchGaearon__WEBPACK_IMPORTED_MODULE_3__.fetchGaearon)());\r\n    }, []);\r\n    console.log(_API_AuthUserService__WEBPACK_IMPORTED_MODULE_5__[\"default\"].getAuth());\r\n    const followers = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)((state) => state.followers.followers);\r\n    const gaearon = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)((state) => state.gaearon.gaearon);\r\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null,\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_4__.Footer, { gaearon: gaearon, followers: followers })));\r\n};\r\n\n\n//# sourceURL=webpack:///./src/Containers/FooterContainer/FooterContainer.tsx?");
 
 /***/ }),
 
@@ -709,17 +643,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"HeaderContainer\": () => (/* binding */ HeaderContainer)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var _features_Queries_User_fetchUser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../features/Queries/User/fetchUser */ \"./src/features/Queries/User/fetchUser.ts\");\n/* harmony import */ var _components_Header_Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/Header/Header */ \"./src/components/Header/Header.tsx\");\n\r\n\r\n\r\n\r\nconst HeaderContainer = () => {\r\n    const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();\r\n    (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {\r\n        dispatch((0,_features_Queries_User_fetchUser__WEBPACK_IMPORTED_MODULE_2__.fetchUser)());\r\n    }, []);\r\n    const user = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)((state) => state.user.user);\r\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Header_Header__WEBPACK_IMPORTED_MODULE_3__.Header, { user: user }));\r\n};\r\n\n\n//# sourceURL=webpack:///./src/Containers/HeaderContainer/HeaderContainer.tsx?");
-
-/***/ }),
-
-/***/ "./src/Containers/MenuContainer/MenuContainer.tsx":
-/*!********************************************************!*\
-  !*** ./src/Containers/MenuContainer/MenuContainer.tsx ***!
-  \********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"MenuContainer\": () => (/* binding */ MenuContainer)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var _components_Menu_Menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/Menu/Menu */ \"./src/components/Menu/Menu.tsx\");\n/* harmony import */ var _utils_removingDuplicateItems__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils/removingDuplicateItems */ \"./src/utils/removingDuplicateItems.ts\");\n\r\n\r\n\r\n\r\nconst MenuContainer = () => {\r\n    const takenCards = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)((state) => state.cards.card);\r\n    const answer = [];\r\n    const findList = () => {\r\n        takenCards.map((card) => card.taken ? answer.push(card.company) : null);\r\n        if (answer.length) {\r\n            console.clear();\r\n            console.log((0,_utils_removingDuplicateItems__WEBPACK_IMPORTED_MODULE_3__.removingDuplicateItems)(answer));\r\n        }\r\n        else {\r\n            console.log(\"тут пусто\");\r\n        }\r\n    };\r\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Menu_Menu__WEBPACK_IMPORTED_MODULE_2__.Menu, { findList: findList }));\r\n};\r\n\n\n//# sourceURL=webpack:///./src/Containers/MenuContainer/MenuContainer.tsx?");
 
 /***/ }),
 
@@ -767,17 +690,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./src/components/Card/Card.tsx":
-/*!**************************************!*\
-  !*** ./src/components/Card/Card.tsx ***!
-  \**************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _Card_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Card.scss */ \"./src/components/Card/Card.scss\");\n\r\n\r\nconst Card = ({ onClick, card }) => {\r\n    const [isActive, setIsActive] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);\r\n    const clickCard = () => {\r\n        if (card !== undefined) {\r\n            onClick(card.id);\r\n        }\r\n    };\r\n    const rightClick = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)((event) => {\r\n        event.preventDefault();\r\n        event.stopPropagation();\r\n        alert('Меню для карточки');\r\n    }, []);\r\n    const toggleClass = () => {\r\n        setIsActive(oldActive => !oldActive);\r\n    };\r\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"li\", { onContextMenu: rightClick, className: isActive\r\n            ? \"card__selected\"\r\n            : \"card\", onClick: clickCard, onClickCapture: toggleClass },\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"span\", null,\r\n            \"\\u041D\\u0430\\u0437\\u0432\\u0430\\u043D\\u0438\\u0435 \\u043A\\u043E\\u043C\\u043F\\u0430\\u043D\\u0438\\u0438:\", card === null || card === void 0 ? void 0 :\r\n            card.company),\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"span\", null,\r\n            \"\\u0410\\u0434\\u0440\\u0435\\u0441:\", card === null || card === void 0 ? void 0 :\r\n            card.address),\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"span\", null,\r\n            \"Email:\", card === null || card === void 0 ? void 0 :\r\n            card.email),\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"span\", null,\r\n            \"\\u0422\\u0435\\u043B\\u0435\\u0444\\u043E\\u043D:\", card === null || card === void 0 ? void 0 :\r\n            card.phone)));\r\n};\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Card);\r\n\n\n//# sourceURL=webpack:///./src/components/Card/Card.tsx?");
-
-/***/ }),
-
 /***/ "./src/components/ChangeButtons/ChangeButtons.tsx":
 /*!********************************************************!*\
   !*** ./src/components/ChangeButtons/ChangeButtons.tsx ***!
@@ -786,17 +698,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"ChangeButtons\": () => (/* binding */ ChangeButtons)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _Button_Button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Button/Button */ \"./src/components/Button/Button.tsx\");\n\r\n\r\nconst ChangeButtons = ({ setCurrentTheme }) => {\r\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", { className: 'container__buttons' },\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Button_Button__WEBPACK_IMPORTED_MODULE_1__.Button, { title: '\\u0421\\u043C\\u0435\\u043D\\u0438\\u0442\\u044C \\u043D\\u0430 \\u043A\\u0440\\u0430\\u0441\\u043D\\u0443\\u044E \\u0442\\u0435\\u043C\\u0443', onClick: () => setCurrentTheme('red') }),\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Button_Button__WEBPACK_IMPORTED_MODULE_1__.Button, { title: '\\u0421\\u043C\\u0435\\u043D\\u0438\\u0442\\u044C \\u043D\\u0430 \\u0441\\u0438\\u043D\\u044E\\u044E \\u0442\\u0435\\u043C\\u0443', onClick: () => setCurrentTheme('blue') })));\r\n};\r\n\n\n//# sourceURL=webpack:///./src/components/ChangeButtons/ChangeButtons.tsx?");
-
-/***/ }),
-
-/***/ "./src/components/Content/Content.tsx":
-/*!********************************************!*\
-  !*** ./src/components/Content/Content.tsx ***!
-  \********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Content\": () => (/* binding */ Content)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _Card_Card__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Card/Card */ \"./src/components/Card/Card.tsx\");\n/* harmony import */ var _Content_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Content.scss */ \"./src/components/Content/Content.scss\");\n\r\n\r\n\r\n;\r\nconst Content = ({ cards, clickCard }) => {\r\n    const onContextMenu = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)((event) => {\r\n        event.preventDefault();\r\n        alert('Меню для списка компаний');\r\n    }, []);\r\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"section\", { className: \"content\", onContextMenu: onContextMenu },\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"ul\", { className: \"components\" },\r\n            (cards.map((card) => (react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Card_Card__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { card: card, key: card.id, onClick: clickCard })))),\r\n            [1, 2, 3, 4, 5, 6, 7, 8].map(index => {\r\n                return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Card_Card__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { key: index }));\r\n            }))));\r\n};\r\n\n\n//# sourceURL=webpack:///./src/components/Content/Content.tsx?");
 
 /***/ }),
 
@@ -811,17 +712,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./src/components/Form/Form.tsx":
-/*!**************************************!*\
-  !*** ./src/components/Form/Form.tsx ***!
-  \**************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Form\": () => (/* binding */ Form)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _Button_Button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Button/Button */ \"./src/components/Button/Button.tsx\");\n/* harmony import */ var _Form_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Form.scss */ \"./src/components/Form/Form.scss\");\n\r\n\r\n\r\nconst Form = ({ formData, onChange, handleSubmit }) => {\r\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"form\", { className: \"form\", onSubmit: handleSubmit },\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"input\", { className: \"form__input\", type: \"text\", name: \"company\", placeholder: \"\\u0412\\u0432\\u0435\\u0434\\u0438\\u0442\\u0435 \\u043D\\u0430\\u0437\\u0432\\u0430\\u043D\\u0438\\u0435 \\u043A\\u043E\\u043C\\u043F\\u0430\\u043D\\u0438\\u0438\", required: true, value: formData.company, onChange: onChange }),\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"input\", { className: \"form__input\", type: \"text\", name: \"address\", placeholder: \"\\u0412\\u0432\\u0435\\u0434\\u0438\\u0442\\u0435 \\u0412\\u0430\\u0448 \\u0430\\u0434\\u0440\\u0435\\u0441\", required: true, value: formData.address, onChange: onChange }),\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"input\", { className: \"form__input\", type: \"email\", name: \"email\", placeholder: \"\\u0412\\u0432\\u0435\\u0434\\u0438\\u0442\\u0435 \\u0412\\u0430\\u0448 e-mail\", required: true, value: formData.email, onChange: onChange }),\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"input\", { className: \"form__input\", type: \"tel\", name: \"phone\", placeholder: \"\\u0412\\u0432\\u0435\\u0434\\u0438\\u0442\\u0435 \\u0412\\u0430\\u0448 \\u0442\\u0435\\u043B\\u0435\\u0444\\u043E\\u043D\", required: true, value: formData.phone, onChange: onChange }),\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Button_Button__WEBPACK_IMPORTED_MODULE_1__.Button, { title: \"\\u0434\\u043E\\u0431\\u0430\\u0432\\u0438\\u0442\\u044C\" })));\r\n};\r\n\n\n//# sourceURL=webpack:///./src/components/Form/Form.tsx?");
-
-/***/ }),
-
 /***/ "./src/components/Header/Header.tsx":
 /*!******************************************!*\
   !*** ./src/components/Header/Header.tsx ***!
@@ -833,14 +723,14 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./src/components/Menu/Menu.tsx":
-/*!**************************************!*\
-  !*** ./src/components/Menu/Menu.tsx ***!
-  \**************************************/
+/***/ "./src/components/LoginForm/LoginForm.tsx":
+/*!************************************************!*\
+  !*** ./src/components/LoginForm/LoginForm.tsx ***!
+  \************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Menu\": () => (/* binding */ Menu)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _Button_Button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Button/Button */ \"./src/components/Button/Button.tsx\");\n/* harmony import */ var _Menu_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Menu.scss */ \"./src/components/Menu/Menu.scss\");\n\r\n\r\n\r\nconst Menu = ({ findList }) => {\r\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"menu\", { className: \"menu\" },\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Button_Button__WEBPACK_IMPORTED_MODULE_1__.Button, { title: \"\\u0443\\u0437\\u043D\\u0430\\u0442\\u044C \\u0441\\u043F\\u0438\\u0441\\u043E\\u043A \\u043A\\u043E\\u043C\\u043F\\u0430\\u043D\\u0438\\u0439\", onClick: findList })));\r\n};\r\n\n\n//# sourceURL=webpack:///./src/components/Menu/Menu.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"LoginForm\": () => (/* binding */ LoginForm)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _Button_Button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Button/Button */ \"./src/components/Button/Button.tsx\");\n/* harmony import */ var _LoginForm_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./LoginForm.scss */ \"./src/components/LoginForm/LoginForm.scss\");\n\r\n\r\n\r\nconst LoginForm = ({ formLogin, onChange, handleSubmit }) => {\r\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"form\", { className: \"LoginForm\", onSubmit: handleSubmit },\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"input\", { type: \"text\", className: \"LoginForm__input\", name: \"user\", placeholder: \"\\u0412\\u0432\\u0435\\u0434\\u0438\\u0442\\u0435 \\u0438\\u043C\\u044F\", required: true, value: formLogin.user, onChange: onChange }),\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"input\", { type: \"password\", className: \"LoginForm__input\", name: \"password\", placeholder: \"\\u0412\\u0432\\u0435\\u0434\\u0438\\u0442\\u0435 \\u043F\\u0430\\u0440\\u043E\\u043B\\u044C\", required: true, value: formLogin.password, onChange: onChange }),\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Button_Button__WEBPACK_IMPORTED_MODULE_1__.Button, { title: \"\\u0432\\u043E\\u0439\\u0442\\u0438\" })));\r\n};\r\n\n\n//# sourceURL=webpack:///./src/components/LoginForm/LoginForm.tsx?");
 
 /***/ }),
 
@@ -965,17 +855,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./src/hooks/useTypedSelector.tsx":
-/*!****************************************!*\
-  !*** ./src/hooks/useTypedSelector.tsx ***!
-  \****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"useTypedSelector\": () => (/* binding */ useTypedSelector)\n/* harmony export */ });\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n\r\nconst useTypedSelector = react_redux__WEBPACK_IMPORTED_MODULE_0__.useSelector;\r\n\n\n//# sourceURL=webpack:///./src/hooks/useTypedSelector.tsx?");
-
-/***/ }),
-
 /***/ "./src/index.tsx":
 /*!***********************!*\
   !*** ./src/index.tsx ***!
@@ -987,25 +866,14 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 
 /***/ }),
 
-/***/ "./src/pages/Home/Home.tsx":
-/*!*********************************!*\
-  !*** ./src/pages/Home/Home.tsx ***!
-  \*********************************/
+/***/ "./src/pages/Login/LoginContainer.tsx":
+/*!********************************************!*\
+  !*** ./src/pages/Login/LoginContainer.tsx ***!
+  \********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Home\": () => (/* binding */ Home)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _Containers_ContentContainer_ContentContainer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Containers/ContentContainer/ContentContainer */ \"./src/Containers/ContentContainer/ContentContainer.tsx\");\n/* harmony import */ var _Containers_FormContainer_FormContainer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Containers/FormContainer/FormContainer */ \"./src/Containers/FormContainer/FormContainer.tsx\");\n/* harmony import */ var _Containers_MenuContainer_MenuContainer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Containers/MenuContainer/MenuContainer */ \"./src/Containers/MenuContainer/MenuContainer.tsx\");\n/* harmony import */ var _Home_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Home.scss */ \"./src/pages/Home/Home.scss\");\n\r\n\r\n\r\n\r\n\r\nconst Home = () => {\r\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null,\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Containers_ContentContainer_ContentContainer__WEBPACK_IMPORTED_MODULE_1__.ContentContainer, null),\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Containers_MenuContainer_MenuContainer__WEBPACK_IMPORTED_MODULE_3__.MenuContainer, null),\r\n        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Containers_FormContainer_FormContainer__WEBPACK_IMPORTED_MODULE_2__.FormContainer, null)));\r\n};\r\n\n\n//# sourceURL=webpack:///./src/pages/Home/Home.tsx?");
-
-/***/ }),
-
-/***/ "./src/utils/removingDuplicateItems.ts":
-/*!*********************************************!*\
-  !*** ./src/utils/removingDuplicateItems.ts ***!
-  \*********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"removingDuplicateItems\": () => (/* binding */ removingDuplicateItems)\n/* harmony export */ });\nconst removingDuplicateItems = (array) => {\r\n    return array.filter((item, index) => array.indexOf(item) === index);\r\n};\r\n\n\n//# sourceURL=webpack:///./src/utils/removingDuplicateItems.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var _components_LoginForm_LoginForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/LoginForm/LoginForm */ \"./src/components/LoginForm/LoginForm.tsx\");\n/* harmony import */ var _features_Slices_Auth_AuthService__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../features/Slices/Auth/AuthService */ \"./src/features/Slices/Auth/AuthService.ts\");\n\r\n\r\n\r\n\r\nconst LoginContainer = () => {\r\n    const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();\r\n    const initialState = {\r\n        user: \"\",\r\n        password: \"\"\r\n    };\r\n    const [formLogin, setFormLogin] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(initialState);\r\n    const onChange = (e) => setFormLogin(Object.assign(Object.assign({}, formLogin), { [e.target.name]: e.target.value }));\r\n    const { user, password } = formLogin;\r\n    const handleSubmit = (event) => {\r\n        event.preventDefault();\r\n        dispatch((0,_features_Slices_Auth_AuthService__WEBPACK_IMPORTED_MODULE_3__.checkAuth)(user, password));\r\n    };\r\n    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_LoginForm_LoginForm__WEBPACK_IMPORTED_MODULE_2__.LoginForm, { formLogin: formLogin, handleSubmit: handleSubmit, onChange: onChange }));\r\n};\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (LoginContainer);\r\n\n\n//# sourceURL=webpack:///./src/pages/Login/LoginContainer.tsx?");
 
 /***/ }),
 
