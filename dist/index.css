@@ -1,3 +1,7 @@
+/*!*******************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/App.scss ***!
+  \*******************************************************************************************************/
+
 /*!****************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/Footer/Footer.scss ***!
   \****************************************************************************************************************************/
@@ -32,23 +36,6 @@
   display: block;
   margin: 5px;
 }
-/*!************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/Form/Form.scss ***!
-  \************************************************************************************************************************/
-.form {
-  grid-area: form;
-  background: var(--primary);
-  color: var(--text-color);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.form__input {
-  margin: 10px;
-  padding: 5px;
-  border: none;
-}
 /*!****************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/Header/Header.scss ***!
   \****************************************************************************************************************************/
@@ -70,26 +57,6 @@
   color: var(--text-color);
   text-decoration: none;
   cursor: pointer;
-}
-/*!************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/Menu/Menu.scss ***!
-  \************************************************************************************************************************/
-.menu {
-  grid-area: menu;
-  background: var(--primary);
-  color: var(--text-color);
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@media only screen and (max-width: 1024px) {
-  .menu {
-    padding: 10px 0;
-    margin: 10px 0;
-  }
 }
 /*!************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/Card/Card.scss ***!
@@ -151,9 +118,46 @@
     grid-template-columns: 1fr;
   }
 }
-/*!*******************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/App.scss ***!
-  \*******************************************************************************************************/
+/*!************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/Form/Form.scss ***!
+  \************************************************************************************************************************/
+.form {
+  grid-area: form;
+  background: var(--primary);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form__input {
+  margin: 10px;
+  padding: 5px;
+  border: none;
+}
+/*!************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/Menu/Menu.scss ***!
+  \************************************************************************************************************************/
+.menu {
+  grid-area: menu;
+  background: var(--primary);
+  color: var(--text-color);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .menu {
+    padding: 10px 0;
+    margin: 10px 0;
+  }
+}
+/*!*******************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/pages/Home/Home.scss ***!
+  \*******************************************************************************************************************/
 .container {
   display: grid;
   grid-template-columns: repeat 3 1fr;

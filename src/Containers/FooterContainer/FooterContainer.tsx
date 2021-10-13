@@ -17,14 +17,11 @@ export const FooterContainer = () => {
 
 	const followers = useSelector((state: RootState) => state.followers.followers)
 
-	const auth = useSelector((state: RootState) => state.auth.isAuth)
-
 	const gaearon = useSelector((state: RootState) => state.gaearon.gaearon)
 
 	return (
 		<>
 			<Footer gaearon={gaearon} followers={followers} />
-			{console.log(auth)}
 		</>
 	)
 }

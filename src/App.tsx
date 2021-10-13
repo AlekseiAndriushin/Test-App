@@ -4,7 +4,7 @@ import { ChangeButtons } from './components/ChangeButtons/ChangeButtons'
 import { FooterContainer } from './Containers/FooterContainer/FooterContainer'
 import { HeaderContainer } from './Containers/HeaderContainer/HeaderContainer'
 import { useTheme } from './contexts/Theme/Theme.context'
-import { Home } from './pages/Home/Home'
+import LoginContainer from './pages/Login/LoginContainer'
 
 export const App = () => {
 
@@ -13,7 +13,7 @@ export const App = () => {
 	return (
 		<div className="container" style={{ ...theme as React.CSSProperties }}>
 			<HeaderContainer />
-			<Home />
+			<LoginContainer />
 			<FooterContainer />
 			<ChangeButtons setCurrentTheme={setCurrentTheme} />
 		</div >
