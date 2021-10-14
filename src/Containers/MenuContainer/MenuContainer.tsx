@@ -1,19 +1,25 @@
 import React, { SyntheticEvent } from 'react'
+import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux'
 import { Menu } from '../../components/Menu/Menu'
 import { logout } from '../../features/Slices/Auth/AuthService'
 import { useTypedSelector } from '../../hooks/useTypedSelector'
 import { removingDuplicateItems } from '../../utils/removingDuplicateItems'
+import { RouteNames } from '../../router';
 
 export const MenuContainer = () => {
 
 	const { isAuth } = useTypedSelector(state => state.auth)
+
+	const router = useHistory();
 
 	const dispatch = useDispatch()
 
 	const handleLogout = (event: SyntheticEvent) => {
 		event.preventDefault()
 		dispatch(logout())
+		// router.push(RouteNames.LOGIN);
+
 	}
 	const takenCards = useTypedSelector(state => state.cards.card)
 	const answer: Array<string> = []

@@ -1,8 +1,10 @@
 import React, { FocusEvent, SyntheticEvent, useState } from 'react'
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import { LoginForm } from '../../components/LoginForm/LoginForm'
 import { checkAuth } from '../../features/Slices/Auth/AuthService';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
+import { RouteNames } from '../../router';
 
 export const LoginContainer = () => {
 
@@ -20,12 +22,14 @@ export const LoginContainer = () => {
 
 	const { isLoading, error } = useTypedSelector((state) => state.auth);
 
+	const router = useHistory();
 
 	const { user, password } = formLogin;
 
 	const handleSubmit = (event: SyntheticEvent) => {
 		event.preventDefault()
 		dispatch(checkAuth(user, password))
+		router.push(RouteNames.HOME);
 	}
 
 	return (
