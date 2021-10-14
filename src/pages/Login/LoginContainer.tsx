@@ -18,7 +18,7 @@ export const LoginContainer = () => {
 	const onChange = (e: FocusEvent<HTMLInputElement>) =>
 		setFormLogin({ ...formLogin, [e.target.name]: e.target.value });
 
-	const { error } = useTypedSelector((state) => state.auth);
+	const { isLoading, error } = useTypedSelector((state) => state.auth);
 
 
 	const { user, password } = formLogin;
@@ -33,6 +33,7 @@ export const LoginContainer = () => {
 			error={error}
 			formLogin={formLogin}
 			handleSubmit={handleSubmit}
-			onChange={onChange} />
+			onChange={onChange}
+			isLoading={isLoading} />
 	)
 }

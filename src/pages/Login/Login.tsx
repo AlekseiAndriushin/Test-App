@@ -12,12 +12,13 @@ interface ILogin {
 	onChange: (e: FocusEvent<HTMLInputElement>) => void;
 	handleSubmit: (event: SyntheticEvent) => void;
 	error: string;
+	isLoading: boolean;
 }
 
-export const Login: React.FC<ILogin> = ({ error, formLogin, onChange, handleSubmit }) => {
+export const Login: React.FC<ILogin> = ({ error, formLogin, onChange, handleSubmit, isLoading }) => {
 	return (
 		<>
-			<LoginForm error={error} formLogin={formLogin} onChange={onChange} handleSubmit={handleSubmit} />
+			<LoginForm error={error} formLogin={formLogin} onChange={onChange} handleSubmit={handleSubmit} isLoading={isLoading} />
 		</>
 	)
 }

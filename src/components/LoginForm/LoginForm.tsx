@@ -1,5 +1,6 @@
 import React, { FocusEvent, SyntheticEvent } from 'react'
 import { Button } from '../Button/Button'
+import { Loader } from '../Loader/Loader'
 import './LoginForm.scss'
 
 interface IFormLoginData {
@@ -12,12 +13,13 @@ interface IFormLogin {
 	onChange: (e: FocusEvent<HTMLInputElement>) => void;
 	handleSubmit: (event: SyntheticEvent) => void;
 	error: string
+	isLoading: boolean
 }
 
-export const LoginForm: React.FC<IFormLogin> = ({ error, formLogin, onChange, handleSubmit }) => {
+export const LoginForm: React.FC<IFormLogin> = ({ error, formLogin, onChange, handleSubmit, isLoading }) => {
 	return (
 		<div className="LoginForm">
-			<form onSubmit={handleSubmit}>
+			{!isLoading ? <form onSubmit={handleSubmit}>
 				{error}
 				<input type="text"
 					className="LoginForm__input"
@@ -36,7 +38,9 @@ export const LoginForm: React.FC<IFormLogin> = ({ error, formLogin, onChange, ha
 					onChange={onChange}
 				/>
 				<Button title="войти" />
-			</form>
+			</form> : <Loader />
+
+			}
 		</div>
 	)
 }
