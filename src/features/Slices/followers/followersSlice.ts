@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../../../app/store";
 
 type FollowersState = {
-	status: "loading" | "idle";
+	isLoading: boolean;
 	error: string | null;
 	followers: Followers[];
 };
@@ -13,7 +13,7 @@ type Followers = {
 };
 
 const initialState: FollowersState = {
-	status: 'idle',
+	isLoading: false,
 	error: null,
 	followers: [],
 }
@@ -35,17 +35,17 @@ const followersSlice = createSlice({
 	},
 	extraReducers: (builder) => {
 		builder.addCase(fetchFollowers.pending, (state) => {
-			state.status = "loading";
+			state.isLoading = true;
 			state.error = null;
 		})
 		builder.addCase(fetchFollowers.fulfilled,
 			(state, action) => {
 				state.followers = action.payload
-				state.status = "idle"
+				state.isLoading = false
 			})
 	}
 })
 
-export const selectStatus = (state: RootState) => state.followers.status
+export const selectStatus = (state: RootState) => state.followers.isLoading
 
 export default followersSlice.reducer

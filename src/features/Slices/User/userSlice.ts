@@ -10,13 +10,13 @@ type User = {
 };
 
 type userState = {
-	status: "loading" | "idle";
+	isLoading: boolean;
 	error: string | null;
 	user: User;
 };
 
 const initialState: userState = {
-	status: 'idle',
+	isLoading: false,
 	error: null,
 	user: undefined,
 }
@@ -29,18 +29,18 @@ const userSlice = createSlice({
 	},
 	extraReducers: (builder) => {
 		builder.addCase(fetchUser.pending, (state) => {
-			state.status = "loading";
+			state.isLoading = true;
 			state.error = null;
 		})
 		builder.addCase(fetchUser.fulfilled,
 			(state, action) => {
 				state.user = action.payload
-				state.status = "idle"
+				state.isLoading = false
 			})
 	}
 
 })
 
-export const selectStatus = (state: RootState) => state.user.status
+export const selectStatus = (state: RootState) => state.user.isLoading
 
 export default userSlice.reducer

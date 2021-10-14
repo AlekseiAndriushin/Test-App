@@ -18,9 +18,10 @@ export const MenuContainer = () => {
 	const handleLogout = (event: SyntheticEvent) => {
 		event.preventDefault()
 		dispatch(logout())
-		// router.push(RouteNames.LOGIN);
+		router.push(RouteNames.LOGIN);
 
 	}
+
 	const takenCards = useTypedSelector(state => state.cards.card)
 	const answer: Array<string> = []
 	const findList = () => {

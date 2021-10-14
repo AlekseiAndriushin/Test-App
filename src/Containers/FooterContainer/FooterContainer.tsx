@@ -15,13 +15,13 @@ export const FooterContainer = () => {
 
 	console.log(AuthUserService.getAuth())
 
-	const followers = useSelector((state: RootState) => state.followers.followers)
+	const { followers, isLoading } = useSelector((state: RootState) => state.followers)
 
-	const gaearon = useSelector((state: RootState) => state.gaearon.gaearon)
+	const { gaearon } = useSelector((state: RootState) => state.gaearon)
 
 	return (
 		<>
-			<Footer gaearon={gaearon} followers={followers} />
+			<Footer gaearon={gaearon} followers={followers} isLoading={isLoading} />
 		</>
 	)
 }

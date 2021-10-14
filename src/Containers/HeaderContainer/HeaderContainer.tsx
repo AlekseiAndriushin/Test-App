@@ -11,10 +11,10 @@ export const HeaderContainer = () => {
 		dispatch(fetchUser())
 
 	}, [])
-	const user = useSelector((state: RootState) => state.user.user)
+	const { user, isLoading } = useSelector((state: RootState) => state.user)
 
 	return (
-		<Header user={user} />
+		<Header user={user} isLoading={isLoading} />
 	)
 }
 

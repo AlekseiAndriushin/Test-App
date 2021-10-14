@@ -1,4 +1,5 @@
 import React from 'react'
+import { Loader } from '../Loader/Loader';
 import "./Header.scss"
 
 
@@ -11,17 +12,22 @@ type User = {
 
 interface IUserProps {
 	user: User
+	isLoading: boolean;
 }
 
-export const Header: React.FC<IUserProps> = ({ user }) => {
+export const Header: React.FC<IUserProps> = ({ user, isLoading }) => {
 
 	return (
 		<header className="header">
-			<a href={user?.html_url} target="_blank" className='header__link'>
-				Github profile:{user?.name}
-			</a>
-			<img className='header__image' src={`${user?.avatar_url}`} />
-			<span>Number of my subscribers:{user?.followers}</span>
+			{isLoading
+				?
+				<Loader />
+				:
+				(<><a href={user?.html_url} target="_blank" className='header__link'>
+					Github profile:{user?.name}
+				</a>
+					<img className='header__image' src={`${user?.avatar_url}`} />
+					<span>Number of my subscribers:{user?.followers}</span> </>)}
 		</header>
 	)
 }
