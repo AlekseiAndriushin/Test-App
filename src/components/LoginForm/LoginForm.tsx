@@ -20,7 +20,7 @@ export const LoginForm: React.FC<IFormLogin> = ({ error, formLogin, onChange, ha
 	return (
 		<div className="LoginForm">
 			{!isLoading ? <form onSubmit={handleSubmit}>
-				{error}
+				{error && <div className="LoginForm__errorText">{error}</div>}
 				<input type="text"
 					className="LoginForm__input"
 					name="user"

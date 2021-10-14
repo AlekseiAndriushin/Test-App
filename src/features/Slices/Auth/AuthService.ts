@@ -57,7 +57,7 @@ export const checkAuth = (username: string, password: string) => async (dispatch
 			authLocalStorage.setKey(authToken);
 			dispatch(authSlice.actions.setAuth())
 		} else {
-			dispatch(authSlice.actions.setError('Что-то пошло не так, проверьте имя пользователя и пароль'))
+			dispatch(authSlice.actions.setError('Что-то пошло не так, проверьте имя пользователя или пароль'))
 		}
 		dispatch(authSlice.actions.setLoading(false))
 	}, 2000)
