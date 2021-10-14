@@ -39,6 +39,9 @@ const authSlice = createSlice({
 			state, action
 		) {
 			state.error = action.payload
+		},
+		logout: (state) => {
+			state.isAuth = false;
 		}
 	}
 });
@@ -60,5 +63,9 @@ export const checkAuth = (username: string, password: string) => async (dispatch
 	}, 2000)
 }
 
+export const logout = () => async (dispatch: Dispatch) => {
+	authLocalStorage.removeKey();
+	dispatch(authSlice.actions.logout())
+}
 
 export default authSlice.reducer
