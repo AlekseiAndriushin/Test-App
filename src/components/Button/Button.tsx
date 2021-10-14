@@ -5,7 +5,7 @@ interface IProps {
 	onClick?: (e: React.MouseEvent) => void;
 }
 
-export const Button = ({ title, onClick }: Readonly<IProps>): React.ReactElement => {
+export const Button: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = ({ title, onClick }) => {
 
 	return (
 		<button className="findListButton" onClick={onClick}>

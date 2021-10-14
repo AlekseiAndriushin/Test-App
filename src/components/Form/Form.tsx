@@ -57,7 +57,7 @@ export const Form: React.FC<IForm> = ({ formData, onChange, handleSubmit }) => {
 				onChange={onChange}
 			/>
 
-			<Button title="добавить" />
+			<Button title="добавить" disabled={!formData} />
 		</form>
 	)
 }
