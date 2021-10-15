@@ -1,19 +1,19 @@
-export class LocalStorage {
-	key: string;
+export abstract class LocalStorage {
+	private key: string;
 
 	constructor(key: string) {
 		this.key = key;
 	}
 
-	getKey() {
+	public getKey() {
 		localStorage.getItem(this.key);
 	}
 
-	setKey(value: string) {
+	public setKey(value: string) {
 		localStorage.setItem(this.key, value);
 	}
 
-	removeKey() {
+	public removeKey() {
 		localStorage.removeItem(this.key);
 	}
 }
