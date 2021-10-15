@@ -2,13 +2,7 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { privateRoutes, publicRoutes } from '.';
 import { useTypedSelector } from '../hooks/useTypedSelector';
-import { ErrorPage } from '../pages/Custom404/Custom404';
-
-export enum RouteNames {
-	LOGIN = '/login',
-	HOME = '/',
-	ABOUT = '/about'
-}
+import { Custom404 } from '../pages/Custom404';
 
 export const AppRouter = () => {
 
@@ -25,7 +19,7 @@ export const AppRouter = () => {
 				/>
 			))}
 			<Route>
-				<ErrorPage />
+				<Custom404 />
 			</Route>
 		</Switch>
 
@@ -39,7 +33,7 @@ export const AppRouter = () => {
 			/>
 		))}
 		<Route>
-			<ErrorPage />
+			<Custom404 />
 		</Route>
 	</Switch>
 

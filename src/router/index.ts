@@ -1,7 +1,7 @@
 import React from 'react';
-import { AboutPage } from '../pages/AboutPage/AboutPage';
-import { Home } from '../pages/Home/Home';
-import { LoginFormContainer } from '../Containers/LoginFormContainer/LoginFormContainer';
+import { AboutPage } from '../pages/AboutPage';
+import { Home } from '../pages/Home';
+import { LoginFormContainer } from '../Containers/LoginFormContainer';
 
 export interface IRoute {
 	path: string;

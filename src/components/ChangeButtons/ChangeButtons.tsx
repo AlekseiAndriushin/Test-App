@@ -1,5 +1,5 @@
 import React, { Dispatch, SetStateAction } from 'react'
-import { Button } from '../Button/Button';
+import { Button } from '../Button';
 
 type ThemeType = 'red' | 'blue';
 

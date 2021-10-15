@@ -2,7 +2,7 @@ import React from 'react'
 import { RootState } from '../../app/store';
 
 import { useTypedSelector } from '../../hooks/useTypedSelector';
-import { Content } from '../../components/Content/Content';
+import { Content } from '../../components/Content';
 import { useDispatch } from 'react-redux';
 import { toggleCard } from '../../features/Slices/Cards/cardsSlice';
 

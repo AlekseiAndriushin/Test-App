@@ -1,6 +1,6 @@
 import React, { FocusEvent, SyntheticEvent } from 'react'
-import { Button } from '../Button/Button'
-import { Loader } from '../Loader/Loader'
+import { Button } from '../Button'
+import { Loader } from '../Loader'
 import './LoginForm.scss'
 
 interface IFormLoginData {

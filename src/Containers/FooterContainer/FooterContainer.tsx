@@ -3,8 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../../app/store'
 import { fetchFollowers } from '../../features/Queries/followers/fetchFollowers'
 import { fetchGaearon } from '../../features/Queries/gaearon/fetchGaearon'
-import { Footer } from '../../components/Footer/Footer'
-import AuthUserService from '../../API/AuthUserService'
+import { Footer } from '../../components/Footer'
 
 export const FooterContainer = () => {
 	const dispatch = useDispatch()

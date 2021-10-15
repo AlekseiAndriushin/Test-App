@@ -15,7 +15,7 @@ interface ICardProps {
 	onClick?: (event: string) => void;
 }
 
-const Card: React.FC<ICardProps> = ({ onClick, card }) => {
+export const Card: React.FC<ICardProps> = ({ onClick, card }) => {
 
 	const [isActive, setIsActive] = useState<boolean>(false)
 
@@ -53,4 +53,3 @@ const Card: React.FC<ICardProps> = ({ onClick, card }) => {
 	)
 }
 
-export default Card

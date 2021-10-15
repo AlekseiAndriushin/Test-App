@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTypedSelector } from '../../hooks/useTypedSelector'
-import { Custom404Component } from '../../components/Custom404Component/Custom404Component'
+import { Custom404Component } from '../../components/Custom404Component'
 
 
 

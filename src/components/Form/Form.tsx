@@ -1,5 +1,5 @@
 import React, { FocusEvent, SyntheticEvent } from 'react'
-import { Button } from '../Button/Button'
+import { Button } from '../Button'
 import './Form.scss'
 
 interface IFormData {
