@@ -1,7 +1,7 @@
 import React from 'react';
 import { AboutPage } from '../pages/AboutPage/AboutPage';
 import { Home } from '../pages/Home/Home';
-import { LoginContainer } from '../Containers/LoginContainer/LoginContainer';
+import { LoginFormContainer } from '../Containers/LoginFormContainer/LoginFormContainer';
 
 export interface IRoute {
 	path: string;
@@ -18,7 +18,7 @@ export enum RouteNames {
 
 
 export const publicRoutes: IRoute[] = [
-	{ path: RouteNames.LOGIN, exact: true, component: LoginContainer }
+	{ path: RouteNames.LOGIN, exact: true, component: LoginFormContainer }
 ]
 
 export const privateRoutes: IRoute[] = [
