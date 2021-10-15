@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './ErrorComponent.scss'
+import './Custom404Component.scss'
 interface IErrorComponent {
 	isAuth: boolean;
 }
 
 
-export const ErrorComponent: React.FC<IErrorComponent> = ({ isAuth }) => {
+export const Custom404Component: React.FC<IErrorComponent> = ({ isAuth }) => {
 	return (
 		<>
 			{isAuth

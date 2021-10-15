@@ -83,20 +83,6 @@
   text-decoration: none;
   cursor: pointer;
 }
-/*!********************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/ErrorComponent/ErrorComponent.scss ***!
-  \********************************************************************************************************************************************/
-.linkText {
-  font-size: 20px;
-  color: var(--text-color);
-  grid-area: content;
-  justify-content: center;
-  align-items: center;
-  display: grid;
-  background: var(--primary);
-  text-decoration: none;
-  cursor: pointer;
-}
 /*!*****************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/pages/AboutPage/AboutPage.scss ***!
   \*****************************************************************************************************************************/
@@ -257,6 +243,20 @@
 .LoginForm__errorText {
   font-size: 20px;
   color: var(--text-color);
+}
+/*!****************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/Custom404Component/Custom404Component.scss ***!
+  \****************************************************************************************************************************************************/
+.linkText {
+  font-size: 20px;
+  color: var(--text-color);
+  grid-area: content;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  background: var(--primary);
+  text-decoration: none;
+  cursor: pointer;
 }
 /*!*******************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/App.scss ***!

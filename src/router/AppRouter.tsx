@@ -2,7 +2,7 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { privateRoutes, publicRoutes } from '.';
 import { useTypedSelector } from '../hooks/useTypedSelector';
-import { ErrorPage } from '../pages/404/ErrorPage';
+import { ErrorPage } from '../pages/Custom404/Custom404';
 
 export enum RouteNames {
 	LOGIN = '/login',
