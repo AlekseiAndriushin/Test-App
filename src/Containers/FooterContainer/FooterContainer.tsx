@@ -13,8 +13,6 @@ export const FooterContainer = () => {
 		dispatch(fetchGaearon())
 	}, [])
 
-	console.log(AuthUserService.getAuth())
-
 	const { followers, isLoading } = useSelector((state: RootState) => state.followers)
 
 	const { gaearon } = useSelector((state: RootState) => state.gaearon)
