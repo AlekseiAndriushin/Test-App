@@ -109,6 +109,15 @@
   display: grid;
   background: var(--primary);
 }
+.aboutPage__text {
+  display: flex;
+  justify-content: center;
+}
+.aboutPage__linkText {
+  font-size: 20px;
+  color: var(--text-color);
+  text-decoration: none;
+}
 /*!************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/Card/Card.scss ***!
   \************************************************************************************************************************/
@@ -197,6 +206,11 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+.menu__linkText {
+  font-size: 20px;
+  color: var(--text-color);
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 1024px) {

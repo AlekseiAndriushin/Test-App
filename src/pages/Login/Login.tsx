@@ -1,6 +1,5 @@
 import React, { FocusEvent, SyntheticEvent } from 'react'
 import { LoginForm } from '../../components/LoginForm/LoginForm'
-import './Login.module.scss'
 
 interface ILoginData {
 	user: string;

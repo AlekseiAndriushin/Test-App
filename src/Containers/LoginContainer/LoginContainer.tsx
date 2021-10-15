@@ -4,8 +4,9 @@ import { useHistory } from 'react-router-dom';
 import { LoginForm } from '../../components/LoginForm/LoginForm'
 import { checkAuth } from '../../features/Slices/Auth/AuthService';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
-import { RouteNames } from '../../router';
-
+export enum RouteNames {
+	HOME = '/',
+}
 export const LoginContainer = () => {
 
 	const dispatch = useDispatch();

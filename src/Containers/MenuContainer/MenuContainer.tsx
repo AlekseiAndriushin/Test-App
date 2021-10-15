@@ -5,8 +5,9 @@ import { Menu } from '../../components/Menu/Menu'
 import { logout } from '../../features/Slices/Auth/AuthService'
 import { useTypedSelector } from '../../hooks/useTypedSelector'
 import { removingDuplicateItems } from '../../utils/removingDuplicateItems'
-import { RouteNames } from '../../router';
-
+export enum RouteNames {
+	LOGIN = '/login',
+}
 export const MenuContainer = () => {
 
 	const { isAuth } = useTypedSelector(state => state.auth)
