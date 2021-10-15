@@ -83,10 +83,32 @@
   text-decoration: none;
   cursor: pointer;
 }
-/*!***********************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/pages/404/ErrorPage.scss ***!
-  \***********************************************************************************************************************/
-
+/*!********************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/ErrorComponent/ErrorComponent.scss ***!
+  \********************************************************************************************************************************************/
+.linkText {
+  font-size: 20px;
+  color: var(--text-color);
+  grid-area: content;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  background: var(--primary);
+  text-decoration: none;
+  cursor: pointer;
+}
+/*!*****************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/pages/AboutPage/AboutPage.scss ***!
+  \*****************************************************************************************************************************/
+.aboutPage {
+  font-size: 20px;
+  color: var(--text-color);
+  grid-area: content;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  background: var(--primary);
+}
 /*!************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/Card/Card.scss ***!
   \************************************************************************************************************************/
@@ -170,12 +192,11 @@
 .menu {
   grid-area: menu;
   background: var(--primary);
-  color: var(--text-color);
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-around;
 }
 
 @media only screen and (max-width: 1024px) {
