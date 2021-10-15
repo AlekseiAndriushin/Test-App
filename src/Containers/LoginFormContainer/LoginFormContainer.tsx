@@ -30,7 +30,7 @@ export const LoginFormContainer = () => {
 	const handleSubmit = (event: SyntheticEvent) => {
 		event.preventDefault()
 		dispatch(checkAuth(user, password))
-		router.push(RouteNames.HOME);
+		router.push(RouteNames.HOME)
 	}
 
 	return (

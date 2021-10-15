@@ -1,8 +1,9 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import { privateRoutes, publicRoutes } from '.';
+import { privateRoutes, publicRoutes, RouteNames } from '.';
 import { useTypedSelector } from '../store/useTypedSelector';
 import { Custom404 } from '../pages/Custom404';
+import { LoginFormContainer } from '../Containers/LoginFormContainer';
 
 export const AppRouter = () => {
 
@@ -33,7 +34,7 @@ export const AppRouter = () => {
 			/>
 		))}
 		<Route>
-			<Custom404 />
+			<LoginFormContainer />
 		</Route>
 	</Switch>
 
