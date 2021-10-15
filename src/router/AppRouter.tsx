@@ -3,9 +3,6 @@ import { Switch, Route } from 'react-router-dom'
 import { privateRoutes, publicRoutes } from '.';
 import { useTypedSelector } from '../hooks/useTypedSelector';
 import { ErrorPage } from '../pages/404/ErrorPage';
-import { AboutPage } from '../pages/AboutPage/AboutPage';
-import { Home } from '../pages/Home/Home';
-import { Login } from '../pages/Login/Login';
 
 export enum RouteNames {
 	LOGIN = '/login',
@@ -14,6 +11,7 @@ export enum RouteNames {
 }
 
 export const AppRouter = () => {
+
 	const { isAuth } = useTypedSelector(state => state.auth)
 
 	const authRoute =
@@ -46,13 +44,11 @@ export const AppRouter = () => {
 	</Switch>
 
 	return (
-		<>
-			<Switch>
-				{isAuth
-					? authRoute
-					: UnAuthRoute
-				}
-			</Switch>
-		</>
+		<Switch>
+			{isAuth
+				? authRoute
+				: UnAuthRoute
+			}
+		</Switch>
 	)
 }
