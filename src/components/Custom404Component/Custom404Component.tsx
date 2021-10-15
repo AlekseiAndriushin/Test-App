@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './Custom404Component.scss'
+
 interface IErrorComponent {
 	isAuth: boolean;
 }
