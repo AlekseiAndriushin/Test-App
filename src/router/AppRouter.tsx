@@ -9,7 +9,6 @@ export const AppRouter = () => {
 	return (
 		<>
 			<Switch>
-				<Route exact={false} path={RouteNames.ERROR} component={ErrorPage} />
 				{isAuth
 					? (
 						<Switch>
