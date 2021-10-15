@@ -9,9 +9,11 @@
 		"content content menu"
 		"content content form"
 		"content content form"
-		"footer footer footer";
+		"footer footer footer"
+		"buttons buttons buttons";
 	gap: 20px 10px;
 	&__buttons {
+		grid-area: buttons;
 		display: flex;
 		justify-content: space-around;
 	}
@@ -25,6 +27,7 @@
 			"menu"
 			"content"
 			"form"
-			"footer";
+			"footer"
+			"buttons";
 	}
 }
