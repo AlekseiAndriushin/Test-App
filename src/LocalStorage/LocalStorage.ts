@@ -5,15 +5,15 @@ export abstract class LocalStorage {
 		this.key = key;
 	}
 
-	public getKey() {
+	public getItem() {
 		localStorage.getItem(this.key);
 	}
 
-	public setKey(value: string) {
+	public setItem(value: string) {
 		localStorage.setItem(this.key, value);
 	}
 
-	public removeKey() {
+	public removeItem() {
 		localStorage.removeItem(this.key);
 	}
 }

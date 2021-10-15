@@ -54,7 +54,7 @@ export const checkAuth = (username: string, password: string) => async (dispatch
 		const userCheck = response.find(user => user.user === username && user.password === password);
 		if (userCheck) {
 			const authToken = uuidv4();
-			authLocalStorage.setKey(authToken);
+			authLocalStorage.setItem(authToken);
 			dispatch(authSlice.actions.setAuth())
 		} else {
 			dispatch(authSlice.actions.setError('Что-то пошло не так, проверьте имя пользователя или пароль'))
@@ -64,7 +64,7 @@ export const checkAuth = (username: string, password: string) => async (dispatch
 }
 
 export const logout = () => async (dispatch: Dispatch) => {
-	authLocalStorage.removeKey();
+	authLocalStorage.removeItem();
 	dispatch(authSlice.actions.logout())
 }
 
