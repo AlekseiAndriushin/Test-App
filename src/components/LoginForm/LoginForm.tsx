@@ -10,10 +10,10 @@ interface IFormLoginData {
 
 interface IFormLogin {
 	formLogin: IFormLoginData;
-	onChange: (e: FocusEvent<HTMLInputElement>) => void;
-	handleSubmit: (event: SyntheticEvent) => void;
 	error: string
 	isLoading: boolean
+	onChange: (e: FocusEvent<HTMLInputElement>) => void;
+	handleSubmit: (event: SyntheticEvent) => void;
 }
 
 export const LoginForm: React.FC<IFormLogin> = ({ error, formLogin, onChange, handleSubmit, isLoading }) => {
