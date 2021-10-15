@@ -1,5 +1,5 @@
 import React from 'react'
-import { ErrorComponentContainer } from '../../components/ErrorComponent/ErrorComponentContainer'
+import { ErrorComponentContainer } from '../../Containers/ErrorComponentContainer/ErrorComponentContainer'
 
 export const ErrorPage = () => {
 	return (

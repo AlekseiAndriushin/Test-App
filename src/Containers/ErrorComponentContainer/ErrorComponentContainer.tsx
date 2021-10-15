@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTypedSelector } from '../../hooks/useTypedSelector'
-import { ErrorComponent } from './ErrorComponent'
+import { ErrorComponent } from '../../components/ErrorComponent/ErrorComponent'
 
 
 

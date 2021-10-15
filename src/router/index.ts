@@ -1,7 +1,7 @@
 import React from 'react';
 import { AboutPage } from '../pages/AboutPage/AboutPage';
 import { Home } from '../pages/Home/Home';
-import { LoginContainer } from '../pages/Login/LoginContainer';
+import { LoginContainer } from '../Containers/LoginContainer/LoginContainer';
 
 export interface IRoute {
 	path: string;
@@ -24,5 +24,4 @@ export const publicRoutes: IRoute[] = [
 export const privateRoutes: IRoute[] = [
 	{ path: RouteNames.HOME, exact: true, component: Home },
 	{ path: RouteNames.ABOUT, exact: true, component: AboutPage }
-
 ]
