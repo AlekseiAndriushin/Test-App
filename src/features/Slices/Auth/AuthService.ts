@@ -1,11 +1,15 @@
-import { createSlice, Dispatch } from "@reduxjs/toolkit";
+import { createSlice, Dispatch, PayloadAction } from "@reduxjs/toolkit";
 import { v4 as uuidv4 } from 'uuid';
 import AuthUserService from "../../../API/AuthUserService";
 import { authLocalStorage } from "../../../LocalStorage";
 
+
+type isLoaded = boolean
+type isError = string | null;
+
 interface IAuthService {
-	isLoading: boolean;
-	error: string | null;
+	isLoading: isLoaded;
+	error: isError;
 	isAuth: boolean
 }
 
@@ -25,18 +29,19 @@ const authSlice = createSlice({
 	initialState,
 	reducers: {
 		setLoading(
-			state,
-			action
+			state: IAuthService,
+			action: PayloadAction<isLoaded>
 		) {
 			state.isLoading = action.payload
 		},
 		setAuth(
-			state
+			state: IAuthService
 		) {
 			state.isAuth = true
 		},
 		setError(
-			state, action
+			state: IAuthService
+			, action: PayloadAction<isError>
 		) {
 			state.error = action.payload
 		},
