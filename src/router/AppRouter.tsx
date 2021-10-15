@@ -1,5 +1,5 @@
 import React from 'react'
-import { Switch, Route, Redirect } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import { useTypedSelector } from '../hooks/useTypedSelector';
 import { ErrorPage } from '../pages/404/ErrorPage';
 import { privateRoutes, publicRoutes, RouteNames } from '../router';
@@ -21,8 +21,9 @@ export const AppRouter = () => {
 									key={route.path}
 								/>
 							))}
-							<Redirect to={RouteNames.HOME} />
-
+							<Route>
+								<ErrorPage />
+							</Route>
 						</Switch>)
 					:
 					(<Switch>
@@ -34,11 +35,12 @@ export const AppRouter = () => {
 								key={route.path}
 							/>
 						))}
-						<Redirect to={RouteNames.LOGIN} />
+						<Route>
+							<ErrorPage />
+						</Route>
 					</Switch>)
 				}
 
-				{/* <Redirect to="/404"  /> */}
 			</Switch>
 		</>
 	)

@@ -60,7 +60,7 @@ export const checkAuth = (username: string, password: string) => async (dispatch
 			dispatch(authSlice.actions.setError('Что-то пошло не так, проверьте имя пользователя или пароль'))
 		}
 		dispatch(authSlice.actions.setLoading(false))
-	}, 2000)
+	}, 0)
 }
 
 export const logout = () => async (dispatch: Dispatch) => {
