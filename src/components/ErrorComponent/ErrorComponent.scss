@@ -1,0 +1,11 @@
+.linkText {
+	font-size: 20px;
+	color: var(--text-color);
+	grid-area: content;
+	justify-content: center;
+	align-items: center;
+	display: grid;
+	background: var(--primary);
+	text-decoration: none;
+	cursor: pointer;
+}

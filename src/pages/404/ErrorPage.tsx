@@ -4,8 +4,6 @@ import './ErrorPage.scss'
 
 export const ErrorPage = () => {
 	return (
-		<section>
-			<ErrorComponentContainer />
-		</section>
+		<ErrorComponentContainer />
 	)
 }
