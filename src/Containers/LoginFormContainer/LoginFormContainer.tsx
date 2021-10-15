@@ -7,7 +7,7 @@ import { useTypedSelector } from '../../hooks/useTypedSelector';
 export enum RouteNames {
 	HOME = '/',
 }
-export const LoginContainer = () => {
+export const LoginFormContainer = () => {
 
 	const dispatch = useDispatch();
 
