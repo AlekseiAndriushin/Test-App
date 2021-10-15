@@ -3,7 +3,7 @@ import cardsReducer from "../features/Slices/cards/cardsSlice";
 import gaearonReducer from "../features/Slices/Gaearon/gaearonSlice";
 import followersReducer from '../features/Slices/followers/followersSlice'
 import userReducer from '../features/Slices/User/userSlice';
-import authReducer from '../features/Slices/Auth/AuthService'
+import authReducer from '../features/Slices/Auth/authSlice'
 
 export const store = configureStore({
 	reducer: {

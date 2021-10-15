@@ -2,7 +2,7 @@ import React, { FocusEvent, SyntheticEvent, useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { LoginForm } from '../../components/LoginForm/LoginForm'
-import { checkAuth } from '../../features/Slices/Auth/AuthService';
+import { checkAuth } from '../../features/Slices/Auth/authSlice';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
 export enum RouteNames {
 	HOME = '/',
