@@ -1,9 +1,9 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-type CardId = string;
+type cardId = string;
 type taken = boolean;
 interface ICard {
-	id: CardId;
+	id: cardId;
 	company: string;
 	address: string;
 	email: string;
@@ -30,7 +30,7 @@ const cardsSlice = createSlice({
 		},
 		toggleCard(
 			state: CardsState,
-			action: PayloadAction<CardId>
+			action: PayloadAction<cardId>
 		) {
 			const index = state.card.findIndex(
 				({ id }) => id === action.payload);

@@ -4,7 +4,7 @@ import { RootState } from '../../app/store';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
 import { Content } from '../../components/Content/Content';
 import { useDispatch } from 'react-redux';
-import { toggleCard } from '../../features/Slices/cards/cardsSlice';
+import { toggleCard } from '../../features/Slices/Cards/cardsSlice';
 
 export const ContentContainer = () => {
 
