@@ -1,5 +1,5 @@
 import React from 'react'
-import { useTypedSelector } from '../../hooks/useTypedSelector'
+import { useTypedSelector } from '../../store/useTypedSelector'
 import { Custom404Component } from '../../components/Custom404Component'
 
 export const Custom404Container = () => {

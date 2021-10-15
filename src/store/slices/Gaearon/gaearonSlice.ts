@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { RootState } from "../../../app/store";
-import { fetchGaearon } from "../../Queries/gaearon/fetchGaearon";
+import { RootState } from "../../store";
+import { fetchGaearon } from "../../queries/gaearon/fetchGaearon";
 
 type GaearonState = {
 	status: "loading" | "idle";

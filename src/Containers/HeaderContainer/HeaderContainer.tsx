@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../app/store';
-import { fetchUser } from '../../features/Queries/User/fetchUser';
+import { RootState } from '../../store/store';
+import { fetchUser } from '../../store/queries/User/fetchUser';
 import { Header } from '../../components/Header';
 
 export const HeaderContainer = () => {

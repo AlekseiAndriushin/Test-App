@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { RootState } from '../../app/store'
-import { fetchFollowers } from '../../features/Queries/followers/fetchFollowers'
-import { fetchGaearon } from '../../features/Queries/gaearon/fetchGaearon'
+import { RootState } from '../../store/store'
+import { fetchFollowers } from '../../store/queries/followers/fetchFollowers'
+import { fetchGaearon } from '../../store/queries/gaearon/fetchGaearon'
 import { Footer } from '../../components/Footer'
 
 export const FooterContainer = () => {

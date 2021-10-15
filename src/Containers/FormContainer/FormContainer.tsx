@@ -1,6 +1,6 @@
 import React, { FocusEvent, SyntheticEvent, useState } from 'react'
 import { useDispatch } from 'react-redux';
-import { addCard } from '../../features/Slices/Cards/cardsSlice';
+import { addCard } from '../../store/slices/Cards/cardsSlice';
 import { Form } from '../../components/Form';
 
 export const FormContainer = () => {

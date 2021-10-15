@@ -1,7 +1,7 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { privateRoutes, publicRoutes } from '.';
-import { useTypedSelector } from '../hooks/useTypedSelector';
+import { useTypedSelector } from '../store/useTypedSelector';
 import { Custom404 } from '../pages/Custom404';
 
 export const AppRouter = () => {

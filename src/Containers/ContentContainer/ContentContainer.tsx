@@ -1,10 +1,10 @@
 import React from 'react'
-import { RootState } from '../../app/store';
+import { RootState } from '../../store/store';
 
-import { useTypedSelector } from '../../hooks/useTypedSelector';
+import { useTypedSelector } from '../../store/useTypedSelector';
 import { Content } from '../../components/Content';
 import { useDispatch } from 'react-redux';
-import { toggleCard } from '../../features/Slices/Cards/cardsSlice';
+import { toggleCard } from '../../store/slices/Cards/cardsSlice';
 
 export const ContentContainer = () => {
 
