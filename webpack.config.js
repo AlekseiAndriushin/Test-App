@@ -1,53 +1,79 @@
+const path = require('path');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const filename = (name) => `[name].[contenthash].${name}`;
+
+const plugins = () => {
+  const basePlugins = [
+    new HTMLWebpackPlugin({
+      template: path.resolve(__dirname, 'src/index.html'),
+      filename: 'index.html',
+    }),
+    new MiniCssExtractPlugin({
+      filename: `./css/${filename('css')}`,
+    }),
+  ];
+  return basePlugins;
+};
+
 module.exports = {
-  mode: 'development',
-  entry: {
-    index: './src/index.tsx',
+  resolve: {
+    extensions: ['.js', '.tsx', '.ts'],
   },
+  mode: 'development',
+  entry: ['./src/index.tsx'],
   output: {
-    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'build'),
+    filename: `./js/${filename('js')}`,
+    publicPath: '/',
   },
   devServer: {
     historyApiFallback: true,
+    open: false,
     compress: true,
     hot: true,
     port: 3000,
   },
+  plugins: plugins(),
   module: {
     rules: [
       {
-        test: /\.s?css$/i,
+        test: /\.s[ac]ss$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: (resourcePath, context) => {
+                return (
+                  path.relative(
+                    path.dirname(resourcePath),
+                    context
+                  ) + '/'
+                );
+              },
+            },
+          },
           'css-loader',
           'sass-loader',
         ],
       },
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(ts|js)x?$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        },
-      },
-      {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                '@babel/preset-env',
+                '@babel/preset-react',
+                '@babel/preset-typescript',
+              ],
+            },
+          },
+        ],
       },
     ],
   },
-  resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
-  },
-
-  plugins: [
-    new MiniCssExtractPlugin(),
-    new HtmlWebpackPlugin({
-      template: './src/index.html',
-      filename: 'index.html',
-      inject: 'body',
-    }),
-  ],
 };
