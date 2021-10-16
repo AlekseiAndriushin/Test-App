@@ -1,3 +1,4 @@
+import { Custom404 } from './../pages/Custom404/Custom404';
 import React from 'react';
 import { AboutPage } from '../pages/AboutPage';
 import { Home } from '../pages/Home';
@@ -23,5 +24,6 @@ export const publicRoutes: IRoute[] = [
 
 export const privateRoutes: IRoute[] = [
 	{ path: RouteNames.HOME, exact: true, component: Home },
-	{ path: RouteNames.ABOUT, exact: true, component: AboutPage }
+	{ path: RouteNames.ABOUT, exact: true, component: AboutPage },
+	{ path: RouteNames.ERROR, exact: false, component: Custom404 },
 ]

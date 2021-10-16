@@ -1,6 +1,6 @@
 import React from 'react'
-import { Switch, Route } from 'react-router-dom'
-import { privateRoutes, publicRoutes } from '.';
+import { Switch, Route, Redirect } from 'react-router-dom'
+import { privateRoutes, publicRoutes, RouteNames } from '.';
 import { useTypedSelector } from '../store/useTypedSelector';
 import { Custom404 } from '../pages/Custom404';
 import { LoginFormContainer } from '../Containers/LoginFormContainer';
@@ -19,7 +19,7 @@ export const AppRouter = () => {
 					key={route.path}
 				/>
 			))}
-			<Route component={Custom404} />
+			<Redirect to={RouteNames.ERROR} />
 		</Switch>
 
 	const UnAuthRoute = <Switch>
