@@ -1,8 +1,8 @@
-import { Custom404 } from './../pages/Custom404/Custom404';
+import { Custom404 } from './../pages';
 import React from 'react';
-import { AboutPage } from '../pages/AboutPage';
-import { Home } from '../pages/Home';
-import { LoginFormContainer } from '../Containers/LoginFormContainer';
+import { AboutPage } from '../pages';
+import { Home } from '../pages';
+import { LoginFormContainer } from '../Containers';
 
 export interface IRoute {
   path: string;

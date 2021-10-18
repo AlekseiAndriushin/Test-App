@@ -1,7 +1,7 @@
 import React from 'react';
-import { ContentContainer } from '../../Containers/ContentContainer';
-import { FormContainer } from '../../Containers/FormContainer';
-import { MenuContainer } from '../../Containers/MenuContainer';
+import { ContentContainer } from '../../Containers';
+import { FormContainer } from '../../Containers';
+import { MenuContainer } from '../../Containers';
 import './Home.scss';
 
 export const Home = () => (

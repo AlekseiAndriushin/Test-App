@@ -1,7 +1,7 @@
 import React from 'react';
-import { ChangeButtons } from './components/ChangeButtons';
-import { FooterContainer } from './Containers/FooterContainer';
-import { HeaderContainer } from './Containers/HeaderContainer';
+import { ChangeButtons } from './components';
+import { FooterContainer } from './Containers';
+import { HeaderContainer } from './Containers';
 import { useTheme } from './contexts/Theme/Theme.context';
 import { AppRouter } from './router/AppRouter';
 import './App.scss';

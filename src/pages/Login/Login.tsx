@@ -1,5 +1,5 @@
 import React from 'react';
-import { LoginFormContainer } from '../../Containers/LoginFormContainer';
+import { LoginFormContainer } from '../../Containers';
 
 export const Login: React.FC = () => (
   <>

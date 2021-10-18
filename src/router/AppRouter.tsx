@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { privateRoutes, publicRoutes, RouteNames } from '.';
 import { useTypedSelector } from '../store/useTypedSelector';
-import { LoginFormContainer } from '../Containers/LoginFormContainer';
+import { LoginFormContainer } from '../Containers';
 
 export const AppRouter = () => {
   const { isAuth } = useTypedSelector((state) => state.auth);
