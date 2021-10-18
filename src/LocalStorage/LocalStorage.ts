@@ -6,7 +6,7 @@ export abstract class LocalStorage {
 	}
 
 	public getItem() {
-		localStorage.getItem(this.key);
+		return localStorage.getItem(this.key);
 	}
 
 	public setItem(value: string) {

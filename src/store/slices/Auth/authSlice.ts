@@ -21,7 +21,7 @@ interface IUser {
 const initialState: IAuthService = {
 	isLoading: false,
 	error: null,
-	isAuth: localStorage.getItem('auth') ? true : false
+	isAuth: authLocalStorage.getItem() ? true : false
 }
 
 const authSlice = createSlice({
