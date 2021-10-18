@@ -29,9 +29,7 @@ export const AppRouter = () => {
 
 	const UnAuthRoute = <Switch>
 		<Route path={RouteNames.LOGIN} exact={true} component={Login} />
-		<Route>
-			<Login />
-		</Route>
+		<Redirect to={RouteNames.LOGIN} />
 	</Switch>
 
 	return (

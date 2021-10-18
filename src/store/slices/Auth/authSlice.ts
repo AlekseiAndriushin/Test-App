@@ -10,7 +10,7 @@ type isError = string | null;
 interface IAuthService {
 	isLoading: isLoaded;
 	error: isError;
-	isAuth: boolean
+	isAuth: boolean;
 }
 
 interface IUser {
@@ -21,7 +21,7 @@ interface IUser {
 const initialState: IAuthService = {
 	isLoading: false,
 	error: null,
-	isAuth: localStorage.getItem('auth') ? true : false
+	isAuth: authLocalStorage.getItem() ? true : false
 }
 
 const authSlice = createSlice({
@@ -61,6 +61,7 @@ export const checkAuth = (username: string, password: string) => async (dispatch
 			const authToken = uuidv4();
 			authLocalStorage.setItem(authToken);
 			dispatch(authSlice.actions.setAuth())
+			console.log(authLocalStorage.getItem)
 		} else {
 			dispatch(authSlice.actions.setError('Что-то пошло не так, проверьте имя пользователя или пароль'))
 		}
