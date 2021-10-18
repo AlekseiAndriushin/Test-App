@@ -2,14 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Custom404Component.scss';
 
-interface IErrorComponent {
-  isAuth: boolean;
-}
-
-export const Custom404Component: React.FC<IErrorComponent> = () => (
+export const Custom404Component: React.FC = () => (
   <>
     <Link to='/' className='linkText'>
-      Вернуться на страницу с карточками
+      Зайти на страницу с карточками
     </Link>
   </>
 );
