@@ -10,25 +10,31 @@
 	&__image {
 		width: 50px;
 	}
+
 	&__gaearon {
 		&__image {
 			width: 100px;
 		}
 	}
+
 	&__name {
 		padding: 0;
 		margin: 0;
 	}
+
 	&__company {
 		padding: 5px;
 		margin: 5px;
 	}
+
 	&__followers__wrapper {
 		display: flex;
 		flex-flow: row wrap;
 	}
+
 	&__followers__item {
 		display: block;
 		margin: 5px;
 	}
+	
 }

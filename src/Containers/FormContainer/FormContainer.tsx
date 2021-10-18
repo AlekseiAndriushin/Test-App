@@ -1,7 +1,7 @@
 import React, { FocusEvent, SyntheticEvent, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addCard } from '../../store/slices/Cards/cardsSlice';
-import { Form } from '../../components/Form';
+import { addCard } from '../../store/slices/cards/cardsSlice';
+import { Form } from '../../components';
 
 export const FormContainer = () => {
   const dispatch = useDispatch();

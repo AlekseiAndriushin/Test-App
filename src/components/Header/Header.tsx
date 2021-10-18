@@ -17,8 +17,10 @@ interface IUserProps {
 export const Header: React.FC<IUserProps> = ({ user, isLoading }) => (
   <header className="header">
     {isLoading
-      ?				<Loader />
-      :				(
+      ?				
+      <Loader />
+      :				
+      ( 
         <>
           <a href={user?.html_url} target="_blank" className="header__link" rel="noreferrer">
             Github profile:
@@ -30,6 +32,7 @@ export const Header: React.FC<IUserProps> = ({ user, isLoading }) => (
             {user?.followers}
           </span>
         </>
-			  )}
+			)
+    }
   </header>
 );

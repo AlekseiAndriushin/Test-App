@@ -1,8 +1,8 @@
-import { Custom404 } from './../pages/Custom404/Custom404';
+import { NotFoundPage } from './../pages';
 import React from 'react';
-import { AboutPage } from '../pages/AboutPage';
-import { Home } from '../pages/Home';
-import { LoginFormContainer } from '../Containers/LoginFormContainer';
+import { AboutPage } from '../pages';
+import { HomePage } from '../pages';
+import { LoginFormContainer } from '../Containers';
 
 export interface IRoute {
   path: string;
@@ -22,7 +22,7 @@ export const publicRoutes: IRoute[] = [
 ];
 
 export const privateRoutes: IRoute[] = [
-  { path: RouteNames.HOME, exact: true, component: Home },
+  { path: RouteNames.HOME, exact: true, component: HomePage },
   { path: RouteNames.ABOUT, exact: true, component: AboutPage },
-  { path: RouteNames.ERROR, exact: false, component: Custom404 },
+  { path: RouteNames.ERROR, exact: false, component: NotFoundPage },
 ];

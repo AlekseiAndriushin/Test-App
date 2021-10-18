@@ -12,12 +12,14 @@
 		"footer footer footer"
 		"buttons buttons buttons";
 	gap: 20px 10px;
+
 	&__buttons {
 		grid-area: buttons;
 		display: flex;
 		justify-content: space-around;
 	}
 }
+
 @media only screen and (max-width: 1024px) {
 	.container {
 		grid-template-columns: 1fr;
