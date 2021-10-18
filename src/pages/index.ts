@@ -1,4 +1,4 @@
 export { AboutPage } from './AboutPage'
-export { Custom404 } from './Custom404'
-export { Home } from './Home'
-export { Login } from './Login'
+export { NotFoundPage } from './NotFoundPage'
+export { HomePage } from './HomePage'
+export { LoginPage } from './LoginPage'

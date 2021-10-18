@@ -1,7 +1,7 @@
-import { Custom404 } from './../pages';
+import { NotFoundPage } from './../pages';
 import React from 'react';
 import { AboutPage } from '../pages';
-import { Home } from '../pages';
+import { HomePage } from '../pages';
 import { LoginFormContainer } from '../Containers';
 
 export interface IRoute {
@@ -22,7 +22,7 @@ export const publicRoutes: IRoute[] = [
 ];
 
 export const privateRoutes: IRoute[] = [
-  { path: RouteNames.HOME, exact: true, component: Home },
+  { path: RouteNames.HOME, exact: true, component: HomePage },
   { path: RouteNames.ABOUT, exact: true, component: AboutPage },
-  { path: RouteNames.ERROR, exact: false, component: Custom404 },
+  { path: RouteNames.ERROR, exact: false, component: NotFoundPage },
 ];
