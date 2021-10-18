@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { Menu } from '../../components';
 import { logout } from '../../store/slices/auth/authSlice';
 import { useTypedSelector } from '../../store/useTypedSelector';
-import { removingDuplicateItems } from '../../utils/removingDuplicateItems';
+import { removingDuplicateItems } from './removingDuplicateItems';
 
 export enum RouteNames {
   LOGIN = '/login',
