@@ -1,3 +1,1 @@
-import { LoginFormContainer } from './LoginFormContainer';
-
-export { LoginFormContainer };
+export { LoginFormContainer } from './LoginFormContainer';

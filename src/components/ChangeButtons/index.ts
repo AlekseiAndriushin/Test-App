@@ -1,3 +1,1 @@
-import { ChangeButtons } from './ChangeButtons';
-
-export { ChangeButtons };
+export { ChangeButtons } from './ChangeButtons';

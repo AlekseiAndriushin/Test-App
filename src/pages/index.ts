@@ -1,6 +1,4 @@
-import { AboutPage } from './AboutPage'
-import { Custom404 } from './Custom404'
-import { Home } from './Home'
-import { Login } from './Login'
-
-export {AboutPage,Custom404,Home,Login}
+export { AboutPage } from './AboutPage'
+export { Custom404 } from './Custom404'
+export { Home } from './Home'
+export { Login } from './Login'
