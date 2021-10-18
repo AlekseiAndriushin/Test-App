@@ -19,11 +19,11 @@ export const Menu: React.FC<IMenuProps> = ({
 
     {isAuth ? (
       <>
-        {' '}
-        <Button title='выйти' onClick={handleLogout} />{' '}
+
+        <Button title='выйти' onClick={handleLogout} />
         <Link to='/about' className='menu__linkText'>
           Ещё одна страница
-        </Link>{' '}
+        </Link>
       </>
     ) : null}
   </menu>

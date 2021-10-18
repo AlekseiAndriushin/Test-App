@@ -25,17 +25,22 @@ export const Footer: React.FC<IFooterProps> = ({
 }) => (
   <>
     <footer className='footer'>
-      {isLoading ? (
+
+      {isLoading 
+      ? 
         <Loader />
-      ) : (
+      : 
+      (
         <>
           <h5 className='footer__name'>{gaearon?.name}</h5>
           <h5 className='footer__company'>{gaearon?.company}</h5>
+
           <img
             src={`${gaearon?.avatar_url}`}
             alt={`${gaearon?.name}`}
             className='footer__gaearon__image'
           />
+
           <ul className='footer__followers__wrapper'>
             {followers?.map((follower) => (
               <li className='footer__followers__item' key={follower.login}>
@@ -48,6 +53,7 @@ export const Footer: React.FC<IFooterProps> = ({
               </li>
             ))}
           </ul>
+          
         </>
       )}
     </footer>
