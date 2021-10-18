@@ -3,12 +3,9 @@ import { v4 as uuidv4 } from 'uuid';
 import AuthUserService from '../../../API/AuthUserService';
 import { authLocalStorage } from '../../../LocalStorage';
 
-type isLoaded = boolean;
-type isError = string | null;
-
 interface IAuthService {
-  isLoading: isLoaded;
-  error: isError;
+  isLoading: boolean;
+  error: string | null;
   isAuth: boolean;
 }
 
@@ -27,13 +24,13 @@ const authSlice = createSlice({
   name: 'auth',
   initialState,
   reducers: {
-    setLoading(state: IAuthService, action: PayloadAction<isLoaded>) {
+    setLoading(state: IAuthService, action: PayloadAction<IAuthService["isLoading"]>) {
       state.isLoading = action.payload;
     },
     setAuth(state: IAuthService) {
       state.isAuth = true;
     },
-    setError(state: IAuthService, action: PayloadAction<isError>) {
+    setError(state: IAuthService, action: PayloadAction<IAuthService["error"]>) {
       state.error = action.payload;
     },
     logout: (state) => {
