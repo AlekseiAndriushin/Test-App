@@ -16,6 +16,7 @@ interface IUserProps {
 
 export const Header: React.FC<IUserProps> = ({ user, isLoading }) => (
   <header className="header">
+
     {isLoading
       ?				
       <Loader />
@@ -34,5 +35,6 @@ export const Header: React.FC<IUserProps> = ({ user, isLoading }) => (
         </>
 			)
     }
+    
   </header>
 );
