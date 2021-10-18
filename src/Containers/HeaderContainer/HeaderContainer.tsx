@@ -5,11 +5,14 @@ import { fetchUser } from '../../store/queries/user/fetchUser';
 import { Header } from '../../components';
 
 export const HeaderContainer = () => {
+
   const dispatch = useDispatch();
+
+  const { user, isLoading } = useSelector((state: RootState) => state.user);
+
   useEffect(() => {
     dispatch(fetchUser());
   }, []);
-  const { user, isLoading } = useSelector((state: RootState) => state.user);
 
   return <Header user={user} isLoading={isLoading} />;
 };
