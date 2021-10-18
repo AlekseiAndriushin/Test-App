@@ -2,7 +2,7 @@ import React, { SyntheticEvent } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { Menu } from '../../components/Menu';
-import { logout } from '../../store/slices/Auth/authSlice';
+import { logout } from '../../store/slices/auth/authSlice';
 import { useTypedSelector } from '../../store/useTypedSelector';
 import { removingDuplicateItems } from '../../utils/removingDuplicateItems';
 

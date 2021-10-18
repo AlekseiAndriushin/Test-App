@@ -2,7 +2,7 @@ import React, { FocusEvent, SyntheticEvent, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { LoginForm } from '../../components/LoginForm';
-import { checkAuth } from '../../store/slices/Auth/authSlice';
+import { checkAuth } from '../../store/slices/auth/authSlice';
 import { useTypedSelector } from '../../store/useTypedSelector';
 
 export enum RouteNames {

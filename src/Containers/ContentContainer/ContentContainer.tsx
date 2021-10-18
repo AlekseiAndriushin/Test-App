@@ -4,7 +4,7 @@ import { RootState } from '../../store/store';
 
 import { useTypedSelector } from '../../store/useTypedSelector';
 import { Content } from '../../components/Content';
-import { toggleCard } from '../../store/slices/Cards/cardsSlice';
+import { toggleCard } from '../../store/slices/cards/cardsSlice';
 
 export const ContentContainer = () => {
   const cards = useTypedSelector((state: RootState) => state.cards.card);
