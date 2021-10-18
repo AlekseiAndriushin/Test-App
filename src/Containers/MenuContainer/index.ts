@@ -1,3 +1,3 @@
-import { MenuContainer } from './MenuContainer'
+import { MenuContainer } from './MenuContainer';
 
-export { MenuContainer }
+export { MenuContainer };

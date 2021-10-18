@@ -1,3 +1,3 @@
-import { Custom404Container } from './Custom404Container'
+import { Custom404Container } from './Custom404Container';
 
-export { Custom404Container }
+export { Custom404Container };
