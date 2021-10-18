@@ -1,11 +1,8 @@
-import React from 'react'
-import { LoginFormContainer } from '../../Containers/LoginFormContainer'
+import React from 'react';
+import { LoginFormContainer } from '../../Containers/LoginFormContainer';
 
-export const Login: React.FC = () => {
-	return (
-		<>
-			<LoginFormContainer />
-		</>
-	)
-}
-
+export const Login: React.FC = () => (
+  <>
+    <LoginFormContainer />
+  </>
+);
