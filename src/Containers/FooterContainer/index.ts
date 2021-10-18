@@ -1,3 +1,3 @@
-import { FooterContainer } from './FooterContainer'
+import { FooterContainer } from './FooterContainer';
 
-export { FooterContainer }
+export { FooterContainer };

@@ -1,24 +1,35 @@
-import React, { FocusEvent, SyntheticEvent } from 'react'
-import { LoginForm } from '../../components/LoginForm'
+import React, { FocusEvent, SyntheticEvent } from 'react';
+import { LoginForm } from '../../components/LoginForm';
 
 interface ILoginData {
-	user: string;
-	password: string;
+  user: string;
+  password: string;
 }
 
 interface ILogin {
-	formLogin: ILoginData;
-	onChange: (e: FocusEvent<HTMLInputElement>) => void;
-	handleSubmit: (event: SyntheticEvent) => void;
-	error: string;
-	isLoading: boolean;
+  formLogin: ILoginData;
+  onChange: (e: FocusEvent<HTMLInputElement>) => void;
+  handleSubmit: (event: SyntheticEvent) => void;
+  error: string;
+  isLoading: boolean;
 }
 
-export const Login: React.FC<ILogin> = ({ error, formLogin, onChange, handleSubmit, isLoading }) => {
-	return (
-		<>
-			<LoginForm error={error} formLogin={formLogin} onChange={onChange} handleSubmit={handleSubmit} isLoading={isLoading} />
-		</>
-	)
-}
-
+export const Login: React.FC<ILogin> = ({
+  error,
+  formLogin,
+  onChange,
+  handleSubmit,
+  isLoading,
+}) => {
+  return (
+    <>
+      <LoginForm
+        error={error}
+        formLogin={formLogin}
+        onChange={onChange}
+        handleSubmit={handleSubmit}
+        isLoading={isLoading}
+      />
+    </>
+  );
+};

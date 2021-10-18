@@ -1,3 +1,3 @@
-import { Custom404 } from './Custom404'
+import { Custom404 } from './Custom404';
 
-export { Custom404 }
+export { Custom404 };

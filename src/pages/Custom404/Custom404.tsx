@@ -1,8 +1,6 @@
-import React from 'react'
-import { Custom404Container } from '../../Containers/Custom404Container'
+import React from 'react';
+import { Custom404Component } from '../../components/Custom404Component';
 
 export const Custom404 = () => {
-	return (
-		<Custom404Container />
-	)
-}
+  return <Custom404Component />;
+};

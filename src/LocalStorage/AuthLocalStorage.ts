@@ -1,7 +1,7 @@
-import { LocalStorage } from "./LocalStorage";
+import { LocalStorage } from './LocalStorage';
 
 export class AuthLocalStorage extends LocalStorage {
-	constructor() {
-		super('auth');
-	}
+  constructor() {
+    super('auth');
+  }
 }
