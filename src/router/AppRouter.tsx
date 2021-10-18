@@ -1,36 +1,39 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
+import { privateRoutes, publicRoutes, RouteNames } from '.';
 import { useTypedSelector } from '../store/useTypedSelector';
-import { Login } from '../pages/Login';
-import { Home } from '../pages/Home';
-import { AboutPage } from '../pages/AboutPage';
-import { Custom404 } from '../pages/Custom404';
+import { LoginFormContainer } from '../Containers/LoginFormContainer';
 
 export const AppRouter = () => {
-  enum RouteNames {
-    LOGIN = '/login',
-    HOME = '/',
-    ERROR = '/404',
-    ABOUT = '/about',
-  }
-
   const { isAuth } = useTypedSelector((state) => state.auth);
 
   const authRoute = (
     <Switch>
-      <Route path={RouteNames.HOME} exact component={Home} />
-      <Route path={RouteNames.ABOUT} exact component={AboutPage} />
-      <Route path={RouteNames.ERROR} exact={false} component={Custom404} />
-      <Redirect to={RouteNames.ERROR}>
-        <Custom404 />
-      </Redirect>
+      {privateRoutes.map((route) => (
+        <Route
+          path={route.path}
+          exact={route.exact}
+          component={route.component}
+          key={route.path}
+        />
+      ))}
+      <Redirect to={RouteNames.ERROR} />
     </Switch>
   );
 
   const UnAuthRoute = (
     <Switch>
-      <Route path={RouteNames.LOGIN} exact component={Login} />
-      <Redirect to={RouteNames.LOGIN} />
+      {publicRoutes.map((route) => (
+        <Route
+          path={route.path}
+          exact={route.exact}
+          component={route.component}
+          key={route.path}
+        />
+      ))}
+      <Route>
+        <LoginFormContainer />
+      </Route>
     </Switch>
   );
 
