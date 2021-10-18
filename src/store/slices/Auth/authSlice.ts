@@ -53,9 +53,8 @@ export const checkAuth =
       );
       if (userCheck) {
         const authToken = uuidv4();
-        authLocalStorage.setItem(authToken);
-        dispatch(authSlice.actions.setAuth());
-        console.log(authLocalStorage.getItem);
+         authLocalStorage.setItem(authToken);
+         dispatch(authSlice.actions.setAuth());
       } else {
         dispatch(
           authSlice.actions.setError(
@@ -69,7 +68,7 @@ export const checkAuth =
 
 export const logout = () => async (dispatch: Dispatch) => {
   authLocalStorage.removeItem();
-  dispatch(authSlice.actions.logout());
+  await dispatch(authSlice.actions.logout());
 };
 
 export default authSlice.reducer;
