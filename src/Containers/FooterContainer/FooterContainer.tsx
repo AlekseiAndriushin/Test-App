@@ -6,11 +6,8 @@ import { fetchGaearon } from '../../store/queries/gaearon/fetchGaearon';
 import { Footer } from '../../components';
 
 export const FooterContainer = () => {
+
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchFollowers());
-    dispatch(fetchGaearon());
-  }, []);
 
   const { followers, isLoading } = useSelector(
     (state: RootState) => state.followers
@@ -18,9 +15,12 @@ export const FooterContainer = () => {
 
   const { gaearon } = useSelector((state: RootState) => state.gaearon);
 
+  useEffect(() => {
+    dispatch(fetchFollowers());
+    dispatch(fetchGaearon());
+  }, []);
+
   return (
-    <>
-      <Footer gaearon={gaearon} followers={followers} isLoading={isLoading} />
-    </>
+    <Footer gaearon={gaearon} followers={followers} isLoading={isLoading} />
   );
 };
