@@ -18,9 +18,12 @@ interface IFormLogin {
 
 export const LoginForm: React.FC<IFormLogin> = ({ error, formLogin, onChange, handleSubmit, isLoading }) => {
 	return (
+
 		<div className="LoginForm">
 			{!isLoading ? <form onSubmit={handleSubmit}>
+
 				{error && <div className="LoginForm__errorText">{error}</div>}
+
 				<input type="text"
 					className="LoginForm__input"
 					name="user"
@@ -29,6 +32,7 @@ export const LoginForm: React.FC<IFormLogin> = ({ error, formLogin, onChange, ha
 					value={formLogin.user}
 					onChange={onChange}
 				/>
+
 				<input type="password"
 					className="LoginForm__input"
 					name="password"
@@ -37,9 +41,10 @@ export const LoginForm: React.FC<IFormLogin> = ({ error, formLogin, onChange, ha
 					value={formLogin.password}
 					onChange={onChange}
 				/>
-				<Button title="войти" />
-			</form> : <Loader />
 
+				<Button title="войти" />
+
+			</form> : <Loader />
 			}
 		</div>
 	)

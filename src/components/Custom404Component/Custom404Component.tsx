@@ -6,14 +6,12 @@ interface IErrorComponent {
 	isAuth: boolean;
 }
 
-
-export const Custom404Component: React.FC<IErrorComponent> = ({ isAuth }) => {
+export const Custom404Component: React.FC<IErrorComponent> = () => {
 	return (
 		<>
 			<Link to="/" className="linkText">
 				Вернуться на страницу с карточками
 			</Link>
-
 		</>
 	)
 }
