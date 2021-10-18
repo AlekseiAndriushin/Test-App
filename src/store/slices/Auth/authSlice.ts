@@ -68,7 +68,7 @@ export const checkAuth =
 
 export const logout = () => async (dispatch: Dispatch) => {
   authLocalStorage.removeItem();
-  await dispatch(authSlice.actions.logout());
+  dispatch(authSlice.actions.logout());
 };
 
 export default authSlice.reducer;
