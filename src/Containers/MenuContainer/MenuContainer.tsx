@@ -1,14 +1,32 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
-import { RootState } from '../../app/store'
-import { Menu } from '../../components/Menu/Menu'
+import React, { SyntheticEvent } from 'react'
+import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux'
+import { Menu } from '../../components/Menu'
+import { logout } from '../../store/slices/Auth/authSlice'
+import { useTypedSelector } from '../../store/useTypedSelector'
 import { removingDuplicateItems } from '../../utils/removingDuplicateItems'
-
+export enum RouteNames {
+	LOGIN = '/login',
+}
 export const MenuContainer = () => {
-	const takenCards = useSelector((state: RootState) => state.cards.card)
+
+	const { isAuth } = useTypedSelector(state => state.auth)
+
+	const router = useHistory();
+
+	const dispatch = useDispatch()
+
+	const handleLogout = (event: SyntheticEvent) => {
+		event.preventDefault()
+		dispatch(logout())
+		router.push(RouteNames.LOGIN);
+
+	}
+
+	const takenCards = useTypedSelector(state => state.cards.card)
 	const answer: Array<string> = []
 	const findList = () => {
-		takenCards.map((card) => card.taken ? answer.push(card.company) : null)
+		takenCards?.map((card) => card.taken ? answer.push(card.company) : null)
 		if (answer.length) {
 			console.clear()
 			console.log(removingDuplicateItems(answer))
@@ -18,7 +36,7 @@ export const MenuContainer = () => {
 
 	};
 	return (
-		<Menu findList={findList} />
+		<Menu findList={findList} isAuth={isAuth} handleLogout={handleLogout} />
 	)
 }
 

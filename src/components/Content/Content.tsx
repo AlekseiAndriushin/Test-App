@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react'
-import Card from '../Card/Card';
+import { Card } from '../Card';
 import './Content.scss'
 
 interface ICard {

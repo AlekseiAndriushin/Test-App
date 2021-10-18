@@ -1,12 +1,16 @@
 .menu {
 	grid-area: menu;
 	background: var(--primary);
-	color: var(--text-color);
 	padding: 0;
 	margin: 0;
 	display: flex;
-	justify-content: center;
 	align-items: center;
+	justify-content: space-around;
+	&__linkText {
+		font-size: 20px;
+		color: var(--text-color);
+		text-decoration: none;
+	}
 }
 @media only screen and (max-width: 1024px) {
 	.menu {

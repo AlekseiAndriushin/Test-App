@@ -1,5 +1,5 @@
 import React, { FocusEvent, SyntheticEvent } from 'react'
-import { Button } from '../Button/Button'
+import { Button } from '../Button'
 import './Form.scss'
 
 interface IFormData {
@@ -57,7 +57,7 @@ export const Form: React.FC<IForm> = ({ formData, onChange, handleSubmit }) => {
 				onChange={onChange}
 			/>
 
-			<Button title="добавить" />
+			<Button title="добавить" disabled={!formData} />
 		</form>
 	)
 }

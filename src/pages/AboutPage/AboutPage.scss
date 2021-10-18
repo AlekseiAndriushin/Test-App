@@ -1,0 +1,18 @@
+.aboutPage {
+	font-size: 20px;
+	color: var(--text-color);
+	grid-area: 2 / 1 / 5 / 4;
+	justify-content: center;
+	align-items: center;
+	display: grid;
+	background: var(--primary);
+	&__text {
+		display: flex;
+		justify-content: center;
+	}
+	&__linkText {
+		font-size: 20px;
+		color: var(--text-color);
+		text-decoration: none;
+	}
+}

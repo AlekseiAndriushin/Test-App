@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../app/store';
-import { fetchUser } from '../../features/Queries/User/fetchUser';
-import { Header } from '../../components/Header/Header';
+import { RootState } from '../../store/store';
+import { fetchUser } from '../../store/queries/User/fetchUser';
+import { Header } from '../../components/Header';
 
 export const HeaderContainer = () => {
 	const dispatch = useDispatch()
@@ -11,10 +11,10 @@ export const HeaderContainer = () => {
 		dispatch(fetchUser())
 
 	}, [])
-	const user = useSelector((state: RootState) => state.user.user)
+	const { user, isLoading } = useSelector((state: RootState) => state.user)
 
 	return (
-		<Header user={user} />
+		<Header user={user} isLoading={isLoading} />
 	)
 }
 
