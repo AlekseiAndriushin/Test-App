@@ -9,11 +9,6 @@ interface IAuthService {
   isAuth: boolean;
 }
 
-interface IUser {
-  user: string;
-  password: string;
-}
-
 const initialState: IAuthService = {
   isLoading: false,
   error: null,
@@ -44,7 +39,7 @@ export const checkAuth =
     dispatch(authSlice.actions.setLoading(true));
 
     setTimeout(async () => {
-      const response: IUser[] = await AuthUserService.getAuth();
+      const response = await AuthUserService.getAuth();
       const userCheck = response.find(
         (user) => user.user === username && user.password === password
       );

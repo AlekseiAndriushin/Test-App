@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../../store';
 
 type FollowersState = {
@@ -32,11 +32,11 @@ const followersSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(fetchFollowers.pending, (state) => {
+    builder.addCase(fetchFollowers.pending, (state: FollowersState) => {
       state.isLoading = true;
       state.error = null;
     });
-    builder.addCase(fetchFollowers.fulfilled, (state, action) => {
+    builder.addCase(fetchFollowers.fulfilled, (state: FollowersState, action: PayloadAction<FollowersState['followers']>) => {
       state.followers = action.payload;
       state.isLoading = false;
     });

@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../../store';
 import { fetchUser } from '../../queries/user/fetchUser';
 
@@ -9,13 +9,13 @@ type User = {
   followers: number | undefined;
 };
 
-type userState = {
+type UserState = {
   isLoading: boolean;
   error: string | null;
   user: User;
 };
 
-const initialState: userState = {
+const initialState: UserState = {
   isLoading: false,
   error: null,
   user: undefined,
@@ -26,11 +26,11 @@ const userSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(fetchUser.pending, (state) => {
+    builder.addCase(fetchUser.pending, (state: UserState) => {
       state.isLoading = true;
       state.error = null;
     });
-    builder.addCase(fetchUser.fulfilled, (state, action) => {
+    builder.addCase(fetchUser.fulfilled, (state: UserState, action: PayloadAction<User>) => {
       state.user = action.payload;
       state.isLoading = false;
     });

@@ -24,7 +24,9 @@ export const LoginForm: React.FC<IFormLogin> = ({
   isLoading,
 }) => (
   <div className='LoginForm'>
-    {!isLoading ? (
+    {isLoading && <Loader />} 
+
+    {!isLoading &&  (
       <form onSubmit={handleSubmit}>
         {error && <div className='LoginForm__errorText'>{error}</div>}
 
@@ -50,8 +52,6 @@ export const LoginForm: React.FC<IFormLogin> = ({
 
         <Button title='войти' />
       </form>
-    ) : (
-      <Loader />
     )}
   </div>
 );

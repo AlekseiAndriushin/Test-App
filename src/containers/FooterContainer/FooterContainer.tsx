@@ -1,19 +1,17 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../store/store';
+import { useDispatch } from 'react-redux';
 import { fetchFollowers } from '../../store/queries/followers/fetchFollowers';
 import { fetchGaearon } from '../../store/queries/gaearon/fetchGaearon';
 import { Footer } from '../../components';
+import { useTypedSelector } from '../../store/useTypedSelector';
 
 export const FooterContainer = () => {
-
   const dispatch = useDispatch();
-
-  const { followers, isLoading } = useSelector(
-    (state: RootState) => state.followers
+  const { gaearon } = useTypedSelector((state) => state.gaearon);
+  const { followers, isLoading } = useTypedSelector(
+    (state) => state.followers
   );
 
-  const { gaearon } = useSelector((state: RootState) => state.gaearon);
 
   useEffect(() => {
     dispatch(fetchFollowers());

@@ -1,4 +1,10 @@
 import React from 'react';
 import './Loader.scss';
 
-export const Loader = () => <div className='lds-dual-ring' />;
+export const Loader = () => {
+	return (
+	<div className='loader'>
+		<div className="loader__animation"/>
+	</div>
+	) 
+}

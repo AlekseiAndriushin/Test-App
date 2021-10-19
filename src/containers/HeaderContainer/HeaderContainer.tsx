@@ -1,14 +1,12 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../store/store';
+import { useDispatch } from 'react-redux';
 import { fetchUser } from '../../store/queries/user/fetchUser';
 import { Header } from '../../components';
+import { useTypedSelector } from '../../store/useTypedSelector';
 
 export const HeaderContainer = () => {
-
   const dispatch = useDispatch();
-
-  const { user, isLoading } = useSelector((state: RootState) => state.user);
+  const { user, isLoading } = useTypedSelector((state) => state.user);
 
   useEffect(() => {
     dispatch(fetchUser());

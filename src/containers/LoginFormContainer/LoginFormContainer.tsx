@@ -5,12 +5,14 @@ import { LoginForm } from '../../components';
 import { checkAuth } from '../../store/slices/auth/authSlice';
 import { useTypedSelector } from '../../store/useTypedSelector';
 
-export enum RouteNames {
+enum RouteNames {
   HOME = '/',
 }
 
 export const LoginFormContainer = () => {
+  const router = useHistory();
   const dispatch = useDispatch();
+  const { isLoading, error } = useTypedSelector((state) => state.auth);
 
   const initialState = {
     user: '',
@@ -18,15 +20,9 @@ export const LoginFormContainer = () => {
   };
 
   const [formLogin, setFormLogin] = useState(initialState);
-
+  const { user, password } = formLogin;
   const onChange = (e: FocusEvent<HTMLInputElement>) =>
     setFormLogin({ ...formLogin, [e.target.name]: e.target.value });
-
-  const { isLoading, error } = useTypedSelector((state) => state.auth);
-
-  const router = useHistory();
-
-  const { user, password } = formLogin;
 
   const handleSubmit = (event: SyntheticEvent) => {
     event.preventDefault();

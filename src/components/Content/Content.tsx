@@ -17,6 +17,7 @@ interface IContentProps {
 }
 
 export const Content: React.FC<IContentProps> = ({ cards, clickCard }) => {
+
   const onContextMenu = useCallback((event: React.MouseEvent) => {
     event.preventDefault();
     alert('Меню для списка компаний');
