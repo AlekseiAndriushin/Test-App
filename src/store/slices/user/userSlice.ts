@@ -9,13 +9,13 @@ type User = {
   followers: number | undefined;
 };
 
-type userState = {
+type UserState = {
   isLoading: boolean;
   error: string | null;
   user: User;
 };
 
-const initialState: userState = {
+const initialState: UserState = {
   isLoading: false,
   error: null,
   user: undefined,
