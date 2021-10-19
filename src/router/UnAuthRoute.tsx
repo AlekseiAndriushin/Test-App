@@ -7,7 +7,6 @@ export enum RouteNames {
 }
 
 export const UnAuthRoute = () => {
-	
 	return (
 		<Switch>
 			<Route path={RouteNames.LOGIN} exact component={LoginPage} />
