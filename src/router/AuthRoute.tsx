@@ -1,18 +1,20 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import { privateRoutes, RouteNames } from '.';
+import { AboutPage, HomePage, NotFoundPage } from '../pages';
 
+export enum RouteNames {
+	HOME = '/',
+	ERROR = '/404',
+	ABOUT = '/about',
+}
 
 export const AuthRoute = () => {
 	return	<Switch>
-			{privateRoutes.map((route) => (
-				<Route
-					path={route.path}
-					exact={route.exact}
-					component={route.component}
-					key={route.path}
-				/>
-			))}
-			<Redirect to={RouteNames.ERROR} />
+		<Switch>
+			<Route path={RouteNames.HOME} exact component={HomePage} />
+			<Route path={RouteNames.ABOUT} exact component={AboutPage} />
+			<Route path={RouteNames.ERROR} exact={false} component={NotFoundPage} />
+			<Redirect to={RouteNames.ERROR}/>
+		</Switch>
 		</Switch>
 }
