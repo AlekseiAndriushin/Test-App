@@ -7,11 +7,5 @@ import { UnAuthRoute } from './UnAuthRoute';
 export const AppRouter = () => {
   const { isAuth } = useTypedSelector((state) => state.auth);
 
-  return <Switch>{
-    isAuth
-     ?
-      <AuthRoute/>
-       : 
-       <UnAuthRoute/>
-       }</Switch>;
+  return <Switch>{isAuth ? <AuthRoute /> : <UnAuthRoute />}</Switch>;
 };
