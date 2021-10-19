@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { AboutPage, HomePage, NotFoundPage } from '../pages';
 
-export enum RouteNames {
+enum RouteNames {
 	HOME = '/',
 	ERROR = '/404',
 	ABOUT = '/about',

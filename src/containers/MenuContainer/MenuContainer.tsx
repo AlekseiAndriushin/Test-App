@@ -6,7 +6,7 @@ import { logout } from '../../store/slices/auth/authSlice';
 import { useTypedSelector } from '../../store/useTypedSelector';
 import { removingDuplicateItems } from './removingDuplicateItems';
 
-export enum RouteNames {
+enum RouteNames {
   LOGIN = '/login',
 }
 

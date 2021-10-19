@@ -5,7 +5,7 @@ import { LoginForm } from '../../components';
 import { checkAuth } from '../../store/slices/auth/authSlice';
 import { useTypedSelector } from '../../store/useTypedSelector';
 
-export enum RouteNames {
+enum RouteNames {
   HOME = '/',
 }
 
