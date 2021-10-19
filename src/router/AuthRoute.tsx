@@ -9,12 +9,12 @@ export enum RouteNames {
 }
 
 export const AuthRoute = () => {
-	return	<Switch>
+	return	(
 		<Switch>
 			<Route path={RouteNames.HOME} exact component={HomePage} />
 			<Route path={RouteNames.ABOUT} exact component={AboutPage} />
 			<Route path={RouteNames.ERROR} exact={false} component={NotFoundPage} />
 			<Redirect to={RouteNames.ERROR}/>
 		</Switch>
-		</Switch>
+	)
 }

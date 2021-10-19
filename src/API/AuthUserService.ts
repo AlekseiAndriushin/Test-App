@@ -1,6 +1,6 @@
 import RequestService from './RequestService';
 
-class NetworkService {
+class  NetworkService {
   getAuth() {
     const url = './users.json';
     return RequestService.getRequest(url);
