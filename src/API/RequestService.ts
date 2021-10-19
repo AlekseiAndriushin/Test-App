@@ -1,13 +1,13 @@
 class RequestService {
-  async getRequest(url) {
-    const data = await fetch(url)
-      .then((res) => res.json())
+   public getRequest<T>(url: string): Promise<T> {
+     return fetch(url)
+      .then(response => response.json() as Promise<T>)
+      .then(data => {
+        return data;
+      })
       .catch((err) => {
-        {
           throw new Error(`Oh we have a error${err}`);
-        }
       });
-    return data;
   }
 }
 

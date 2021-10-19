@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../../store';
 import { fetchGaearon } from '../../queries/gaearon/fetchGaearon';
 
@@ -25,11 +25,11 @@ const gaearonSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(fetchGaearon.pending, (state) => {
+    builder.addCase(fetchGaearon.pending, (state: GaearonState) => {
       state.status = 'loading';
       state.error = null;
     });
-    builder.addCase(fetchGaearon.fulfilled, (state, action) => {
+    builder.addCase(fetchGaearon.fulfilled, (state: GaearonState, action: PayloadAction<Gaearon>) => {
       state.gaearon = action.payload;
       state.status = 'idle';
     });
