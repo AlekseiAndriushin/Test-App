@@ -26,11 +26,9 @@ export const Footer: React.FC<IFooterProps> = ({
   <>
     <footer className='footer'>
 
-      {isLoading 
-      ? 
-        <Loader />
-      : 
-      (
+      {isLoading && <Loader />}
+
+        {!isLoading && (
         <>
           <h5 className='footer__name'>{gaearon?.name}</h5>
           <h5 className='footer__company'>{gaearon?.company}</h5>
@@ -53,7 +51,6 @@ export const Footer: React.FC<IFooterProps> = ({
               </li>
             ))}
           </ul>
-          
         </>
       )}
     </footer>

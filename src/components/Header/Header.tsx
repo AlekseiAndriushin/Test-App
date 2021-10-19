@@ -17,11 +17,8 @@ interface IUserProps {
 export const Header: React.FC<IUserProps> = ({ user, isLoading }) => (
   <header className="header">
 
-    {isLoading
-      ?				
-      <Loader />
-      :				
-      ( 
+    {isLoading && <Loader />}
+    {!isLoading && (
         <>
           <a href={user?.html_url} target="_blank" className="header__link" rel="noreferrer">
             Github profile:

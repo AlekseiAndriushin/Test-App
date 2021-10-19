@@ -17,14 +17,13 @@ export const Menu: React.FC<IMenuProps> = ({
   <menu className='menu'>
     <Button title='узнать список компаний' onClick={findList} />
 
-    {isAuth ? (
+    {isAuth && (
       <>
-
         <Button title='выйти' onClick={handleLogout} />
         <Link to='/about' className='menu__linkText'>
           Ещё одна страница
         </Link>
       </>
-    ) : null}
+    )}
   </menu>
 );
