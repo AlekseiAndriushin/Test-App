@@ -11,24 +11,11 @@ enum RouteNames {
 }
 
 export const MenuContainer = () => {
-
-  const { isAuth } = useTypedSelector((state) => state.auth);
-
-  const router = useHistory();
-
-  const dispatch = useDispatch();
-
-  const handleLogout = (event: SyntheticEvent) => {
-    event.preventDefault();
-
-    dispatch(logout());
-
-    router.push(RouteNames.LOGIN);
-  };
-
-  const takenCards = useTypedSelector((state) => state.cards.card);
-
-  const answer: Array<string> = [];
+    const router = useHistory();
+    const dispatch = useDispatch();
+    const { isAuth } = useTypedSelector((state) => state.auth);
+    const takenCards = useTypedSelector((state) => state.cards.card);
+    const answer: Array<string> = [];
 
   const findList = () => {
     takenCards?.map((card) => (card.taken ? answer.push(card.company) : null));
@@ -40,6 +27,16 @@ export const MenuContainer = () => {
       console.log('тут пусто');
     }
   };
+
+  const handleLogout = (event: SyntheticEvent) => {
+    event.preventDefault();
+
+    dispatch(logout());
+
+    router.push(RouteNames.LOGIN);
+  };
+
+
 
   return (
     <Menu findList={findList} isAuth={isAuth} handleLogout={handleLogout} />

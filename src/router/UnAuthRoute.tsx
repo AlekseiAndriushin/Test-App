@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { LoginPage } from '../pages';
 
-export enum RouteNames {
+enum RouteNames {
 	LOGIN = '/login',
 }
 

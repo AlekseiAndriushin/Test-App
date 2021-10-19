@@ -6,10 +6,8 @@ import { Content } from '../../components';
 import { toggleCard } from '../../store/slices/cards/cardsSlice';
 
 export const ContentContainer = () => {
-
-  const cards = useTypedSelector((state: RootState) => state.cards.card);
-
   const dispatch = useDispatch();
+  const cards = useTypedSelector((state: RootState) => state.cards.card);
 
   const clickCard = (id: string) => {
     dispatch(toggleCard(id));
