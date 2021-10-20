@@ -21,6 +21,7 @@ export const Content: React.FC<IContentProps> = ({ cards, clickCard }) => {
     event.preventDefault();
     alert('Меню для списка компаний');
   }, []);
+
   return (
     <section className='content' onContextMenu={onContextMenu}>
       <ul className='components'>
