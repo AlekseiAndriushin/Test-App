@@ -19,13 +19,19 @@ const authSlice = createSlice({
   name: 'auth',
   initialState,
   reducers: {
-    setLoading(state: IAuthService, action: PayloadAction<IAuthService["isLoading"]>) {
+    setLoading(
+      state: IAuthService,
+      action: PayloadAction<IAuthService['isLoading']>
+    ) {
       state.isLoading = action.payload;
     },
     setAuth(state: IAuthService) {
       state.isAuth = true;
     },
-    setError(state: IAuthService, action: PayloadAction<IAuthService["error"]>) {
+    setError(
+      state: IAuthService,
+      action: PayloadAction<IAuthService['error']>
+    ) {
       state.error = action.payload;
     },
     logout: (state) => {
@@ -45,8 +51,8 @@ export const checkAuth =
       );
       if (userCheck) {
         const authToken = uuidv4();
-         authLocalStorage.setItem(authToken);
-         dispatch(authSlice.actions.setAuth());
+        authLocalStorage.setItem(authToken);
+        dispatch(authSlice.actions.setAuth());
       } else {
         dispatch(
           authSlice.actions.setError(

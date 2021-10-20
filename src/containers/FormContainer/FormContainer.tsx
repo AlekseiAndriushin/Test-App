@@ -5,17 +5,17 @@ import { Form } from '../../components';
 
 export const FormContainer = () => {
   const dispatch = useDispatch();
-  
+
   const initialState = {
     company: '',
     address: '',
     email: '',
     phone: '',
   };
-  
+
   const [formData, setFormData] = useState(initialState);
   const { company, address, email, phone } = formData;
-  
+
   const onChange = (e: FocusEvent<HTMLInputElement>) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 

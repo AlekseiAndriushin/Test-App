@@ -3,18 +3,18 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import { AboutPage, HomePage, NotFoundPage } from '../pages';
 
 enum RouteNames {
-	HOME = '/',
-	ERROR = '/404',
-	ABOUT = '/about',
+  HOME = '/',
+  ERROR = '/404',
+  ABOUT = '/about',
 }
 
 export const AuthRoute = () => {
-	return	(
-		<Switch>
-			<Route path={RouteNames.HOME} exact component={HomePage} />
-			<Route path={RouteNames.ABOUT} exact component={AboutPage} />
-			<Route path={RouteNames.ERROR} exact={false} component={NotFoundPage} />
-			<Redirect to={RouteNames.ERROR}/>
-		</Switch>
-	)
-}
+  return (
+    <Switch>
+      <Route path={RouteNames.HOME} exact component={HomePage} />
+      <Route path={RouteNames.ABOUT} exact component={AboutPage} />
+      <Route path={RouteNames.ERROR} exact={false} component={NotFoundPage} />
+      <Redirect to={RouteNames.ERROR} />
+    </Switch>
+  );
+};

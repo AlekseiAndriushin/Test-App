@@ -30,10 +30,13 @@ const userSlice = createSlice({
       state.isLoading = true;
       state.error = null;
     });
-    builder.addCase(fetchUser.fulfilled, (state: UserState, action: PayloadAction<User>) => {
-      state.user = action.payload;
-      state.isLoading = false;
-    });
+    builder.addCase(
+      fetchUser.fulfilled,
+      (state: UserState, action: PayloadAction<User>) => {
+        state.user = action.payload;
+        state.isLoading = false;
+      }
+    );
   },
 });
 

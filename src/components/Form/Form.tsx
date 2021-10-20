@@ -16,7 +16,6 @@ interface IForm {
 
 export const Form: React.FC<IForm> = ({ formData, onChange, handleSubmit }) => (
   <form className='form' onSubmit={handleSubmit}>
-    
     <input
       className='form__input'
       type='text'

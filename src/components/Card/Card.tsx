@@ -16,7 +16,6 @@ interface ICardProps {
 }
 
 export const Card: React.FC<ICardProps> = ({ onClick, card }) => {
-
   const [isActive, setIsActive] = useState<boolean>(false);
 
   const clickCard = () => {
@@ -26,7 +25,6 @@ export const Card: React.FC<ICardProps> = ({ onClick, card }) => {
   };
 
   const rightClick = useCallback((event: React.MouseEvent) => {
-
     event.preventDefault();
     event.stopPropagation();
     alert('Меню для карточки');
@@ -43,7 +41,6 @@ export const Card: React.FC<ICardProps> = ({ onClick, card }) => {
       onClick={clickCard}
       onClickCapture={toggleClass}
     >
-
       <span>
         Название компании:
         {card?.company}
@@ -63,7 +60,6 @@ export const Card: React.FC<ICardProps> = ({ onClick, card }) => {
         Телефон:
         {card?.phone}
       </span>
-
     </li>
   );
 };

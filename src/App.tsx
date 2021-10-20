@@ -9,7 +9,7 @@ export const App = () => {
   const { theme, setCurrentTheme } = useTheme();
 
   return (
-    <div className="container" style={{ ...theme as React.CSSProperties }}>
+    <div className='container' style={{ ...(theme as React.CSSProperties) }}>
       <HeaderContainer />
       <AppRouter />
       <FooterContainer />

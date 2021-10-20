@@ -11,7 +11,6 @@ export const ChangeButtons: React.FC<IChangeButtonsProps> = ({
   setCurrentTheme,
 }) => (
   <div className='container__buttons'>
-
     <Button
       title='Сменить на красную тему'
       onClick={() => setCurrentTheme('red')}
@@ -21,6 +20,5 @@ export const ChangeButtons: React.FC<IChangeButtonsProps> = ({
       title='Сменить на синюю тему'
       onClick={() => setCurrentTheme('blue')}
     />
-    
   </div>
 );

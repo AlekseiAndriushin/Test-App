@@ -17,7 +17,7 @@ type Gaearon = {
 const initialState: GaearonState = {
   status: 'idle',
   error: null,
-  gaearon: undefined,
+  gaearon: null,
 };
 
 const gaearonSlice = createSlice({
@@ -29,10 +29,13 @@ const gaearonSlice = createSlice({
       state.status = 'loading';
       state.error = null;
     });
-    builder.addCase(fetchGaearon.fulfilled, (state: GaearonState, action: PayloadAction<Gaearon>) => {
-      state.gaearon = action.payload;
-      state.status = 'idle';
-    });
+    builder.addCase(
+      fetchGaearon.fulfilled,
+      (state: GaearonState, action: PayloadAction<Gaearon>) => {
+        state.gaearon = action.payload;
+        state.status = 'idle';
+      }
+    );
   },
 });
 
