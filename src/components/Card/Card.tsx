@@ -41,25 +41,10 @@ export const Card: React.FC<ICardProps> = ({ onClick, card }) => {
       onClick={clickCard}
       onClickCapture={toggleClass}
     >
-      <span>
-        Название компании:
-        {card?.company}
-      </span>
-
-      <span>
-        Адрес:
-        {card?.address}
-      </span>
-
-      <span>
-        Email:
-        {card?.email}
-      </span>
-
-      <span>
-        Телефон:
-        {card?.phone}
-      </span>
+      <span>Название компании: {card?.company}</span>
+      <span>Адрес: {card?.address}</span>
+      <span>Email: {card?.email}</span>
+      <span>Телефон: {card?.phone}</span>
     </li>
   );
 };

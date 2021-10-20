@@ -21,6 +21,7 @@ export const LoginFormContainer = () => {
 
   const [formLogin, setFormLogin] = useState(initialState);
   const { user, password } = formLogin;
+
   const onChange = (e: FocusEvent<HTMLInputElement>) =>
     setFormLogin({ ...formLogin, [e.target.name]: e.target.value });
 

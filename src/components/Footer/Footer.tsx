@@ -23,35 +23,33 @@ export const Footer: React.FC<IFooterProps> = ({
   followers,
   isLoading,
 }) => (
-  <>
-    <footer className='footer'>
-      {isLoading && <Loader />}
+  <footer className='footer'>
+    {isLoading && <Loader />}
 
-      {!isLoading && (
-        <>
-          <h5 className='footer__name'>{gaearon?.name}</h5>
-          <h5 className='footer__company'>{gaearon?.company}</h5>
+    {!isLoading && (
+      <>
+        <h5 className='footer__name'>{gaearon?.name}</h5>
+        <h5 className='footer__company'>{gaearon?.company}</h5>
 
-          <img
-            src={`${gaearon?.avatar_url}`}
-            alt={`${gaearon?.name}`}
-            className='footer__gaearon__image'
-          />
+        <img
+          src={`${gaearon?.avatar_url}`}
+          alt={`${gaearon?.name}`}
+          className='footer__gaearon__image'
+        />
 
-          <ul className='footer__followers__wrapper'>
-            {followers?.map((follower) => (
-              <li className='footer__followers__item' key={follower.login}>
-                {follower.login}{' '}
-                <img
-                  src={`${follower.avatar_url}`}
-                  alt={follower.login}
-                  className='footer__image'
-                />
-              </li>
-            ))}
-          </ul>
-        </>
-      )}
-    </footer>
-  </>
+        <ul className='footer__followers__wrapper'>
+          {followers?.map((follower) => (
+            <li className='footer__followers__item' key={follower.login}>
+              {follower.login}{' '}
+              <img
+                src={`${follower.avatar_url}`}
+                alt={follower.login}
+                className='footer__image'
+              />
+            </li>
+          ))}
+        </ul>
+      </>
+    )}
+  </footer>
 );

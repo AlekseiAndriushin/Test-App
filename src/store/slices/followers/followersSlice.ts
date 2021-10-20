@@ -1,4 +1,5 @@
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { fetchFollowers } from '../../queries/followers/fetchFollowers';
 import { RootState } from '../../store';
 
 type FollowersState = {
@@ -17,15 +18,6 @@ const initialState: FollowersState = {
   error: null,
   followers: [],
 };
-
-const fetchFollowers = createAsyncThunk<Followers[]>(
-  'followers/fetch',
-  async () => {
-    const response = await fetch('https://api.github.com/users/gaearon');
-    const data: Followers[] = await response.json();
-    return data;
-  }
-);
 
 const followersSlice = createSlice({
   name: 'followers',

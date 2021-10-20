@@ -9,7 +9,7 @@ class NetworkService {
 
   getFollowers() {
     const url = 'https://api.github.com/users/gaearon/followers';
-    return RequestService.getRequest<Followers>(url);
+    return RequestService.getRequest<Followers[]>(url);
   }
 
   getUser() {

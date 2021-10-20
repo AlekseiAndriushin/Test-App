@@ -30,9 +30,7 @@ export const MenuContainer = () => {
 
   const handleLogout = (event: SyntheticEvent) => {
     event.preventDefault();
-
     dispatch(logout());
-
     router.push(RouteNames.LOGIN);
   };
 
