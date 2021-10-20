@@ -10,29 +10,31 @@ type User = {
 };
 
 interface IUserProps {
-  user: User
+  user: User;
   isLoading: boolean;
 }
 
 export const Header: React.FC<IUserProps> = ({ user, isLoading }) => (
-  <header className="header">
-
+  <header className='header'>
     {isLoading && <Loader />}
 
     {!isLoading && (
-        <>
-          <a href={user?.html_url} target="_blank" className="header__link" rel="noreferrer">
-            Github profile:
-            {user?.name}
-          </a>
-          <img className="header__image" src={`${user?.avatar_url}`} />
-          <span>
-            Number of my subscribers:
-            {user?.followers}
-          </span>
-        </>
-			)
-    }
-    
+      <>
+        <a
+          href={user?.html_url}
+          target='_blank'
+          className='header__link'
+          rel='noreferrer'
+        >
+          Github profile:
+          {user?.name}
+        </a>
+        <img className='header__image' src={`${user?.avatar_url}`} />
+        <span>
+          Number of my subscribers:
+          {user?.followers}
+        </span>
+      </>
+    )}
   </header>
 );

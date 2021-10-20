@@ -17,7 +17,6 @@ interface IContentProps {
 }
 
 export const Content: React.FC<IContentProps> = ({ cards, clickCard }) => {
-
   const onContextMenu = useCallback((event: React.MouseEvent) => {
     event.preventDefault();
     alert('Меню для списка компаний');
@@ -26,7 +25,6 @@ export const Content: React.FC<IContentProps> = ({ cards, clickCard }) => {
   return (
     <section className='content' onContextMenu={onContextMenu}>
       <ul className='components'>
-
         {cards.map((card) => (
           <Card card={card} key={card.id} onClick={clickCard} />
         ))}
@@ -34,7 +32,6 @@ export const Content: React.FC<IContentProps> = ({ cards, clickCard }) => {
         {[1, 2, 3, 4, 5, 6, 7, 8].map((index) => (
           <Card key={index} />
         ))}
-        
       </ul>
     </section>
   );

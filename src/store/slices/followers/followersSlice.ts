@@ -36,10 +36,16 @@ const followersSlice = createSlice({
       state.isLoading = true;
       state.error = null;
     });
-    builder.addCase(fetchFollowers.fulfilled, (state: FollowersState, action: PayloadAction<FollowersState['followers']>) => {
-      state.followers = action.payload;
-      state.isLoading = false;
-    });
+    builder.addCase(
+      fetchFollowers.fulfilled,
+      (
+        state: FollowersState,
+        action: PayloadAction<FollowersState['followers']>
+      ) => {
+        state.followers = action.payload;
+        state.isLoading = false;
+      }
+    );
   },
 });
 

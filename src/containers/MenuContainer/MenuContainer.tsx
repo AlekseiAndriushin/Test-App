@@ -11,11 +11,11 @@ enum RouteNames {
 }
 
 export const MenuContainer = () => {
-    const router = useHistory();
-    const dispatch = useDispatch();
-    const { isAuth } = useTypedSelector((state) => state.auth);
-    const takenCards = useTypedSelector((state) => state.cards.card);
-    const answer: Array<string> = [];
+  const router = useHistory();
+  const dispatch = useDispatch();
+  const { isAuth } = useTypedSelector((state) => state.auth);
+  const takenCards = useTypedSelector((state) => state.cards.card);
+  const answer: Array<string> = [];
 
   const findList = () => {
     takenCards?.map((card) => (card.taken ? answer.push(card.company) : null));
@@ -35,8 +35,6 @@ export const MenuContainer = () => {
 
     router.push(RouteNames.LOGIN);
   };
-
-
 
   return (
     <Menu findList={findList} isAuth={isAuth} handleLogout={handleLogout} />

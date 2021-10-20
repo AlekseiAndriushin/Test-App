@@ -1,19 +1,19 @@
 .loader {
-  	display: inline-block;
+	display: inline-block;
 	width: 80px;
 	height: 80px;
 
-  &__animation {
-    content: " ";
-	display: block;
-	width: 52px;
-	height: 52px;
-	margin: 8px;
-	border-radius: 50%;
-	border: 6px solid var(--secondary);
-	border-color: var(--secondary) transparent var(--secondary) transparent;
-	animation: lds-dual-ring 1.2s linear infinite;
-  }
+	&__animation {
+		content: " ";
+		display: block;
+		width: 52px;
+		height: 52px;
+		margin: 8px;
+		border-radius: 50%;
+		border: 6px solid var(--secondary);
+		border-color: var(--secondary) transparent var(--secondary) transparent;
+		animation: lds-dual-ring 1.2s linear infinite;
+	}
 }
 
 @keyframes lds-dual-ring {

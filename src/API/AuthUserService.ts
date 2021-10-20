@@ -1,7 +1,7 @@
 import RequestService from './RequestService';
 import { IUser } from './types';
 
-class  NetworkService {
+class NetworkService {
   getAuth() {
     const url = './users.json';
     return RequestService.getRequest<IUser[]>(url);
