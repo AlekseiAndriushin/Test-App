@@ -9,7 +9,6 @@ export const FooterContainer = () => {
   const dispatch = useDispatch();
   const { gaearon } = useTypedSelector((state) => state.gaearon);
   const { followers, isLoading } = useTypedSelector((state) => state.followers);
-
   useEffect(() => {
     dispatch(fetchFollowers());
     dispatch(fetchGaearon());

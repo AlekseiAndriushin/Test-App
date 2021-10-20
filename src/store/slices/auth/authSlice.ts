@@ -49,6 +49,7 @@ export const checkAuth =
       const userCheck = response.find(
         (user) => user.user === username && user.password === password
       );
+
       if (userCheck) {
         const authToken = uuidv4();
         authLocalStorage.setItem(authToken);
@@ -60,6 +61,7 @@ export const checkAuth =
           )
         );
       }
+
       dispatch(authSlice.actions.setLoading(false));
     }, 0);
   };

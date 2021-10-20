@@ -30,10 +30,7 @@ export const Header: React.FC<IUserProps> = ({ user, isLoading }) => (
           {user?.name}
         </a>
         <img className='header__image' src={`${user?.avatar_url}`} />
-        <span>
-          Number of my subscribers:
-          {user?.followers}
-        </span>
+        <span>Number of my subscribers: {user?.followers}</span>
       </>
     )}
   </header>
