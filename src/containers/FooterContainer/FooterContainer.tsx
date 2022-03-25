@@ -9,9 +9,14 @@ export const FooterContainer = () => {
   const dispatch = useDispatch();
   const { gaearon } = useTypedSelector((state) => state.gaearon);
   const { followers, isLoading } = useTypedSelector((state) => state.followers);
+  const fetchLimit = 30;
 
   useEffect(() => {
-    dispatch(fetchFollowers());
+    dispatch(
+      fetchFollowers({
+        per_page: fetchLimit,
+      })
+    );
     dispatch(fetchGaearon());
   }, []);
 
