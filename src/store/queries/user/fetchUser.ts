@@ -1,4 +1,13 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import NetworkService from '../../../API/NetworkService';
+import { GithubAPI } from '../../../api/githubApi';
 
-export const fetchUser = createAsyncThunk('user/fetch', NetworkService.getUser);
+const prefix = 'github/';
+const getGaearonPrefix = `${prefix}fetchUser`;
+
+export const fetchUser = createAsyncThunk(
+  getGaearonPrefix,
+	  async () => {
+    const response = await GithubAPI.getUser();
+    return response.data;
+  }
+);
