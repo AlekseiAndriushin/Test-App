@@ -50,7 +50,7 @@ export const LoginForm: React.FC<IFormLogin> = ({
           onChange={onChange}
         />
 
-        <Button title='войти' />
+        <Button title='Войти' />
       </form>
     )}
   </div>
