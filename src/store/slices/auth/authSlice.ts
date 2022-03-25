@@ -1,6 +1,6 @@
 import { createSlice, Dispatch, PayloadAction } from '@reduxjs/toolkit';
 import { v4 as uuidv4 } from 'uuid';
-import AuthUserService from '../../../API/AuthUserService';
+import { AuthAPI } from '../../../api/auth';
 import { authLocalStorage } from '../../../LocalStorage';
 
 interface IAuthService {
@@ -45,7 +45,7 @@ export const checkAuth =
     dispatch(authSlice.actions.setLoading(true));
 
     setTimeout(async () => {
-      const response = await AuthUserService.getAuth();
+			const response = await AuthAPI.getUser();
       const userCheck = response.find(
         (user) => user.user === username && user.password === password
       );
